@@ -1,0 +1,584 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<project>
+  <fileVersion>2</fileVersion>
+  <fileChecksum>132138162</fileChecksum>
+  <configuration>
+    <name>Flash Debug</name>
+    <outputs>
+      <file>$PROJ_DIR$\module\drv_hd44780_cnfg.h</file>
+      <file>$PROJ_DIR$\module\drv_hd44780.c</file>
+      <file>$PROJ_DIR$\module\drv_hd44780_l.c</file>
+      <file>$PROJ_DIR$\..\library\src\stm32f10x_flash.c</file>
+      <file>$PROJ_DIR$\..\library\src\stm32f10x_gpio.c</file>
+      <file>$PROJ_DIR$\..\library\src\stm32f10x_lib.c</file>
+      <file>$PROJ_DIR$\..\library\src\stm32f10x_nvic.c</file>
+      <file>$PROJ_DIR$\..\library\src\stm32f10x_rcc.c</file>
+      <file>$PROJ_DIR$\..\library\src\stm32f10x_tim1.c</file>
+      <file>$PROJ_DIR$\..\library\src\stm32f10x_usart.c</file>
+      <file>$PROJ_DIR$\app\uart.c</file>
+      <file>$PROJ_DIR$\app\uart.h</file>
+      <file>$PROJ_DIR$\app\cd_class.c</file>
+      <file>$PROJ_DIR$\app\usb_desc.c</file>
+      <file>$PROJ_DIR$\app\usb_cnfg.h</file>
+      <file>$PROJ_DIR$\module\usb_buffer.c</file>
+      <file>$PROJ_DIR$\app\usb_hooks.c</file>
+      <file>$PROJ_DIR$\module\usb_t9.c</file>
+      <file>$PROJ_DIR$\module\usb_hw.c</file>
+      <file>$PROJ_DIR$\app\stm32f10x_it.c</file>
+      <file>$PROJ_DIR$\app\stm32f10x_vector.c</file>
+      <file>$PROJ_DIR$\app\main.c</file>
+      <file>$PROJ_DIR$\Flash Debug\Obj\usb_hooks.o</file>
+      <file>$TOOLKIT_DIR$\inc\c\ctype.h</file>
+      <file>$PROJ_DIR$\Flash Debug\Obj\stm32f10x_vector.pbi</file>
+      <file>$TOOLKIT_DIR$\inc\c\wchar.h</file>
+      <file>$PROJ_DIR$\config\STM32F10x_FLASH.icf</file>
+      <file>$TOOLKIT_DIR$\inc\c\xtls.h</file>
+      <file>$PROJ_DIR$\..\library\inc\stm32f10x_usart.h</file>
+      <file>$PROJ_DIR$\app\cdc_cmd.h</file>
+      <file>$PROJ_DIR$\module\usb_hw.h</file>
+      <file>$PROJ_DIR$\Flash Debug\Obj\stm32f10x_flash.o</file>
+      <file>$PROJ_DIR$\..\library\inc\stm32f10x_gpio.h</file>
+      <file>$PROJ_DIR$\Flash Debug\Obj\usb_buffer.o</file>
+      <file>$PROJ_DIR$\..\library\inc\stm32f10x_tim1.h</file>
+      <file>$PROJ_DIR$\Flash Debug\Obj\uart.pbi</file>
+      <file>$PROJ_DIR$\Flash Debug\Obj\stm32f10x_flash.pbi</file>
+      <file>$PROJ_DIR$\..\library\inc\stm32f10x_flash.h</file>
+      <file>$PROJ_DIR$\Flash Debug\Obj\stm32f10x_lib.o</file>
+      <file>$PROJ_DIR$\module\usb_desc.h</file>
+      <file>$PROJ_DIR$\..\library\inc\stm32f10x_nvic.h</file>
+      <file>$PROJ_DIR$\Flash Debug\Obj\stm32f10x_nvic.pbi</file>
+      <file>$PROJ_DIR$\Flash Debug\Obj\usb_t9.o</file>
+      <file>$TOOLKIT_DIR$\inc\c\xlocaleuse.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\ystdio.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Threads.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\string.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\xencoding_limits.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\stdlib.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\ycheck.h</file>
+      <file>$PROJ_DIR$\app\usb_dev_desc.h</file>
+      <file>$PROJ_DIR$\module\drv_hd44780_l.h</file>
+      <file>$PROJ_DIR$\Flash Debug\Obj\drv_hd44780.pbi</file>
+      <file>$PROJ_DIR$\Flash Debug\Obj\drv_hd44780.o</file>
+      <file>$PROJ_DIR$\Flash Debug\Exe\VirtualCom.out</file>
+      <file>$PROJ_DIR$\app\usb_hooks.h</file>
+      <file>$PROJ_DIR$\module\usb_buffer.h</file>
+      <file>$PROJ_DIR$\app\cdc_desc.h</file>
+      <file>$PROJ_DIR$\board\arm_comm.h</file>
+      <file>$PROJ_DIR$\module\usb_t9.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Config_Normal.h</file>
+      <file>$PROJ_DIR$\Flash Debug\Obj\stm32f10x_usart.pbi</file>
+      <file>$PROJ_DIR$\Flash Debug\Obj\stm32f10x_gpio.o</file>
+      <file>$PROJ_DIR$\Flash Debug\Obj\usb_hw.pbi</file>
+      <file>$PROJ_DIR$\Flash Debug\Obj\usb_t9.pbi</file>
+      <file>$PROJ_DIR$\app\stm32f10x_it.h</file>
+      <file>$PROJ_DIR$\Flash Debug\Obj\stm32f10x_nvic.o</file>
+      <file>$PROJ_DIR$\Flash Debug\Obj\usb_hw.o</file>
+      <file>$PROJ_DIR$\Flash Debug\Obj\cd_class.pbi</file>
+      <file>$PROJ_DIR$\Flash Debug\Obj\uart.o</file>
+      <file>$PROJ_DIR$\..\library\inc\cortexm3_macro.h</file>
+      <file>$PROJ_DIR$\Flash Debug\Obj\stm32f10x_it.pbi</file>
+      <file>$TOOLKIT_DIR$\lib\m7M_tl.a</file>
+      <file>$PROJ_DIR$\Flash Debug\Obj\stm32f10x_tim1.pbi</file>
+      <file>$PROJ_DIR$\module\drv_hd44780.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\xlocale.h</file>
+      <file>$PROJ_DIR$\Flash Debug\Obj\stm32f10x_gpio.pbi</file>
+      <file>$PROJ_DIR$\Flash Debug\Obj\main.o</file>
+      <file>$PROJ_DIR$\Flash Debug\Obj\VirtualCom.pbd</file>
+      <file>$PROJ_DIR$\Flash Debug\Obj\stm32f10x_rcc.pbi</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Defaults.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\limits.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\stdio.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Product.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\xmtx.h</file>
+      <file>$PROJ_DIR$\..\library\inc\stm32f10x_lib.h</file>
+      <file>$PROJ_DIR$\Flash Debug\Obj\stm32f10x_tim1.o</file>
+      <file>$PROJ_DIR$\Flash Debug\Obj\cd_class.o</file>
+      <file>$PROJ_DIR$\Flash Debug\Obj\usb_buffer.pbi</file>
+      <file>$PROJ_DIR$\app\cd_class.h</file>
+      <file>$PROJ_DIR$\Flash Debug\Obj\drv_hd44780_l.o</file>
+      <file>$TOOLKIT_DIR$\inc\c\ysizet.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\xlocale_c.h</file>
+      <file>$PROJ_DIR$\Flash Debug\Obj\usb_hooks.pbi</file>
+      <file>$PROJ_DIR$\Flash Debug\Obj\usb_desc.pbi</file>
+      <file>$PROJ_DIR$\..\library\inc\stm32f10x_map.h</file>
+      <file>$PROJ_DIR$\..\library\inc\stm32f10x_type.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\io_macros.h</file>
+      <file>$PROJ_DIR$\Flash Debug\Obj\usb_desc.o</file>
+      <file>$PROJ_DIR$\app\includes.h</file>
+      <file>$TOOLKIT_DIR$\lib\shb_l.a</file>
+      <file>$PROJ_DIR$\Flash Debug\Obj\main.pbi</file>
+      <file>$PROJ_DIR$\..\library\inc\stm32f10x_rcc.h</file>
+      <file>$PROJ_DIR$\Flash Debug\Obj\drv_hd44780_l.pbi</file>
+      <file>$PROJ_DIR$\app\stm32f10x_conf.h</file>
+      <file>$PROJ_DIR$\Flash Debug\Obj\stm32f10x_usart.o</file>
+      <file>$TOOLKIT_DIR$\lib\rt7M_tl.a</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Product_string.h</file>
+      <file>$PROJ_DIR$\Flash Debug\Obj\stm32f10x_vector.o</file>
+      <file>$PROJ_DIR$\Flash Debug\Obj\stm32f10x_it.o</file>
+      <file>$PROJ_DIR$\Flash Debug\Obj\stm32f10x_lib.pbi</file>
+      <file>$TOOLKIT_DIR$\lib\dl7M_tln.a</file>
+      <file>$TOOLKIT_DIR$\inc\c\intrinsics.h</file>
+      <file>$PROJ_DIR$\Flash Debug\Obj\stm32f10x_rcc.o</file>
+      <file>$TOOLKIT_DIR$\inc\c\assert.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\yvals.h</file>
+    </outputs>
+    <file>
+      <name>[ROOT_NODE]</name>
+      <outputs>
+        <tool>
+          <name>ILINK</name>
+          <file> 54</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\module\drv_hd44780.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 53</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 52</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 74 99 82 49 115 80 60 83 47 45 91 44 46 107 23 75 27 84 48 43 92 25 81 112 114 85 95 104 96 70 37 32 40 102 34 28 58 0 51 14 39 30 97 59 55 50 56 11 89 57 29</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 74 99 82 49 115 80 60 83 47 45 91 44 46 107 23 75 27 84 48 43 92 25 81 112 114 85 95 104 96 70 37 32 40 102 34 28 58 0 51 14 39 30 97 59 55 50 56 11 89 57 29</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\module\drv_hd44780_l.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 90</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 103</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 51 99 82 49 115 80 60 83 47 45 91 44 46 107 23 75 27 84 48 43 92 25 81 112 114 85 95 104 96 70 37 32 40 102 34 28 58 0 74 14 39 30 97 59 55 50 56 11 89 57 29</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 51 99 82 49 115 80 60 83 47 45 91 44 46 107 23 75 27 84 48 43 92 25 81 112 114 85 95 104 96 70 37 32 40 102 34 28 58 0 74 14 39 30 97 59 55 50 56 11 89 57 29</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\library\src\stm32f10x_flash.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 31</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 36</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 37 95 104 96 70</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 37 95 104 96 70</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\library\src\stm32f10x_gpio.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 62</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 76</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 32 95 104 96 70 102</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 32 95 104 96 70 102</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\library\src\stm32f10x_lib.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 38</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 110</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 85 95 104 96 70 37 32 40 102 34 28</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 85 95 104 96 70 37 32 40 102 34 28</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\library\src\stm32f10x_nvic.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 66</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 41</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 40 95 104 96 70</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 40 95 104 96 70</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\library\src\stm32f10x_rcc.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 113</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 79</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 102 95 104 96 70</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 102 95 104 96 70</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\library\src\stm32f10x_tim1.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 86</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 73</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 34 95 104 96 70 102</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 34 95 104 96 70 102</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\library\src\stm32f10x_usart.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 105</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 61</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 28 95 104 96 70 102</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 28 95 104 96 70 102</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\app\uart.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 69</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 35</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 11 99 82 49 115 80 60 83 47 45 91 44 46 107 23 75 27 84 48 43 92 25 81 112 114 85 95 104 96 70 37 32 40 102 34 28 58 0 51 74 14 39 30 97 59 55 50 56 89 57 29</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 11 99 82 49 115 80 60 83 47 45 91 44 46 107 23 75 27 84 48 43 92 25 81 112 114 85 95 104 96 70 37 32 40 102 34 28 58 0 51 74 14 39 30 97 59 55 50 56 89 57 29</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\app\cd_class.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 87</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 68</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 89 99 82 49 115 80 60 83 47 45 91 44 46 107 23 75 27 84 48 43 92 25 81 112 114 85 95 104 96 70 37 32 40 102 34 28 58 0 51 74 14 39 30 97 59 55 50 56 11 57 29</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 89 99 82 49 115 80 60 83 47 45 91 44 46 107 23 75 27 84 48 43 92 25 81 112 114 85 95 104 96 70 37 32 40 102 34 28 58 0 51 74 14 39 30 97 59 55 50 56 11 57 29</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\app\usb_desc.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 98</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 94</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 39 99 82 49 115 80 60 83 47 45 91 44 46 107 23 75 27 84 48 43 92 25 81 112 114 85 95 104 96 70 37 32 40 102 34 28 58 0 51 74 14 30 97 59 55 50 56 11 89 57 29</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 39 99 82 49 115 80 60 83 47 45 91 44 46 107 23 75 27 84 48 43 92 25 81 112 114 85 95 104 96 70 37 32 40 102 34 28 58 0 51 74 14 30 97 59 55 50 56 11 89 57 29</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\module\usb_buffer.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 33</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 88</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 56 99 82 49 115 80 60 83 47 45 91 44 46 107 23 75 27 84 48 43 92 25 81 112 114 85 95 104 96 70 37 32 40 102 34 28 58 0 51 74 14 39 30 97 59 55 50 11 89 57 29</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 56 99 82 49 115 80 60 83 47 45 91 44 46 107 23 75 27 84 48 43 92 25 81 112 114 85 95 104 96 70 37 32 40 102 34 28 58 0 51 74 14 39 30 97 59 55 50 11 89 57 29</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\app\usb_hooks.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 22</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 93</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 55 99 82 49 115 80 60 83 47 45 91 44 46 107 23 75 27 84 48 43 92 25 81 112 114 85 95 104 96 70 37 32 40 102 34 28 58 0 51 74 14 39 30 97 59 50 56 11 89 57 29</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 55 99 82 49 115 80 60 83 47 45 91 44 46 107 23 75 27 84 48 43 92 25 81 112 114 85 95 104 96 70 37 32 40 102 34 28 58 0 51 74 14 39 30 97 59 50 56 11 89 57 29</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\module\usb_t9.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 42</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 64</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 59 99 82 49 115 80 60 83 47 45 91 44 46 107 23 75 27 84 48 43 92 25 81 112 114 85 95 104 96 70 37 32 40 102 34 28 58 0 51 74 14 39 30 97 55 50 56 11 89 57 29</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 59 99 82 49 115 80 60 83 47 45 91 44 46 107 23 75 27 84 48 43 92 25 81 112 114 85 95 104 96 70 37 32 40 102 34 28 58 0 51 74 14 39 30 97 55 50 56 11 89 57 29</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\module\usb_hw.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 67</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 63</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 30 99 82 49 115 80 60 83 47 45 91 44 46 107 23 75 27 84 48 43 92 25 81 112 114 85 95 104 96 70 37 32 40 102 34 28 58 0 51 74 14 39 97 59 55 50 56 11 89 57 29</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 30 99 82 49 115 80 60 83 47 45 91 44 46 107 23 75 27 84 48 43 92 25 81 112 114 85 95 104 96 70 37 32 40 102 34 28 58 0 51 74 14 39 97 59 55 50 56 11 89 57 29</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\app\stm32f10x_it.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 109</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 71</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 65 85 95 104 96 70 37 32 40 102 34 28 14 99 82 49 115 80 60 83 47 45 91 44 46 107 23 75 27 84 48 43 92 25 81 112 114 58 0 51 74 39 30 97 59 55 50 56 11 89 57 29</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 65 85 95 104 96 70 37 32 40 102 34 28 14 99 82 49 115 80 60 83 47 45 91 44 46 107 23 75 27 84 48 43 92 25 81 112 114 58 0 51 74 39 30 97 59 55 50 56 11 89 57 29</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\app\stm32f10x_vector.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 108</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 24</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 85 95 104 96 70 37 32 40 102 34 28 65</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 85 95 104 96 70 37 32 40 102 34 28 65</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\app\main.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 77</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 101</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 99 82 49 115 80 60 83 47 45 91 44 46 107 23 75 27 84 48 43 92 25 81 112 114 85 95 104 96 70 37 32 40 102 34 28 58 0 51 74 14 39 30 97 59 55 50 56 11 89 57 29</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 99 82 49 115 80 60 83 47 45 91 44 46 107 23 75 27 84 48 43 92 25 81 112 114 85 95 104 96 70 37 32 40 102 34 28 58 0 51 74 14 39 30 97 59 55 50 56 11 89 57 29</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\Flash Debug\Exe\VirtualCom.out</name>
+      <inputs>
+        <tool>
+          <name>ILINK</name>
+          <file> 26 87 53 90 77 31 62 109 38 66 113 86 105 108 69 33 98 22 67 42 100 106 72 111</file>
+        </tool>
+      </inputs>
+    </file>
+  </configuration>
+</project>
+
+

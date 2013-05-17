@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/micrium_ucosIII/!svn/ver/2/trunk/uC-CPU
+END
+cpu_core.c
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/micrium_ucosIII/!svn/ver/2/trunk/uC-CPU/cpu_core.c
+END
+cpu_core.h
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/micrium_ucosIII/!svn/ver/2/trunk/uC-CPU/cpu_core.h
+END
+cpu_def.h
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/micrium_ucosIII/!svn/ver/2/trunk/uC-CPU/cpu_def.h
+END

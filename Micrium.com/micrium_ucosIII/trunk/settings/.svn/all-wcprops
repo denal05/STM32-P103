@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/micrium_ucosIII/!svn/ver/2/trunk/settings
+END
+ucOSIII_Debug.jlink
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/micrium_ucosIII/!svn/ver/2/trunk/settings/ucOSIII_Debug.jlink
+END
+uCOSIII.wsdt
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/micrium_ucosIII/!svn/ver/2/trunk/settings/uCOSIII.wsdt
+END
+ucOSIII.cspy.bat
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/micrium_ucosIII/!svn/ver/2/trunk/settings/ucOSIII.cspy.bat
+END
+ucOSIII.dbgdt
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/micrium_ucosIII/!svn/ver/2/trunk/settings/ucOSIII.dbgdt
+END
+ucOSIII.dni
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/micrium_ucosIII/!svn/ver/2/trunk/settings/ucOSIII.dni
+END

@@ -1,0 +1,4 @@
+
+<Project Header="Project 'SpeexVocoder_STM32F103-STK'" Path=".\SpeexVocoder_STM32F103-STK.rprj" Project="Yes" OutputFile="" sate="96" ActiveApp="SpeexVocoder_STM32F103-STK" >
+	<ApplicationBuild Header="SpeexVocoder_STM32F103-STK" Extern=".\SpeexVocoder_STM32F103-STK.rapp" Path=".\SpeexVocoder_STM32F103-STK.rapp" OutputFile=".\STK\SpeexVocoder_STM32F103-STK.elf" sate="98" Config="STM3210B-EVAL" />
+</Project>

@@ -1,0 +1,233 @@
+
+<ApplicationBuild Header="SpeexVocoder_STM32F103-STK" Extern=".\SpeexVocoder_STM32F103-STK.rapp" Path=".\SpeexVocoder_STM32F103-STK.rapp" OutputFile=".\STK\SpeexVocoder_STM32F103-STK.elf" sate="98" Config="STM3210B-EVAL" >
+	<Group Header="User" Marker="-1" OutputFile="" sate="0" >
+		<NodeC Path="..\src\lcd.c" Header="lcd.c" Marker="-1" OutputFile=".\STK\lcd.o" sate="0" />
+		<NodeC Path="..\src\main.c" Header="main.c" Marker="-1" OutputFile=".\STK\main.o" sate="0" />
+		<NodeC Path="..\src\stm32f10x_it.c" Header="stm32f10x_it.c" Marker="-1" OutputFile=".\STK\stm32f10x_it.o" sate="0" />
+		<NodeC Path="..\src\vocoder.c" Header="vocoder.c" Marker="-1" OutputFile=".\STK\vocoder.o" sate="0" />
+																																													
+	</Group>
+	<Group Header="RIDE" Marker="0" OutputFile="" sate="0" >
+		<NodeC Path="..\..\..\Libraries\CMSIS\Core\CM3\startup\gcc\startup_stm32f10x_hd.c" Header="startup_stm32f10x_hd.c" Marker="0" OutputFile=".\STK\startup_stm32f10x_hd.o" sate="0" >
+			<Options>
+				<Config Header="STM3210B-EVAL" >
+					<Set Header="NodeC" >
+						<Section Header="Build" >
+							<Property Header="Exclude" Value="Yes" Removable="1" />
+							<Property Header="LinkExclude" Value="Yes" Removable="1" />
+																																																																																																																																											
+						</Section>
+																																																																																																																					
+					</Set>
+																																																																																										
+				</Config>
+																																																																						
+			</Options>
+																																																		
+		</NodeC>
+		<NodeC Path="..\..\..\Libraries\CMSIS\Core\CM3\startup\gcc\startup_stm32f10x_ld.c" Header="startup_stm32f10x_ld.c" Marker="0" OutputFile=".\STK\startup_stm32f10x_ld.o" sate="0" >
+			<Options>
+				<Config Header="STM3210B-EVAL" >
+					<Set Header="NodeC" >
+						<Section Header="Build" >
+							<Property Header="Exclude" Value="Yes" Removable="1" />
+							<Property Header="LinkExclude" Value="Yes" Removable="1" />
+																																																																																																																																											
+						</Section>
+																																																																																																																					
+					</Set>
+																																																																																										
+				</Config>
+																																																																						
+			</Options>
+																																																		
+		</NodeC>
+		<NodeC Path="..\..\..\Libraries\CMSIS\Core\CM3\startup\gcc\startup_stm32f10x_md.c" Header="startup_stm32f10x_md.c" Marker="-1" OutputFile=".\STK\startup_stm32f10x_md.o" sate="0" />
+		<Options>
+			<Config Header="STM3210B-EVAL" >
+				<Set Header="ApplicationBuild" >
+					<Section Header="Directories" >
+						<Property Header="IncDir" Value="..\..\..\Libraries\STM32F10x_StdPeriph_Driver\inc;..\..\..\Libraries\CMSIS\Core\CM3;..\inc" Removable="1" />
+																																																																																																																																	
+					</Section>
+																																																																																																									
+				</Set>
+				<Set Header="Group" >
+					<Section Header="Build" >
+						<Property Header="Exclude" Value="No" Removable="1" />
+						<Property Header="LinkExclude" Value="No" Removable="1" />
+																																																				
+					</Section>
+																																										
+				</Set>
+																												
+			</Config>
+																				
+		</Options>
+																																													
+	</Group>
+	<Group Header="StdPeriph_Driver" Marker="-1" OutputFile="" sate="0" >
+		<NodeC Path="..\..\..\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_tim.c" Header="stm32f10x_tim.c" Marker="-1" OutputFile=".\STK\stm32f10x_tim.o" sate="0" />
+		<NodeC Path="..\..\..\Libraries\STM32F10x_StdPeriph_Driver\src\misc.c" Header="misc.c" Marker="-1" OutputFile=".\STK\misc.o" sate="0" />
+		<NodeC Path="..\..\..\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_adc.c" Header="stm32f10x_adc.c" Marker="-1" OutputFile=".\STK\stm32f10x_adc.o" sate="0" />
+		<NodeC Path="..\..\..\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_flash.c" Header="stm32f10x_flash.c" Marker="-1" OutputFile=".\STK\stm32f10x_flash.o" sate="0" />
+		<NodeC Path="..\..\..\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c" Header="stm32f10x_gpio.c" Marker="-1" OutputFile=".\STK\stm32f10x_gpio.o" sate="0" />
+		<NodeC Path="..\..\..\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c" Header="stm32f10x_rcc.c" Marker="-1" OutputFile=".\STK\stm32f10x_rcc.o" sate="0" />
+		<NodeC Path="..\..\..\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_spi.c" Header="stm32f10x_spi.c" Marker="-1" OutputFile=".\STK\stm32f10x_spi.o" sate="0" />
+		<NodeC Path="..\..\..\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_usart.c" Header="stm32f10x_usart.c" Marker="-1" OutputFile=".\STK\stm32f10x_usart.o" sate="0" />
+																																													
+	</Group>
+	<Group Header="CMSIS" Marker="-1" OutputFile="" sate="0" >
+		<NodeC Path="..\..\..\Libraries\CMSIS\Core\CM3\system_stm32f10x.c" Header="system_stm32f10x.c" Marker="-1" OutputFile=".\STK\system_stm32f10x.o" sate="0" />
+		<NodeC Path="..\..\..\Libraries\CMSIS\Core\CM3\core_cm3.c" Header="core_cm3.c" Marker="-1" OutputFile=".\STK\core_cm3.o" sate="0" />
+																																													
+	</Group>
+	<Group Header="Doc" Marker="-1" OutputFile="" sate="0" >
+		<NodeText Path="..\readme.txt" Header="readme.txt" Marker="-1" OutputFile="" sate="0" />
+																																													
+	</Group>
+	<Configs>
+		<Config Header="STM3210B-EVAL" />
+																																													
+	</Configs>
+	<Group Header="libspeex" Marker="-1" OutputFile="" sate="0" >
+		<NodeC Path="..\..\..\Libraries\STM32F10x_Speex_Lib\libspeex\window.c" Header="window.c" Marker="-1" OutputFile=".\STK\window.o" sate="0" />
+		<NodeC Path="..\..\..\Libraries\STM32F10x_Speex_Lib\libspeex\bits.c" Header="bits.c" Marker="-1" OutputFile=".\STK\bits.o" sate="0" />
+		<NodeC Path="..\..\..\Libraries\STM32F10x_Speex_Lib\libspeex\exc_10_32_table.c" Header="exc_10_32_table.c" Marker="-1" OutputFile=".\STK\exc_10_32_table.o" sate="0" />
+		<NodeC Path="..\..\..\Libraries\STM32F10x_Speex_Lib\libspeex\gain_table.c" Header="gain_table.c" Marker="-1" OutputFile=".\STK\gain_table.o" sate="0" />
+		<NodeC Path="..\..\..\Libraries\STM32F10x_Speex_Lib\libspeex\lpc.c" Header="lpc.c" Marker="-1" OutputFile=".\STK\lpc.o" sate="0" />
+		<NodeC Path="..\..\..\Libraries\STM32F10x_Speex_Lib\libspeex\lsp.c" Header="lsp.c" Marker="-1" OutputFile=".\STK\lsp.o" sate="0" />
+		<NodeC Path="..\..\..\Libraries\STM32F10x_Speex_Lib\libspeex\lsp_tables_nb.c" Header="lsp_tables_nb.c" Marker="-1" OutputFile=".\STK\lsp_tables_nb.o" sate="0" />
+		<NodeC Path="..\..\..\Libraries\STM32F10x_Speex_Lib\libspeex\speex.c" Header="speex.c" Marker="-1" OutputFile=".\STK\speex.o" sate="0" />
+		<NodeC Path="..\..\..\Libraries\STM32F10x_Speex_Lib\libspeex\speex_callbacks.c" Header="speex_callbacks.c" Marker="-1" OutputFile=".\STK\speex_callbacks.o" sate="0" />
+		<NodeC Path="..\..\..\Libraries\STM32F10x_Speex_Lib\libspeex\speex_header.c" Header="speex_header.c" Marker="-1" OutputFile=".\STK\speex_header.o" sate="0" />
+		<NodeC Path="..\..\..\Libraries\STM32F10x_Speex_Lib\STM32\libspeex\vq.c" Header="vq.c" Marker="-1" OutputFile=".\STK\vq.o" sate="0" />
+		<NodeC Path="..\..\..\Libraries\STM32F10x_Speex_Lib\STM32\libspeex\cb_search.c" Header="cb_search.c" Marker="-1" OutputFile=".\STK\cb_search.o" sate="0" />
+		<NodeC Path="..\..\..\Libraries\STM32F10x_Speex_Lib\STM32\libspeex\filters.c" Header="filters.c" Marker="-1" OutputFile=".\STK\filters.o" sate="0" />
+		<NodeC Path="..\..\..\Libraries\STM32F10x_Speex_Lib\STM32\libspeex\ltp.c" Header="ltp.c" Marker="-1" OutputFile=".\STK\ltp.o" sate="0" />
+		<NodeC Path="..\..\..\Libraries\STM32F10x_Speex_Lib\STM32\libspeex\modes.c" Header="modes.c" Marker="0" OutputFile=".\STK\modes.o" sate="0" >
+			<Options>
+				<Config Header="STM3210B-EVAL" >
+					<Set Header="GCC" >
+						<Section Header="Dialect" >
+							<Property Header="CharSign" Value="-funsigned-char" Removable="1" />
+									
+						</Section>
+							
+					</Set>
+				</Config>
+			</Options>
+		</NodeC>
+		<NodeC Path="..\..\..\Libraries\STM32F10x_Speex_Lib\STM32\libspeex\nb_celp.c" Header="nb_celp.c" Marker="-1" OutputFile=".\STK\nb_celp.o" sate="0" />
+		<NodeC Path="..\..\..\Libraries\STM32F10x_Speex_Lib\STM32\libspeex\quant_lsp.c" Header="quant_lsp.c" Marker="-1" OutputFile=".\STK\quant_lsp.o" sate="0" />
+		<NodeASM Path="..\..\..\Libraries\STM32F10x_Speex_Lib\STM32\libspeex\gcc\filters_cortexM3.s" Header="filters_cortexM3.s" Marker="-1" OutputFile=".\STK\filters_cortexM3.o" sate="0" />
+		<NodeASM Path="..\..\..\Libraries\STM32F10x_Speex_Lib\STM32\libspeex\gcc\ltp_cortexM3.s" Header="ltp_cortexM3.s" Marker="-1" OutputFile=".\STK\ltp_cortexM3.o" sate="0" />
+		<NodeASM Path="..\..\..\Libraries\STM32F10x_Speex_Lib\STM32\libspeex\gcc\vq_cortexm3.s" Header="vq_cortexm3.s" Marker="-1" OutputFile=".\STK\vq_cortexm3.o" sate="0" />
+		<NodeC Path="..\..\..\Libraries\STM32F10x_Speex_Lib\libspeex\gain_table_lbr.c" Header="gain_table_lbr.c" Marker="-1" OutputFile=".\STK\gain_table_lbr.o" sate="0" />
+		<NodeC Path="..\..\..\Libraries\STM32F10x_Speex_Lib\libspeex\high_lsp_tables.c" Header="high_lsp_tables.c" Marker="-1" OutputFile=".\STK\high_lsp_tables.o" sate="0" />
+									
+	</Group>
+	<Options>
+		<Config Header="Standard" >
+			<Set Header="ApplicationBuild" >
+				<Section Header="General" >
+					<Property Header="TargetFamily" Value="ARM" />
+																																																																																																																																														
+				</Section>
+				<Section Header="Directories" >
+					<Property Header="IncDir" Value="..\..\..\..\Libraries\STM32F10x_StdPeriph_Driver\inc;..\..\..\..\Libraries\CMSIS\Core\CM3;..\inc" Removable="1" />
+					<Property Header="OutDir" Value="$(ApplicationDir)\STM3210B-EVAL" Removable="1" />
+					<Property Header="ListDir" Value="$(ApplicationDir)\STM3210B-EVAL" Removable="1" />
+																																																																																																																																														
+				</Section>
+																																																																																																														
+			</Set>
+			<Set Header="Target" >
+				<Section Header="ProcessorARM" >
+					<Property Header="Processor" Value="STM32F103VBT6" />
+																																																																																																																																														
+				</Section>
+				<Section Header="ToolSetARM" >
+					<Property Header="BuildToolSetARM" Value="ARM\\GNU.config" Removable="1" />
+																																																																																																																																														
+				</Section>
+																																																																																																														
+			</Set>
+			<Set Header="GCC" >
+				<Section Header="Defines" >
+					<Property Header="Defines" Value="STM32F10X_MD;USE_STDPERIPH_DRIVER;USE_STM3210B_EVAL" Removable="1" />
+																																																																																																																																														
+				</Section>
+				<Section Header="OPTIMIZE" >
+					<Property Header="Optimize" Value="-Os" Removable="1" />
+																																																																																																																																														
+				</Section>
+																																																																																																														
+			</Set>
+			<Set Header="LD" >
+				<Section Header="Startup" >
+					<Property Header="DEFAULTSTARTUP" Value="No" Removable="1" />
+					<Property Header="File" Value="" Removable="1" />
+																																																																																																																																														
+				</Section>
+				<Section Header="Scripts" >
+					<Property Header="SCRIPTFILES" Value="Yes" Removable="1" />
+					<Property Header="File" Value="" Removable="1" />
+					<Property Header="StarterKitLimit" Value="No" Removable="1" />
+																																																																																																																																														
+				</Section>
+				<Section Header="LIB" >
+					<Property Header="STLIB" Value="0" Removable="1" />
+					<Property Header="UART0PUTC" Value="0" Removable="1" />
+																																																																																																																																														
+				</Section>
+																																																																																																														
+			</Set>
+																																																																											
+		</Config>
+		<Config Header="STM3210B-EVAL" >
+			<Set Header="LD" >
+				<Section Header="Linker" >
+					<Property Header="MAPFILE" Value="-Wl,-Map -Xlinker !$(Build.ListingFile)!" Removable="1" />
+																																																																																																																																					
+				</Section>
+				<Section Header="LIB" >
+					<Property Header="UART0PUTC" Value="1" Removable="1" />
+																									
+				</Section>
+																			
+			</Set>
+			<Set Header="GCC" >
+				<Section Header="OPTIMIZE" >
+					<Property Header="Optimize" Value="-O2" Removable="1" />
+							
+				</Section>
+				<Section Header="Defines" >
+					<Property Header="Defines" Value="HAVE_CONFIG_H;STM32F10X_MD;USE_STDPERIPH_DRIVER" Removable="1" />
+																																		
+				</Section>
+				<Section Header="Dialect" >
+					<Property Header="CharSign" Value="-fsigned-char" Removable="1" />
+																																		
+				</Section>
+					
+			</Set>
+			<Set Header="ApplicationBuild" >
+				<Section Header="Directories" >
+					<Property Header="IncDir" Value="..\..\..\Libraries\CMSIS\Core\CM3;..\..\..\Libraries\STM32F10x_Speex_Lib\include;..\..\..\Libraries\STM32F10x_Speex_Lib\libspeex;..\..\..\Libraries\STM32F10x_Speex_Lib\STM32;..\..\..\Libraries\STM32F10x_Speex_Lib\STM32\include;..\..\..\Libraries\STM32F10x_Speex_Lib\STM32\libspeex;..\..\..\Libraries\STM32F10x_Speex_Lib\STM32\libspeex\gcc;..\..\..\Libraries\STM32F10x_StdPeriph_Driver\inc;..\inc" Removable="1" />
+					<Property Header="OutDir" Value="$(ApplicationDir)\STK" Removable="1" />
+					<Property Header="ListDir" Value="$(ApplicationDir)\STK" Removable="1" />
+							
+				</Section>
+					
+			</Set>
+			<Set Header="Target" >
+				<Section Header="ProcessorARM" >
+					<Property Header="Processor" Value="STM32F103RBT6" />
+																																		
+				</Section>
+																										
+			</Set>
+		</Config>
+	</Options>
+</ApplicationBuild>

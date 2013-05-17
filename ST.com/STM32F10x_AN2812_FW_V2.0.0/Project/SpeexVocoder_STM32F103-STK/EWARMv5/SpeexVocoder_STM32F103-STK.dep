@@ -1,0 +1,963 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<project>
+  <fileVersion>2</fileVersion>
+  <fileChecksum>4232336880</fileChecksum>
+  <configuration>
+    <name>SpeexVocoder_STM32F103-STK</name>
+    <outputs>
+      <file>$PROJ_DIR$\..\..\..\Libraries\CMSIS\Core\CM3\system_stm32f10x.c</file>
+      <file>$PROJ_DIR$\..\..\..\Libraries\CMSIS\Core\CM3\startup\iar\startup_stm32f10x_md.s</file>
+      <file>$PROJ_DIR$\..\..\..\Libraries\CMSIS\Core\CM3\core_cm3.c</file>
+      <file>$PROJ_DIR$\..\..\..\Libraries\STM32F10x_Speex_Lib\libspeex\bits.c</file>
+      <file>$PROJ_DIR$\..\..\..\Libraries\STM32F10x_Speex_Lib\libspeex\buffer.c</file>
+      <file>$PROJ_DIR$\..\..\..\Libraries\STM32F10x_Speex_Lib\STM32\libspeex\cb_search.c</file>
+      <file>$PROJ_DIR$\..\..\..\Libraries\STM32F10x_Speex_Lib\libspeex\exc_10_32_table.c</file>
+      <file>$PROJ_DIR$\..\..\..\Libraries\STM32F10x_Speex_Lib\STM32\libspeex\filters.c</file>
+      <file>$PROJ_DIR$\..\..\..\Libraries\STM32F10x_Speex_Lib\STM32\libspeex\iar\filters_cortexM3.s</file>
+      <file>$PROJ_DIR$\..\..\..\Libraries\STM32F10x_Speex_Lib\libspeex\gain_table.c</file>
+      <file>$PROJ_DIR$\..\..\..\Libraries\STM32F10x_Speex_Lib\libspeex\gain_table_lbr.c</file>
+      <file>$PROJ_DIR$\..\..\..\Libraries\STM32F10x_Speex_Lib\libspeex\high_lsp_tables.c</file>
+      <file>$PROJ_DIR$\..\..\..\Libraries\STM32F10x_Speex_Lib\libspeex\lpc.c</file>
+      <file>$PROJ_DIR$\..\..\..\Libraries\STM32F10x_Speex_Lib\libspeex\lsp.c</file>
+      <file>$PROJ_DIR$\..\..\..\Libraries\STM32F10x_Speex_Lib\libspeex\lsp_tables_nb.c</file>
+      <file>$PROJ_DIR$\..\..\..\Libraries\STM32F10x_Speex_Lib\STM32\libspeex\ltp.c</file>
+      <file>$PROJ_DIR$\..\..\..\Libraries\STM32F10x_Speex_Lib\STM32\libspeex\iar\ltp_cortexM3.s</file>
+      <file>$PROJ_DIR$\..\..\..\Libraries\STM32F10x_Speex_Lib\STM32\libspeex\modes.c</file>
+      <file>$PROJ_DIR$\..\..\..\Libraries\STM32F10x_Speex_Lib\STM32\libspeex\nb_celp.c</file>
+      <file>$PROJ_DIR$\..\..\..\Libraries\STM32F10x_Speex_Lib\STM32\libspeex\quant_lsp.c</file>
+      <file>$PROJ_DIR$\..\..\..\Libraries\STM32F10x_Speex_Lib\libspeex\speex.c</file>
+      <file>$PROJ_DIR$\..\..\..\Libraries\STM32F10x_Speex_Lib\libspeex\speex_callbacks.c</file>
+      <file>$PROJ_DIR$\..\..\..\Libraries\STM32F10x_Speex_Lib\libspeex\speex_header.c</file>
+      <file>$PROJ_DIR$\..\..\..\Libraries\STM32F10x_Speex_Lib\STM32\libspeex\vq.c</file>
+      <file>$PROJ_DIR$\..\..\..\Libraries\STM32F10x_Speex_Lib\STM32\libspeex\iar\vq_cortexm3.s</file>
+      <file>$PROJ_DIR$\..\..\..\Libraries\STM32F10x_Speex_Lib\libspeex\window.c</file>
+      <file>$PROJ_DIR$\..\..\..\Libraries\STM32F10x_StdPeriph_Driver\src\misc.c</file>
+      <file>$PROJ_DIR$\..\..\..\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_adc.c</file>
+      <file>$PROJ_DIR$\..\..\..\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_flash.c</file>
+      <file>$PROJ_DIR$\..\..\..\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c</file>
+      <file>$PROJ_DIR$\..\..\..\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c</file>
+      <file>$PROJ_DIR$\..\..\..\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_spi.c</file>
+      <file>$PROJ_DIR$\..\..\..\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_tim.c</file>
+      <file>$PROJ_DIR$\..\src\main.c</file>
+      <file>$PROJ_DIR$\..\src\stm32f10x_it.c</file>
+      <file>$PROJ_DIR$\..\src\vocoder.c</file>
+      <file>$PROJ_DIR$\..\..\..\Libraries\STM32F10x_Speex_Lib\libspeex\math_approx.h</file>
+      <file>$PROJ_DIR$\..\..\..\Libraries\STM32F10x_Speex_Lib\libspeex\sb_celp.h</file>
+      <file>$PROJ_DIR$\..\..\..\Libraries\STM32F10x_Speex_Lib\libspeex\filters.h</file>
+      <file>$PROJ_DIR$\..\..\..\Libraries\STM32F10x_Speex_Lib\STM32\libspeex\iar\filters_cortexM3.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\yvals.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Product.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Defaults.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\xencoding_limits.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Threads.h</file>
+      <file>$PROJ_DIR$\..\inc\vocoder.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\intrinsics.h</file>
+      <file>$PROJ_DIR$\..\..\..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_flash.h</file>
+      <file>$PROJ_DIR$\..\..\..\Libraries\STM32F10x_Speex_Lib\STM32\config.h</file>
+      <file>$PROJ_DIR$\..\..\..\Libraries\CMSIS\Core\CM3\stm32f10x.h</file>
+      <file>$PROJ_DIR$\..\..\..\Libraries\CMSIS\Core\CM3\system_stm32f10x.h</file>
+      <file>$PROJ_DIR$\..\..\..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_adc.h</file>
+      <file>$PROJ_DIR$\..\..\..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_gpio.h</file>
+      <file>$PROJ_DIR$\..\..\..\Libraries\STM32F10x_Speex_Lib\STM32\libspeex\cb_search_cortexM3.h</file>
+      <file>$PROJ_DIR$\..\..\..\Libraries\STM32F10x_Speex_Lib\libspeex\cb_search.h</file>
+      <file>$PROJ_DIR$\SpeexVocoder_STM32F103-STK\Obj\misc.pbi</file>
+      <file>$PROJ_DIR$\SpeexVocoder_STM32F103-STK\Obj\lcd.pbi</file>
+      <file>$PROJ_DIR$\SpeexVocoder_STM32F103-STK\Obj\quant_lsp.o</file>
+      <file>$PROJ_DIR$\SpeexVocoder_STM32F103-STK\Obj\core_cm3.o</file>
+      <file>$PROJ_DIR$\SpeexVocoder_STM32F103-STK\Obj\stm32f10x_gpio.pbi</file>
+      <file>$PROJ_DIR$\SpeexVocoder_STM32F103-STK\Obj\stm32f10x_adc.pbi</file>
+      <file>$PROJ_DIR$\SpeexVocoder_STM32F103-STK\Obj\stm32f10x_flash.pbi</file>
+      <file>$PROJ_DIR$\SpeexVocoder_STM32F103-STK\Obj\speex_callbacks.o</file>
+      <file>$PROJ_DIR$\SpeexVocoder_STM32F103-STK\Obj\nb_celp.o</file>
+      <file>$PROJ_DIR$\SpeexVocoder_STM32F103-STK\Obj\speex.o</file>
+      <file>$PROJ_DIR$\SpeexVocoder_STM32F103-STK\Obj\modes.o</file>
+      <file>$PROJ_DIR$\SpeexVocoder_STM32F103-STK\Obj\ltp.o</file>
+      <file>$PROJ_DIR$\SpeexVocoder_STM32F103-STK\Obj\buffer.o</file>
+      <file>$PROJ_DIR$\SpeexVocoder_STM32F103-STK\Obj\high_lsp_tables.o</file>
+      <file>$PROJ_DIR$\SpeexVocoder_STM32F103-STK\Obj\cb_search.o</file>
+      <file>$PROJ_DIR$\SpeexVocoder_STM32F103-STK\Obj\lsp_tables_nb.o</file>
+      <file>$PROJ_DIR$\SpeexVocoder_STM32F103-STK\Obj\filters.o</file>
+      <file>$TOOLKIT_DIR$\inc\c\ycheck.h</file>
+      <file>$PROJ_DIR$\SpeexVocoder_STM32F103-STK\Obj\speex_header.o</file>
+      <file>$TOOLKIT_DIR$\inc\c\ymath.h</file>
+      <file>$PROJ_DIR$\SpeexVocoder_STM32F103-STK\Obj\exc_10_32_table.o</file>
+      <file>$PROJ_DIR$\..\inc\main.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\stdint.h</file>
+      <file>$PROJ_DIR$\..\inc\stm32f10x_conf.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\math.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\xtgmath.h</file>
+      <file>$PROJ_DIR$\..\..\..\Libraries\STM32F10x_Speex_Lib\libspeex\ltp.h</file>
+      <file>$PROJ_DIR$\..\..\..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h</file>
+      <file>$PROJ_DIR$\..\..\..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_spi.h</file>
+      <file>$PROJ_DIR$\..\..\..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_tim.h</file>
+      <file>$PROJ_DIR$\..\..\..\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h</file>
+      <file>$PROJ_DIR$\SpeexVocoder_STM32F103-STK\Obj\lpc.o</file>
+      <file>$PROJ_DIR$\SpeexVocoder_STM32F103-STK\Obj\lsp.o</file>
+      <file>$PROJ_DIR$\SpeexVocoder_STM32F103-STK\Obj\gain_table.o</file>
+      <file>$TOOLKIT_DIR$\lib\m7M_tl.a</file>
+      <file>$PROJ_DIR$\SpeexVocoder_STM32F103-STK\Obj\gain_table_lbr.o</file>
+      <file>$PROJ_DIR$\STM32F10x_FLASH.icf</file>
+      <file>$TOOLKIT_DIR$\lib\shb_l.a</file>
+      <file>$TOOLKIT_DIR$\lib\rt7M_tl.a</file>
+      <file>$TOOLKIT_DIR$\lib\dl7M_tln.a</file>
+      <file>$PROJ_DIR$\SpeexVocoder_STM32F103-STK\Obj\bits.o</file>
+      <file>$PROJ_DIR$\SpeexVocoder_STM32F103-STK\Obj\vq.o</file>
+      <file>$TOOLKIT_DIR$\CMSIS\Include\core_cm3.h</file>
+      <file>$TOOLKIT_DIR$\CMSIS\Include\core_cmFunc.h</file>
+      <file>$TOOLKIT_DIR$\CMSIS\Include\core_cmInstr.h</file>
+      <file>$PROJ_DIR$\SpeexVocoder_STM32F103-STK\Obj\system_stm32f10x.o</file>
+      <file>$PROJ_DIR$\..\..\..\Libraries\STM32F10x_Speex_Lib\STM32\libspeex\iar\ltp_cortexM3.h</file>
+      <file>$PROJ_DIR$\..\inc\voice.h</file>
+      <file>$PROJ_DIR$\..\..\..\Libraries\STM32F10x_Speex_Lib\libspeex\nb_celp.h</file>
+      <file>$PROJ_DIR$\..\inc\stm32f10x_it.h</file>
+      <file>$PROJ_DIR$\..\..\..\Libraries\STM32F10x_Speex_Lib\include\speex\speex_callbacks.h</file>
+      <file>$PROJ_DIR$\..\..\..\Libraries\STM32F10x_Speex_Lib\include\speex\speex.h</file>
+      <file>$PROJ_DIR$\..\..\..\Libraries\STM32F10x_Speex_Lib\libspeex\lpc.h</file>
+      <file>$PROJ_DIR$\..\..\..\Libraries\STM32F10x_Speex_Lib\libspeex\lsp.h</file>
+      <file>$PROJ_DIR$\..\..\..\Libraries\STM32F10x_Speex_Lib\libspeex\modes.h</file>
+      <file>$PROJ_DIR$\..\..\..\Libraries\STM32F10x_Speex_Lib\libspeex\vbr.h</file>
+      <file>$PROJ_DIR$\..\inc\lcd.h</file>
+      <file>$PROJ_DIR$\..\..\..\Libraries\STM32F10x_Speex_Lib\include\speex\speex_header.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Config_Normal.h</file>
+      <file>$PROJ_DIR$\SpeexVocoder_STM32F103-STK\Obj\main.pbi</file>
+      <file>$PROJ_DIR$\SpeexVocoder_STM32F103-STK\Obj\vocoder.pbi</file>
+      <file>$PROJ_DIR$\SpeexVocoder_STM32F103-STK\Obj\stm32f10x_rcc.pbi</file>
+      <file>$PROJ_DIR$\..\src\lcd.c</file>
+      <file>$PROJ_DIR$\SpeexVocoder_STM32F103-STK\Obj\stm32f10x_spi.pbi</file>
+      <file>$PROJ_DIR$\SpeexVocoder_STM32F103-STK\Obj\stm32f10x_tim.pbi</file>
+      <file>$PROJ_DIR$\SpeexVocoder_STM32F103-STK\Obj\lpc.pbi</file>
+      <file>$PROJ_DIR$\SpeexVocoder_STM32F103-STK\Obj\buffer.pbi</file>
+      <file>$PROJ_DIR$\SpeexVocoder_STM32F103-STK\Obj\stm32f10x_it.pbi</file>
+      <file>$PROJ_DIR$\SpeexVocoder_STM32F103-STK\Obj\core_cm3.pbi</file>
+      <file>$PROJ_DIR$\SpeexVocoder_STM32F103-STK\Obj\gain_table.pbi</file>
+      <file>$PROJ_DIR$\SpeexVocoder_STM32F103-STK\Obj\bits.pbi</file>
+      <file>$PROJ_DIR$\SpeexVocoder_STM32F103-STK\Obj\cb_search.pbi</file>
+      <file>$PROJ_DIR$\SpeexVocoder_STM32F103-STK\Obj\vq_cortexm3.o</file>
+      <file>$PROJ_DIR$\SpeexVocoder_STM32F103-STK\Obj\startup_stm32f10x_md.o</file>
+      <file>$PROJ_DIR$\SpeexVocoder_STM32F103-STK\Obj\vocoder.o</file>
+      <file>$PROJ_DIR$\SpeexVocoder_STM32F103-STK\Obj\system_stm32f10x.pbi</file>
+      <file>$PROJ_DIR$\SpeexVocoder_STM32F103-STK\Obj\high_lsp_tables.pbi</file>
+      <file>$PROJ_DIR$\SpeexVocoder_STM32F103-STK\Obj\gain_table_lbr.pbi</file>
+      <file>$PROJ_DIR$\SpeexVocoder_STM32F103-STK\Obj\main.o</file>
+      <file>$PROJ_DIR$\SpeexVocoder_STM32F103-STK\Obj\lcd.o</file>
+      <file>$PROJ_DIR$\SpeexVocoder_STM32F103-STK\Obj\ltp_cortexM3.o</file>
+      <file>$PROJ_DIR$\SpeexVocoder_STM32F103-STK\Obj\filters_cortexM3.o</file>
+      <file>$PROJ_DIR$\SpeexVocoder_STM32F103-STK\Obj\SpeexVocoder_STM32F103-STK.pbd</file>
+      <file>$PROJ_DIR$\SpeexVocoder_STM32F103-STK\Exe\SpeexVocoder_STM32-SK.out</file>
+      <file>$PROJ_DIR$\SpeexVocoder_STM32F103-STK\Obj\stm32f10x_it.o</file>
+      <file>$PROJ_DIR$\SpeexVocoder_STM32F103-STK\Obj\window.o</file>
+      <file>$PROJ_DIR$\SpeexVocoder_STM32F103-STK\Obj\stm32f10x_rcc.o</file>
+      <file>$PROJ_DIR$\SpeexVocoder_STM32F103-STK\Obj\stm32f10x_tim.o</file>
+      <file>$PROJ_DIR$\SpeexVocoder_STM32F103-STK\Obj\stm32f10x_spi.o</file>
+      <file>$PROJ_DIR$\SpeexVocoder_STM32F103-STK\Obj\misc.o</file>
+      <file>$PROJ_DIR$\SpeexVocoder_STM32F103-STK\Obj\stm32f10x_gpio.o</file>
+      <file>$PROJ_DIR$\SpeexVocoder_STM32F103-STK\Obj\lsp.pbi</file>
+      <file>$PROJ_DIR$\SpeexVocoder_STM32F103-STK\Obj\ltp.pbi</file>
+      <file>$PROJ_DIR$\SpeexVocoder_STM32F103-STK\Obj\filters.pbi</file>
+      <file>$PROJ_DIR$\SpeexVocoder_STM32F103-STK\Obj\exc_10_32_table.pbi</file>
+      <file>$PROJ_DIR$\SpeexVocoder_STM32F103-STK\Obj\modes.pbi</file>
+      <file>$PROJ_DIR$\SpeexVocoder_STM32F103-STK\Obj\nb_celp.pbi</file>
+      <file>$PROJ_DIR$\SpeexVocoder_STM32F103-STK\Obj\stm32f10x_adc.o</file>
+      <file>$PROJ_DIR$\SpeexVocoder_STM32F103-STK\Obj\stm32f10x_flash.o</file>
+      <file>$PROJ_DIR$\SpeexVocoder_STM32F103-STK\Obj\quant_lsp.pbi</file>
+      <file>$PROJ_DIR$\SpeexVocoder_STM32F103-STK\Obj\lsp_tables_nb.pbi</file>
+      <file>$PROJ_DIR$\SpeexVocoder_STM32F103-STK\Obj\speex.pbi</file>
+      <file>$PROJ_DIR$\SpeexVocoder_STM32F103-STK\Obj\vq.pbi</file>
+      <file>$PROJ_DIR$\SpeexVocoder_STM32F103-STK\Obj\window.pbi</file>
+      <file>$TOOLKIT_DIR$\inc\c\cmsis_iar.h</file>
+      <file>$PROJ_DIR$\SpeexVocoder_STM32F103-STK\Obj\speex_header.pbi</file>
+      <file>$PROJ_DIR$\SpeexVocoder_STM32F103-STK\Obj\speex_callbacks.pbi</file>
+      <file>$PROJ_DIR$\..\..\..\Libraries\STM32F10x_Speex_Lib\include\speex\speex_bits.h</file>
+      <file>$PROJ_DIR$\..\..\..\Libraries\STM32F10x_Speex_Lib\libspeex\arch.h</file>
+      <file>$PROJ_DIR$\..\..\..\Libraries\STM32F10x_Speex_Lib\STM32\include\speex\speex_config_types.h</file>
+      <file>$PROJ_DIR$\..\..\..\Libraries\STM32F10x_Speex_Lib\include\speex\speex_types.h</file>
+      <file>$PROJ_DIR$\..\..\..\Libraries\STM32F10x_Speex_Lib\libspeex\fixed_generic.h</file>
+      <file>$PROJ_DIR$\..\..\..\Libraries\STM32F10x_Speex_Lib\libspeex\os_support.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\string.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\ysizet.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Product_string.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\stdio.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\stdlib.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\ystdio.h</file>
+      <file>$PROJ_DIR$\..\..\..\Libraries\STM32F10x_Speex_Lib\libspeex\quant_lsp.h</file>
+      <file>$PROJ_DIR$\..\..\..\Libraries\STM32F10x_Speex_Lib\libspeex\vq.h</file>
+      <file>$PROJ_DIR$\..\..\..\Libraries\STM32F10x_Speex_Lib\libspeex\stack_alloc.h</file>
+      <file>$PROJ_DIR$\..\..\..\Libraries\STM32F10x_Speex_Lib\include\speex\speex_buffer.h</file>
+    </outputs>
+    <file>
+      <name>[ROOT_NODE]</name>
+      <outputs>
+        <tool>
+          <name>ILINK</name>
+          <file> 138</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\Libraries\CMSIS\Core\CM3\system_stm32f10x.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 100</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 130</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 49 97 77 72 40 42 113 41 43 44 99 159 46 98 50 78 51 47 52 82 83 84 85</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 49 97 77 72 40 42 41 43 44 99 159 46 98 50 78 51 47 52 82 83 84 85</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\Libraries\CMSIS\Core\CM3\startup\iar\startup_stm32f10x_md.s</name>
+      <outputs>
+        <tool>
+          <name>AARM</name>
+          <file> 128</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\Libraries\CMSIS\Core\CM3\core_cm3.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 58</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 123</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 77 72 40 42 113 41 43 44</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 77 72 40 42 41 43 44</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\Libraries\STM32F10x_Speex_Lib\libspeex\bits.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 95</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 125</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 48 76 49 97 77 72 40 42 113 41 43 44 99 159 46 98 50 78 51 47 52 82 83 84 85 45 162 163 165 164 166 167 168 169 170 171 173 172</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 48 76 49 97 77 72 40 42 41 43 44 99 159 46 98 50 78 51 47 52 82 83 84 85 45 162 163 165 164 166 167 168 169 170 171 173 172</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\Libraries\STM32F10x_Speex_Lib\libspeex\buffer.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 67</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 121</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 48 76 49 97 77 72 40 42 113 41 43 44 99 159 46 98 50 78 51 47 52 82 83 84 85 45 167 168 169 170 171 173 172 163 165 164 166 177</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 48 76 49 97 77 72 40 42 41 43 44 99 159 46 98 50 78 51 47 52 82 83 84 85 45 167 168 169 170 171 173 172 163 165 164 166 177</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\Libraries\STM32F10x_Speex_Lib\STM32\libspeex\cb_search.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 69</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 126</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 48 76 49 97 77 72 40 42 113 41 43 44 99 159 46 98 50 78 51 47 52 82 83 84 85 45 54 162 163 165 164 166 38 176 175 36 167 168 169 170 171 173 172 53</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 48 76 49 97 77 72 40 42 41 43 44 99 159 46 98 50 78 51 47 52 82 83 84 85 45 54 162 163 165 164 166 38 176 175 36 167 168 169 170 171 173 172 53</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\Libraries\STM32F10x_Speex_Lib\libspeex\exc_10_32_table.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 75</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 149</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\Libraries\STM32F10x_Speex_Lib\STM32\libspeex\filters.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 71</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 148</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 48 76 49 97 77 72 40 42 113 41 43 44 99 159 46 98 50 78 51 47 52 82 83 84 85 45 38 163 165 164 166 176 36 81 162 79 74 80 39</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 48 76 49 97 77 72 40 42 41 43 44 99 159 46 98 50 78 51 47 52 82 83 84 85 45 38 163 165 164 166 176 36 81 162 79 74 80 39</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\Libraries\STM32F10x_Speex_Lib\STM32\libspeex\iar\filters_cortexM3.s</name>
+      <outputs>
+        <tool>
+          <name>AARM</name>
+          <file> 136</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\Libraries\STM32F10x_Speex_Lib\libspeex\gain_table.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 88</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 124</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\Libraries\STM32F10x_Speex_Lib\libspeex\gain_table_lbr.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 90</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 132</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\Libraries\STM32F10x_Speex_Lib\libspeex\high_lsp_tables.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 68</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 131</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\Libraries\STM32F10x_Speex_Lib\libspeex\lpc.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 86</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 120</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 48 76 49 97 77 72 40 42 113 41 43 44 99 159 46 98 50 78 51 47 52 82 83 84 85 45 107 163 165 164 166</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 48 76 49 97 77 72 40 42 41 43 44 99 159 46 98 50 78 51 47 52 82 83 84 85 45 107 163 165 164 166</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\Libraries\STM32F10x_Speex_Lib\libspeex\lsp.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 87</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 146</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 48 76 49 97 77 72 40 42 113 41 43 44 99 159 46 98 50 78 51 47 52 82 83 84 85 45 79 74 80 108 163 165 164 166 176 36</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 48 76 49 97 77 72 40 42 41 43 44 99 159 46 98 50 78 51 47 52 82 83 84 85 45 79 74 80 108 163 165 164 166 176 36</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\Libraries\STM32F10x_Speex_Lib\libspeex\lsp_tables_nb.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 70</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 155</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\Libraries\STM32F10x_Speex_Lib\STM32\libspeex\ltp.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 66</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 147</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 48 76 49 97 77 72 40 42 113 41 43 44 99 159 46 98 50 78 51 47 52 82 83 84 85 45 79 74 80 81 162 163 165 164 166 176 38 36 167 168 169 170 171 173 172 101</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 48 76 49 97 77 72 40 42 41 43 44 99 159 46 98 50 78 51 47 52 82 83 84 85 45 79 74 80 81 162 163 165 164 166 176 38 36 167 168 169 170 171 173 172 101</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\Libraries\STM32F10x_Speex_Lib\STM32\libspeex\iar\ltp_cortexM3.s</name>
+      <outputs>
+        <tool>
+          <name>AARM</name>
+          <file> 135</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\Libraries\STM32F10x_Speex_Lib\STM32\libspeex\modes.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 65</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 150</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 48 76 49 97 77 72 40 42 113 41 43 44 99 159 46 98 50 78 51 47 52 82 83 84 85 45 109 106 162 165 164 163 166 81 174 54 37 103 105 110 38 79 74 80</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 48 76 49 97 77 72 40 42 41 43 44 99 159 46 98 50 78 51 47 52 82 83 84 85 45 109 106 162 165 164 163 166 81 174 54 37 103 105 110 38 79 74 80</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\Libraries\STM32F10x_Speex_Lib\STM32\libspeex\nb_celp.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 63</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 151</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 48 76 49 97 77 72 40 42 113 41 43 44 99 159 46 98 50 78 51 47 52 82 83 84 85 45 79 74 80 103 109 106 162 165 164 163 166 105 110 38 107 108 81 174 54 176 175 36 167 168 169 170 171 173 172</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 48 76 49 97 77 72 40 42 41 43 44 99 159 46 98 50 78 51 47 52 82 83 84 85 45 79 74 80 103 109 106 162 165 164 163 166 105 110 38 107 108 81 174 54 176 175 36 167 168 169 170 171 173 172</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\Libraries\STM32F10x_Speex_Lib\STM32\libspeex\quant_lsp.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 57</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 154</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 48 76 49 97 77 72 40 42 113 41 43 44 99 159 46 98 50 78 51 47 52 82 83 84 85 45 174 162 163 165 164 166 167 168 169 170 171 173 172 79 74 80</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 48 76 49 97 77 72 40 42 41 43 44 99 159 46 98 50 78 51 47 52 82 83 84 85 45 174 162 163 165 164 166 167 168 169 170 171 173 172 79 74 80</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\Libraries\STM32F10x_Speex_Lib\libspeex\speex.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 64</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 156</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 48 76 49 97 77 72 40 42 113 41 43 44 99 159 46 98 50 78 51 47 52 82 83 84 85 45 109 106 162 165 164 163 166 79 74 80 167 168 169 170 171 173 172</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 48 76 49 97 77 72 40 42 41 43 44 99 159 46 98 50 78 51 47 52 82 83 84 85 45 109 106 162 165 164 163 166 79 74 80 167 168 169 170 171 173 172</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\Libraries\STM32F10x_Speex_Lib\libspeex\speex_callbacks.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 62</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 161</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 48 76 49 97 77 72 40 42 113 41 43 44 99 159 46 98 50 78 51 47 52 82 83 84 85 45 105 106 162 165 164 163 166 167 168 169 170 171 173 172</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 48 76 49 97 77 72 40 42 41 43 44 99 159 46 98 50 78 51 47 52 82 83 84 85 45 105 106 162 165 164 163 166 167 168 169 170 171 173 172</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\Libraries\STM32F10x_Speex_Lib\libspeex\speex_header.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 73</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 160</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 48 76 49 97 77 72 40 42 113 41 43 44 99 159 46 98 50 78 51 47 52 82 83 84 85 45 163 165 164 166 112 106 162 167 168 169 170 171 173 172</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 48 76 49 97 77 72 40 42 41 43 44 99 159 46 98 50 78 51 47 52 82 83 84 85 45 163 165 164 166 112 106 162 167 168 169 170 171 173 172</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\Libraries\STM32F10x_Speex_Lib\STM32\libspeex\vq.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 96</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 157</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 48 76 49 97 77 72 40 42 113 41 43 44 99 159 46 98 50 78 51 47 52 82 83 84 85 45 175 163 165 164 166 176</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 48 76 49 97 77 72 40 42 41 43 44 99 159 46 98 50 78 51 47 52 82 83 84 85 45 175 163 165 164 166 176</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\Libraries\STM32F10x_Speex_Lib\STM32\libspeex\iar\vq_cortexm3.s</name>
+      <outputs>
+        <tool>
+          <name>AARM</name>
+          <file> 127</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\Libraries\STM32F10x_Speex_Lib\libspeex\window.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 140</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 158</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 48 76 49 97 77 72 40 42 113 41 43 44 99 159 46 98 50 78 51 47 52 82 83 84 85 45 163 165 164 166</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 48 76 49 97 77 72 40 42 41 43 44 99 159 46 98 50 78 51 47 52 82 83 84 85 45 163 165 164 166</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\Libraries\STM32F10x_StdPeriph_Driver\src\misc.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 144</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 55</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 85 49 97 77 72 40 42 113 41 43 44 99 159 46 98 50 78 51 47 52 82 83 84</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 85 49 97 77 72 40 42 41 43 44 99 159 46 98 50 78 51 47 52 82 83 84</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_adc.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 152</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 60</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 51 49 97 77 72 40 42 113 41 43 44 99 159 46 98 50 78 47 52 82 83 84 85</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 51 49 97 77 72 40 42 41 43 44 99 159 46 98 50 78 47 52 82 83 84 85</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_flash.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 153</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 61</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 47 49 97 77 72 40 42 113 41 43 44 99 159 46 98 50 78 51 52 82 83 84 85</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 47 49 97 77 72 40 42 41 43 44 99 159 46 98 50 78 51 52 82 83 84 85</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 145</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 59</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 52 49 97 77 72 40 42 113 41 43 44 99 159 46 98 50 78 51 47 82 83 84 85</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 52 49 97 77 72 40 42 41 43 44 99 159 46 98 50 78 51 47 82 83 84 85</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 141</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 116</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 82 49 97 77 72 40 42 113 41 43 44 99 159 46 98 50 78 51 47 52 83 84 85</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 82 49 97 77 72 40 42 41 43 44 99 159 46 98 50 78 51 47 52 83 84 85</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_spi.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 143</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 118</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 83 49 97 77 72 40 42 113 41 43 44 99 159 46 98 50 78 51 47 52 82 84 85</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 83 49 97 77 72 40 42 41 43 44 99 159 46 98 50 78 51 47 52 82 84 85</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_tim.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 142</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 119</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 84 49 97 77 72 40 42 113 41 43 44 99 159 46 98 50 78 51 47 52 82 83 85</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 84 49 97 77 72 40 42 41 43 44 99 159 46 98 50 78 51 47 52 82 83 85</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\src\main.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 133</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 114</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 76 49 97 77 72 40 42 113 41 43 44 99 159 46 98 50 78 51 47 52 82 83 84 85 45 102 48 106 162 165 164 163 166</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 76 49 97 77 72 40 42 41 43 44 99 159 46 98 50 78 51 47 52 82 83 84 85 45 102 48 106 162 165 164 163 166</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\src\stm32f10x_it.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 139</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 122</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 104 49 97 77 72 40 42 113 41 43 44 99 159 46 98 50 78 51 47 52 82 83 84 85 76 45</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 104 49 97 77 72 40 42 41 43 44 99 159 46 98 50 78 51 47 52 82 83 84 85 76 45</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\src\vocoder.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 129</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 115</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 45 49 97 77 72 40 42 113 41 43 44 99 159 46 98 50 78 51 47 52 82 83 84 85</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 45 49 97 77 72 40 42 41 43 44 99 159 46 98 50 78 51 47 52 82 83 84 85</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\src\lcd.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 134</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 56</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 111 49 97 77 72 40 42 113 41 43 44 99 159 46 98 50 78 51 47 52 82 83 84 85</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 111 49 97 77 72 40 42 41 43 44 99 159 46 98 50 78 51 47 52 82 83 84 85</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\SpeexVocoder_STM32F103-STK\Obj\SpeexVocoder_STM32F103-STK.pbd</name>
+      <inputs>
+        <tool>
+          <name>BILINK</name>
+          <file> 125 121 126 123 149 148 124 132 131 120 146 155 147 114 55 150 151 154 156 161 160 60 61 59 122 116 118 119 130 115 157 158</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\SpeexVocoder_STM32F103-STK\Exe\SpeexVocoder_STM32-SK.out</name>
+      <inputs>
+        <tool>
+          <name>ILINK</name>
+          <file> 91 95 67 69 58 75 71 136 88 90 68 86 87 70 66 135 133 144 65 63 57 64 62 73 128 152 153 145 139 141 143 142 100 129 96 127 140 92 93 89 94</file>
+        </tool>
+      </inputs>
+    </file>
+  </configuration>
+</project>
+
+

@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/micrium_ucosIII/!svn/ver/2/trunk/uCOS-III/Ports
+END
+os_cpu_a.asm
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/micrium_ucosIII/!svn/ver/2/trunk/uCOS-III/Ports/os_cpu_a.asm
+END
+os_type.h
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/micrium_ucosIII/!svn/ver/2/trunk/uCOS-III/Ports/os_type.h
+END
+os_cpu_c.c
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/micrium_ucosIII/!svn/ver/2/trunk/uCOS-III/Ports/os_cpu_c.c
+END
+os_cpu.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/micrium_ucosIII/!svn/ver/2/trunk/uCOS-III/Ports/os_cpu.h
+END

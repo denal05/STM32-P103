@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/micrium_ucosIII/!svn/ver/2/trunk/uCOS-III/Cfg
+END
+os_app_hooks.c
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/micrium_ucosIII/!svn/ver/2/trunk/uCOS-III/Cfg/os_app_hooks.c
+END
+os_cfg.h
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/micrium_ucosIII/!svn/ver/2/trunk/uCOS-III/Cfg/os_cfg.h
+END
+os_cfg_app.h
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/micrium_ucosIII/!svn/ver/2/trunk/uCOS-III/Cfg/os_cfg_app.h
+END
+os_app_hooks.h
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/micrium_ucosIII/!svn/ver/2/trunk/uCOS-III/Cfg/os_app_hooks.h
+END

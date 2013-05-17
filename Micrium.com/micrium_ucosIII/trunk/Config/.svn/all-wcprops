@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/micrium_ucosIII/!svn/ver/2/trunk/Config
+END
+stm32f10x_conf.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/micrium_ucosIII/!svn/ver/2/trunk/Config/stm32f10x_conf.h
+END
+hw_types.h
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/micrium_ucosIII/!svn/ver/2/trunk/Config/hw_types.h
+END
+includes.h
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/micrium_ucosIII/!svn/ver/2/trunk/Config/includes.h
+END

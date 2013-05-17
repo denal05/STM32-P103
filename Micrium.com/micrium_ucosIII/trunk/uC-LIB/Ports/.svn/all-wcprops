@@ -1,0 +1,11 @@
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/micrium_ucosIII/!svn/ver/2/trunk/uC-LIB/Ports
+END
+lib_mem_a.asm
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/micrium_ucosIII/!svn/ver/2/trunk/uC-LIB/Ports/lib_mem_a.asm
+END
