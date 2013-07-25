@@ -9,15 +9,15 @@ Olimex.com/STM32-P103-GettingStarted/settings/*
 Olimex.com/STM32-P103-MassStorage/MassStorage.*
 Olimex.com/STM32-P103-MassStorage/Flash Debug/*
 Olimex.com/STM32-P103-MassStorage/RAM Debug/*
-Olimex.com/STM32-P103-GettingStarted/settings/*
+Olimex.com/STM32-P103-MassStorage/settings/*
 Olimex.com/STM32-P103-USBMouse/USBMouse.*
 Olimex.com/STM32-P103-USBMouse/Flash Debug/*
 Olimex.com/STM32-P103-USBMouse/RAM Debug/*
-Olimex.com/STM32-P103-GettingStarted/settings/*
+Olimex.com/STM32-P103-USBMouse/settings/*
 Olimex.com/STM32-P103-VirtualCom/VirtualCom.*
 Olimex.com/STM32-P103-VirtualCom/Flash Debug/*
 Olimex.com/STM32-P103-VirtualCom/RAM Debug/*
-Olimex.com/STM32-P103-GettingStarted/settings/*
+Olimex.com/STM32-P103-VirtualCom/settings/*
 
 # ignore build files and directories for Micrium.com
 Micrium.com/micrium_ucosIII/trunk/ucOSIII.*
