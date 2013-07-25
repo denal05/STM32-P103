@@ -1,14 +1,14 @@
-# ignore build directory EWARM for STM32L1xx_StdPeriph_Lib_V1.1.0
+# ignore build directory EWARM for STM32F10x_StdPeriph_Lib_V3.5.0
 ST.com/STM32F10x_StdPeriph_Lib_V3.5.0/Project/STM32F10x_StdPeriph_Template/EWARM/*
 
 # ignore build files for Olimex.com
-Olimex.com\STM32-P103-GettingStarted\GettingStarted.*
-Olimex.com\STM32-P103-MassStorage\MassStorage.*
-Olimex.com\STM32-P103-USBMouse\USBMouse.*
-Olimex.com\STM32-P103-VirtualCom\VirtualCom.*
+Olimex.com/STM32-P103-GettingStarted/GettingStarted.*
+Olimex.com/STM32-P103-MassStorage/MassStorage.*
+Olimex.com/STM32-P103-USBMouse/USBMouse.*
+Olimex.com/STM32-P103-VirtualCom/VirtualCom.*
 
 # ignore build files for Micrium.com
-Micrium.com\micrium_ucosIII\trunk\ucOSIII.*
+Micrium.com/micrium_ucosIII/trunk/ucOSIII.*
  
 # ignore specific extensions
 *.pbd
