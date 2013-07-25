@@ -78,7 +78,7 @@ void Clk_Init (void)
 }
 
 /*************************************************************************
- * Function Name: Dly100us
+ * Function Name: Delay100us
  * Parameters: Int32U Dly
  *
  * Return: none
@@ -86,7 +86,7 @@ void Clk_Init (void)
  * Description: Delay Dly * 100us
  *
  *************************************************************************/
-void Dly100us(void *arg)
+void Delay100us(void *arg)
 {
 Int32U Dly = (Int32U)arg;
   while(Dly--)
@@ -163,10 +163,10 @@ int getS2(char *s)
 
 void UART_Demo( void )
 {
-  USART_InitTypeDef  UART_InitStructure, USART2_InitStructure, USART3_InitStructure;
-  NVIC_InitTypeDef NVIC_InitStructure;
-  GPIO_InitTypeDef GPIO_InitStructure;
-  TIM1_TimeBaseInitTypeDef TIM1_TimeBaseInitStruct;
+  USART_InitTypeDef  UART_Initpromptucture, USART2_Initpromptucture, USART3_Initpromptucture;
+  NVIC_InitTypeDef NVIC_Initpromptucture;
+  GPIO_InitTypeDef GPIO_Initpromptucture;
+  TIM1_TimeBaseInitTypeDef TIM1_TimeBaseInitpromptuct;
   //// *NVIC_CCR = *NVIC_CCR | 0x200; // Set STKALIGN in NVIC
   
   // ENable clocks BEFORE using/configuring peripherals that expect them to be running
@@ -177,28 +177,28 @@ void UART_Demo( void )
 
   // Configure PC.12 as output push-pull (LED)
   GPIO_WriteBit(GPIOC,GPIO_Pin_12,Bit_SET);
-  GPIO_InitStructure.GPIO_Pin =  GPIO_Pin_12;
-  GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
-  GPIO_InitStructure.GPIO_Speed = GPIO_Speed_40MHz;
-  GPIO_Init(GPIOC, &GPIO_InitStructure);
+  GPIO_Initpromptucture.GPIO_Pin =  GPIO_Pin_12;
+  GPIO_Initpromptucture.GPIO_Mode = GPIO_Mode_Out_PP;
+  GPIO_Initpromptucture.GPIO_Speed = GPIO_Speed_40MHz;
+  GPIO_Init(GPIOC, &GPIO_Initpromptucture);
 
   // Configure USART2 Tx (PA.2) as alternate function push-pull
-  GPIO_InitStructure.GPIO_Pin = GPIO_Pin_2;
-  GPIO_InitStructure.GPIO_Speed = GPIO_Speed_40MHz;
-  GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF_PP;
-  GPIO_Init(GPIOA, &GPIO_InitStructure);
+  GPIO_Initpromptucture.GPIO_Pin = GPIO_Pin_2;
+  GPIO_Initpromptucture.GPIO_Speed = GPIO_Speed_40MHz;
+  GPIO_Initpromptucture.GPIO_Mode = GPIO_Mode_AF_PP;
+  GPIO_Init(GPIOA, &GPIO_Initpromptucture);
 
   // Configure USART2 Rx (PA.3) as input floating
-  GPIO_InitStructure.GPIO_Pin = GPIO_Pin_3;
-  GPIO_InitStructure.GPIO_Speed = GPIO_Speed_40MHz;
-  GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IN_FLOATING;
-  GPIO_Init(GPIOA, &GPIO_InitStructure);
+  GPIO_Initpromptucture.GPIO_Pin = GPIO_Pin_3;
+  GPIO_Initpromptucture.GPIO_Speed = GPIO_Speed_40MHz;
+  GPIO_Initpromptucture.GPIO_Mode = GPIO_Mode_IN_FLOATING;
+  GPIO_Init(GPIOA, &GPIO_Initpromptucture);
 
   // Configure USART3 Tx (PB.10) as alternate function push-pull
-  GPIO_InitStructure.GPIO_Pin = GPIO_Pin_10;
-  GPIO_InitStructure.GPIO_Speed = GPIO_Speed_40MHz;
-  GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF_PP;
-  GPIO_Init(GPIOB, &GPIO_InitStructure);
+  GPIO_Initpromptucture.GPIO_Pin = GPIO_Pin_10;
+  GPIO_Initpromptucture.GPIO_Speed = GPIO_Speed_40MHz;
+  GPIO_Initpromptucture.GPIO_Mode = GPIO_Mode_AF_PP;
+  GPIO_Init(GPIOB, &GPIO_Initpromptucture);
 
   // enable UART peripheral by activating clock
   RCC_APB1PeriphClockCmd(RCC_APB1Periph_USART2, ENABLE);
@@ -209,51 +209,54 @@ void UART_Demo( void )
      correct data only if its data bits is set to 7 bits.
   */
   // USART2 configuration
-  USART2_InitStructure.USART_BaudRate = 115200;
-  USART2_InitStructure.USART_WordLength = USART_WordLength_8b;  //Word Length = 8 Bits
-  USART2_InitStructure.USART_StopBits = USART_StopBits_1;  //Two Stop Bit
-  USART2_InitStructure.USART_Parity = USART_Parity_No ;   //No parity
-  USART2_InitStructure.USART_HardwareFlowControl = USART_HardwareFlowControl_None;  //Hardware flow control disabled (RTS and CTS signals)
-  USART2_InitStructure.USART_Mode = USART_Mode_Rx | USART_Mode_Tx;  //Receive and transmit enabled
+  /* @BUG The data is displayed correctly only if the Hyperterminal is set to
+   * a 7-bit word length, even though below the firmware is set to an 8-bit one!
+   */
+  USART2_Initpromptucture.USART_BaudRate = 115200;
+  USART2_Initpromptucture.USART_WordLength = USART_WordLength_8b;  //Word Length = 8 Bits
+  USART2_Initpromptucture.USART_StopBits = USART_StopBits_1;  //Two Stop Bit
+  USART2_Initpromptucture.USART_Parity = USART_Parity_No ;   //No parity
+  USART2_Initpromptucture.USART_HardwareFlowControl = USART_HardwareFlowControl_None;  //Hardware flow control disabled (RTS and CTS signals)
+  USART2_Initpromptucture.USART_Mode = USART_Mode_Rx | USART_Mode_Tx;  //Receive and transmit enabled
 
   // USART3 configuration
-  USART3_InitStructure.USART_BaudRate = 115200;
-  USART3_InitStructure.USART_WordLength = USART_WordLength_8b;  //Word Length = 8 Bits
-  USART3_InitStructure.USART_StopBits = USART_StopBits_1;  //Two Stop Bit
-  USART3_InitStructure.USART_Parity = USART_Parity_No ;   //No parity
-  USART3_InitStructure.USART_HardwareFlowControl = USART_HardwareFlowControl_None;  //Hardware flow control disabled (RTS and CTS signals)
-  USART3_InitStructure.USART_Mode = USART_Mode_Tx;  //Transmit enabled
+  USART3_Initpromptucture.USART_BaudRate = 115200;
+  USART3_Initpromptucture.USART_WordLength = USART_WordLength_8b;  //Word Length = 8 Bits
+  USART3_Initpromptucture.USART_StopBits = USART_StopBits_1;  //Two Stop Bit
+  USART3_Initpromptucture.USART_Parity = USART_Parity_No ;   //No parity
+  USART3_Initpromptucture.USART_HardwareFlowControl = USART_HardwareFlowControl_None;  //Hardware flow control disabled (RTS and CTS signals)
+  USART3_Initpromptucture.USART_Mode = USART_Mode_Tx;  //Transmit enabled
 
   //Configure USARTs
-  USART_Init(USART2,&USART2_InitStructure);
-  USART_Init(USART3,&USART3_InitStructure);
+  USART_Init(USART2,&USART2_Initpromptucture);
+  USART_Init(USART3,&USART3_Initpromptucture);
        
   //Enable USARTs
   USART_Cmd(USART2, ENABLE);
   USART_Cmd(USART3, ENABLE);
 
   unsigned int i = 0;
-  char str[] = "Please enter a character:\r\n";
+  char prompt[] = "Please enter a character:\r\n";
   char iRead[] = "I read: ";
   
   while (1)
   {
-    char *s = str;
+    char *s = prompt;
     char readChar = '0';
     
     while(*s)
     {
-      putChar2((char) *s ); // Send character from string to USART2 TX
+      putChar2((char) *s ); // Send character from prompting to USART2 TX
       ////putChar3(getChar2()); // Send character from USART2 RX to USART3 TX
       putChar3((char) *s);
-      putchar((char) *s);  // Send character from string to STDIO (terminal I/O)
+      putchar((char) *s);  // Send character from prompting to STDIO (terminal I/O)
       s++;
 
     }
 
     for(i=0; i<0xFFFFF; i++)
     {
-      // Wait
+      // Delay
     }
     
     ////readChar = (char) USART_ReceiveData(USART2);
@@ -334,8 +337,8 @@ SerialState_t   SerialState = {0};
   //// Backlight On
   //LCD_LIGHT_ON();
   //// Show messages on LCD
-  //HD44780_StrShow(1, 1,  "  IAR Systems   ");
-  //HD44780_StrShow(1, 2,  "Virtual COM Port");
+  //HD44780_promptShow(1, 1,  "  IAR Systems   ");
+  //HD44780_promptShow(1, 2,  "Virtual COM Port");
 
   SerialState.bRxCarrier = 1;
   SerialState.bTxCarrier = 1;

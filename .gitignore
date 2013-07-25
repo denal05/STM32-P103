@@ -1,14 +1,28 @@
-# ignore build directory EWARM for STM32F10x_StdPeriph_Lib_V3.5.0
-ST.com/STM32F10x_StdPeriph_Lib_V3.5.0/Project/STM32F10x_StdPeriph_Template/EWARM/*
+# ignore build directories for STM32F10x_StdPeriph_Lib_V3.5.0
+ST.com/STM32F10x_StdPeriph_Lib_V3.5.0/Project/STM32F10x_StdPeriph_Template/*
 
-# ignore build files for Olimex.com
+# ignore build files and directories for Olimex.com
 Olimex.com/STM32-P103-GettingStarted/GettingStarted.*
+Olimex.com/STM32-P103-GettingStarted/Flash Debug/*
+Olimex.com/STM32-P103-GettingStarted/RAM Debug/*
+Olimex.com/STM32-P103-GettingStarted/settings/*
 Olimex.com/STM32-P103-MassStorage/MassStorage.*
+Olimex.com/STM32-P103-MassStorage/Flash Debug/*
+Olimex.com/STM32-P103-MassStorage/RAM Debug/*
+Olimex.com/STM32-P103-GettingStarted/settings/*
 Olimex.com/STM32-P103-USBMouse/USBMouse.*
+Olimex.com/STM32-P103-USBMouse/Flash Debug/*
+Olimex.com/STM32-P103-USBMouse/RAM Debug/*
+Olimex.com/STM32-P103-GettingStarted/settings/*
 Olimex.com/STM32-P103-VirtualCom/VirtualCom.*
+Olimex.com/STM32-P103-VirtualCom/Flash Debug/*
+Olimex.com/STM32-P103-VirtualCom/RAM Debug/*
+Olimex.com/STM32-P103-GettingStarted/settings/*
 
-# ignore build files for Micrium.com
+# ignore build files and directories for Micrium.com
 Micrium.com/micrium_ucosIII/trunk/ucOSIII.*
- 
+Micrium.com/micrium_ucosIII/trunk/Debug/*
+Micrium.com/micrium_ucosIII/trunk/settings/*
+
 # ignore specific extensions
 *.pbd
