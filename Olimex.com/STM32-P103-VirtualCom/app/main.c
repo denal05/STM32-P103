@@ -163,10 +163,10 @@ int getS2(char *s)
 
 void UART_Demo( void )
 {
-  USART_InitTypeDef  UART_Initpromptucture, USART2_Initpromptucture, USART3_Initpromptucture;
-  NVIC_InitTypeDef NVIC_Initpromptucture;
-  GPIO_InitTypeDef GPIO_Initpromptucture;
-  TIM1_TimeBaseInitTypeDef TIM1_TimeBaseInitpromptuct;
+  USART_InitTypeDef  UART_Initstructure, USART2_Initstructure, USART3_Initstructure;
+  NVIC_InitTypeDef NVIC_Initstructure;
+  GPIO_InitTypeDef GPIO_Initstructure;
+  TIM1_TimeBaseInitTypeDef TIM1_TimeBaseInitstruct;
   //// *NVIC_CCR = *NVIC_CCR | 0x200; // Set STKALIGN in NVIC
   
   // ENable clocks BEFORE using/configuring peripherals that expect them to be running
@@ -177,28 +177,28 @@ void UART_Demo( void )
 
   // Configure PC.12 as output push-pull (LED)
   GPIO_WriteBit(GPIOC,GPIO_Pin_12,Bit_SET);
-  GPIO_Initpromptucture.GPIO_Pin =  GPIO_Pin_12;
-  GPIO_Initpromptucture.GPIO_Mode = GPIO_Mode_Out_PP;
-  GPIO_Initpromptucture.GPIO_Speed = GPIO_Speed_40MHz;
-  GPIO_Init(GPIOC, &GPIO_Initpromptucture);
+  GPIO_Initstructure.GPIO_Pin =  GPIO_Pin_12;
+  GPIO_Initstructure.GPIO_Mode = GPIO_Mode_Out_PP;
+  GPIO_Initstructure.GPIO_Speed = GPIO_Speed_40MHz;
+  GPIO_Init(GPIOC, &GPIO_Initstructure);
 
   // Configure USART2 Tx (PA.2) as alternate function push-pull
-  GPIO_Initpromptucture.GPIO_Pin = GPIO_Pin_2;
-  GPIO_Initpromptucture.GPIO_Speed = GPIO_Speed_40MHz;
-  GPIO_Initpromptucture.GPIO_Mode = GPIO_Mode_AF_PP;
-  GPIO_Init(GPIOA, &GPIO_Initpromptucture);
+  GPIO_Initstructure.GPIO_Pin = GPIO_Pin_2;
+  GPIO_Initstructure.GPIO_Speed = GPIO_Speed_40MHz;
+  GPIO_Initstructure.GPIO_Mode = GPIO_Mode_AF_PP;
+  GPIO_Init(GPIOA, &GPIO_Initstructure);
 
   // Configure USART2 Rx (PA.3) as input floating
-  GPIO_Initpromptucture.GPIO_Pin = GPIO_Pin_3;
-  GPIO_Initpromptucture.GPIO_Speed = GPIO_Speed_40MHz;
-  GPIO_Initpromptucture.GPIO_Mode = GPIO_Mode_IN_FLOATING;
-  GPIO_Init(GPIOA, &GPIO_Initpromptucture);
+  GPIO_Initstructure.GPIO_Pin = GPIO_Pin_3;
+  GPIO_Initstructure.GPIO_Speed = GPIO_Speed_40MHz;
+  GPIO_Initstructure.GPIO_Mode = GPIO_Mode_IN_FLOATING;
+  GPIO_Init(GPIOA, &GPIO_Initstructure);
 
   // Configure USART3 Tx (PB.10) as alternate function push-pull
-  GPIO_Initpromptucture.GPIO_Pin = GPIO_Pin_10;
-  GPIO_Initpromptucture.GPIO_Speed = GPIO_Speed_40MHz;
-  GPIO_Initpromptucture.GPIO_Mode = GPIO_Mode_AF_PP;
-  GPIO_Init(GPIOB, &GPIO_Initpromptucture);
+  GPIO_Initstructure.GPIO_Pin = GPIO_Pin_10;
+  GPIO_Initstructure.GPIO_Speed = GPIO_Speed_40MHz;
+  GPIO_Initstructure.GPIO_Mode = GPIO_Mode_AF_PP;
+  GPIO_Init(GPIOB, &GPIO_Initstructure);
 
   // enable UART peripheral by activating clock
   RCC_APB1PeriphClockCmd(RCC_APB1Periph_USART2, ENABLE);
@@ -212,24 +212,24 @@ void UART_Demo( void )
   /* @BUG The data is displayed correctly only if the Hyperterminal is set to
    * a 7-bit word length, even though below the firmware is set to an 8-bit one!
    */
-  USART2_Initpromptucture.USART_BaudRate = 115200;
-  USART2_Initpromptucture.USART_WordLength = USART_WordLength_8b;  //Word Length = 8 Bits
-  USART2_Initpromptucture.USART_StopBits = USART_StopBits_1;  //Two Stop Bit
-  USART2_Initpromptucture.USART_Parity = USART_Parity_No ;   //No parity
-  USART2_Initpromptucture.USART_HardwareFlowControl = USART_HardwareFlowControl_None;  //Hardware flow control disabled (RTS and CTS signals)
-  USART2_Initpromptucture.USART_Mode = USART_Mode_Rx | USART_Mode_Tx;  //Receive and transmit enabled
+  USART2_Initstructure.USART_BaudRate = 115200;
+  USART2_Initstructure.USART_WordLength = USART_WordLength_8b;  //Word Length = 8 Bits
+  USART2_Initstructure.USART_StopBits = USART_StopBits_1;  //Two Stop Bit
+  USART2_Initstructure.USART_Parity = USART_Parity_No ;   //No parity
+  USART2_Initstructure.USART_HardwareFlowControl = USART_HardwareFlowControl_None;  //Hardware flow control disabled (RTS and CTS signals)
+  USART2_Initstructure.USART_Mode = USART_Mode_Rx | USART_Mode_Tx;  //Receive and transmit enabled
 
   // USART3 configuration
-  USART3_Initpromptucture.USART_BaudRate = 115200;
-  USART3_Initpromptucture.USART_WordLength = USART_WordLength_8b;  //Word Length = 8 Bits
-  USART3_Initpromptucture.USART_StopBits = USART_StopBits_1;  //Two Stop Bit
-  USART3_Initpromptucture.USART_Parity = USART_Parity_No ;   //No parity
-  USART3_Initpromptucture.USART_HardwareFlowControl = USART_HardwareFlowControl_None;  //Hardware flow control disabled (RTS and CTS signals)
-  USART3_Initpromptucture.USART_Mode = USART_Mode_Tx;  //Transmit enabled
+  USART3_Initstructure.USART_BaudRate = 115200;
+  USART3_Initstructure.USART_WordLength = USART_WordLength_8b;  //Word Length = 8 Bits
+  USART3_Initstructure.USART_StopBits = USART_StopBits_1;  //Two Stop Bit
+  USART3_Initstructure.USART_Parity = USART_Parity_No ;   //No parity
+  USART3_Initstructure.USART_HardwareFlowControl = USART_HardwareFlowControl_None;  //Hardware flow control disabled (RTS and CTS signals)
+  USART3_Initstructure.USART_Mode = USART_Mode_Tx;  //Transmit enabled
 
   //Configure USARTs
-  USART_Init(USART2,&USART2_Initpromptucture);
-  USART_Init(USART3,&USART3_Initpromptucture);
+  USART_Init(USART2,&USART2_Initstructure);
+  USART_Init(USART3,&USART3_Initstructure);
        
   //Enable USARTs
   USART_Cmd(USART2, ENABLE);
@@ -246,10 +246,10 @@ void UART_Demo( void )
     
     while(*s)
     {
-      putChar2((char) *s ); // Send character from prompting to USART2 TX
+      putChar2((char) *s ); // Send character from string to USART2 TX
       ////putChar3(getChar2()); // Send character from USART2 RX to USART3 TX
       putChar3((char) *s);
-      putchar((char) *s);  // Send character from prompting to STDIO (terminal I/O)
+      putchar((char) *s);  // Send character from string to STDIO (terminal I/O)
       s++;
 
     }
@@ -337,8 +337,8 @@ SerialState_t   SerialState = {0};
   //// Backlight On
   //LCD_LIGHT_ON();
   //// Show messages on LCD
-  //HD44780_promptShow(1, 1,  "  IAR Systems   ");
-  //HD44780_promptShow(1, 2,  "Virtual COM Port");
+  //HD44780_strShow(1, 1,  "  IAR Systems   ");
+  //HD44780_strShow(1, 2,  "Virtual COM Port");
 
   SerialState.bRxCarrier = 1;
   SerialState.bTxCarrier = 1;
