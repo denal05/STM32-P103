@@ -203,6 +203,12 @@
 #define EVAL_COM2_RX_PIN                 GPIO_Pin_3
 #define EVAL_COM2_RX_GPIO_PORT           GPIOA
 #define EVAL_COM2_RX_GPIO_CLK            RCC_APB2Periph_GPIOA
+#define EVAL_COM2_RTS_PIN                 GPIO_Pin_1
+#define EVAL_COM2_RTS_GPIO_PORT           GPIOA
+#define EVAL_COM2_RTS_GPIO_CLK            RCC_APB2Periph_GPIOA  
+#define EVAL_COM2_CTS_PIN                 GPIO_Pin_0
+#define EVAL_COM2_RTS_GPIO_PORT           GPIOA
+#define EVAL_COM2_RTS_GPIO_CLK            RCC_APB2Periph_GPIOA    
 #define EVAL_COM2_IRQn                   USART2_IRQn
 
 /**
