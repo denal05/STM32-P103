@@ -1,0 +1,26 @@
+what,kind,bundleId,bundleVersion,description,time
+activated,editor,org.eclipse.cdt.make.ui,5.0.1.200809120802,org.eclipse.cdt.make.editor,1222939954296
+no handler,command,org.eclipse.ui,3.4.1.M20080910-0800,org.eclipse.ui.file.refresh,1222939961250
+executed,command,org.eclipse.ui,3.4.1.M20080910-0800,org.eclipse.ui.file.save,1222939967015
+activated,view,org.eclipse.cdt.ui,5.0.1.200809120802,org.eclipse.cdt.ui.CView,1222939968125
+closed,editor,org.eclipse.cdt.make.ui,5.0.1.200809120802,org.eclipse.cdt.make.editor,1222939968125
+deactivated,workbench,org.eclipse.ui.workbench,3.4.1.M20080827-0800a,,1222939970671
+activated,workbench,org.eclipse.ui.workbench,3.4.1.M20080827-0800a,,1222939971078
+activated,view,org.eclipse.ui.console,3.3.0.v20080529-1300,org.eclipse.ui.console.ConsoleView,1222939972656
+activated,view,org.eclipse.cdt.ui,5.0.1.200809120802,org.eclipse.cdt.ui.CView,1222939974265
+deactivated,workbench,org.eclipse.ui.workbench,3.4.1.M20080827-0800a,,1222939986375
+activated,workbench,org.eclipse.ui.workbench,3.4.1.M20080827-0800a,,1222939986781
+opened,editor,org.eclipse.cdt.make.ui,5.0.1.200809120802,org.eclipse.cdt.make.editor,1222939993046
+activated,editor,org.eclipse.cdt.make.ui,5.0.1.200809120802,org.eclipse.cdt.make.editor,1222939993078
+executed,command,org.eclipse.ui,3.4.1.M20080910-0800,org.eclipse.ui.file.save,1222939996578
+activated,view,org.eclipse.cdt.ui,5.0.1.200809120802,org.eclipse.cdt.ui.CView,1222939998781
+deactivated,workbench,org.eclipse.ui.workbench,3.4.1.M20080827-0800a,,1222940002515
+activated,workbench,org.eclipse.ui.workbench,3.4.1.M20080827-0800a,,1222940003234
+activated,view,org.eclipse.ui.ide,3.4.1.M20080903-2000,org.eclipse.ui.views.ProblemView,1222940005437
+activated,view,org.eclipse.cdt.ui,5.0.1.200809120802,org.eclipse.cdt.ui.CView,1222940009265
+closed,editor,org.eclipse.cdt.make.ui,5.0.1.200809120802,org.eclipse.cdt.make.editor,1222940018218
+deactivated,workbench,org.eclipse.ui.workbench,3.4.1.M20080827-0800a,,1222943402265
+activated,workbench,org.eclipse.ui.workbench,3.4.1.M20080827-0800a,,1222943403093
+activated,view,org.eclipse.ui.console,3.3.0.v20080529-1300,org.eclipse.ui.console.ConsoleView,1222943404906
+activated,view,org.eclipse.cdt.ui,5.0.1.200809120802,org.eclipse.cdt.ui.CView,1222943406203
+activated,view,org.eclipse.ui.ide,3.4.1.M20080903-2000,org.eclipse.ui.views.ProblemView,1222943411578

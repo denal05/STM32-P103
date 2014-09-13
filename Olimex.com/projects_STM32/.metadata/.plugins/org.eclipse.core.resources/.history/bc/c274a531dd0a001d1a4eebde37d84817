@@ -1,0 +1,24 @@
+			INSTALLATION
+
+1. Run Olimex-GCCFD-240907.EXE and follow the wizard steps. If you choose to install JRE, it will start automaticaly after installation.
+2. Connect ARM-JTAG-OCD and install drivers.
+ 
+ 			PROJECT CREATION
+
+1. Run the shortcut "Eclipse" on desktop.
+2.Create new C project and name it after board you have// Open the project corresponding to the board you have, and open it's main.c file.
+3. Create main.c file. There include LPC header file you need.If it does't fit to CPU, change header file according to CPU program model .
+4. Create your own or modify previous existing .cmd file. This Linker Script defines how the code and data emitted by the GNU C compiler and assembler are  
+ to be loaded into memory (code goes into FLASH, variables go into RAM). You should change MEMORY section and stack end according to memory map.
+5.You should also need MAKEFILE to specify way of compilation. You may use old one or change it as suitable to you.
+		After project is built you can debug it.
+
+			PROGRAM DEBUG
+
+1.Another file needed by GDB<-->OCD communication is .cfg file. It contains list of OCD commands
+2. Switch to the Debug Perspective(Window->Show View->Debug)
+3. Start OpenOCD program from Run -> External Tools -> OpenOCD or OpenOCDTiny 
+4. Start the debugger from "Run->Open Debug Dialg->Embedded Debug(Cygwin)-><your prject debug profile>", "Debug"
+5. Enjoy the demo.
+
+Note! If at any point a message box pops-up stating that ${project_loc} is not defined, make sure that a file from the project is actually open and selected in the editor.

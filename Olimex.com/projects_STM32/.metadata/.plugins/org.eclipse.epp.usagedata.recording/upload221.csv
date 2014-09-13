@@ -1,0 +1,26 @@
+what,kind,bundleId,bundleVersion,description,time
+activated,workbench,org.eclipse.ui.workbench,3.4.1.M20080827-0800a,,1223118000703
+deactivated,workbench,org.eclipse.ui.workbench,3.4.1.M20080827-0800a,,1223118004296
+activated,workbench,org.eclipse.ui.workbench,3.4.1.M20080827-0800a,,1223118005343
+activated,editor,org.eclipse.cdt.ui,5.0.1.200809120802,org.eclipse.cdt.ui.editor.CEditor,1223118005562
+activated,view,org.eclipse.debug.ui,3.4.1.v20080811_r341,org.eclipse.debug.ui.DebugView,1223118029187
+executed,command,org.eclipse.debug.ui,3.4.1.v20080811_r341,org.eclipse.debug.ui.commands.Terminate,1223118029296
+deactivated,workbench,org.eclipse.ui.workbench,3.4.1.M20080827-0800a,,1223118032312
+executed,command,org.eclipse.ui,3.4.1.M20080910-0800,org.eclipse.ui.edit.paste,1223118034671
+no handler,command,org.eclipse.ui,3.4.1.M20080910-0800,org.eclipse.ui.edit.undo,1223118035250
+no handler,command,org.eclipse.ui,3.4.1.M20080910-0800,org.eclipse.ui.edit.undo,1223118035250
+activated,workbench,org.eclipse.ui.workbench,3.4.1.M20080827-0800a,,1223118042859
+executed,command,org.eclipse.debug.ui,3.4.1.v20080811_r341,org.eclipse.debug.ui.commands.Terminate,1223118048359
+deactivated,workbench,org.eclipse.ui.workbench,3.4.1.M20080827-0800a,,1223118055656
+activated,workbench,org.eclipse.ui.workbench,3.4.1.M20080827-0800a,,1223118056546
+activated,editor,org.eclipse.cdt.ui,5.0.1.200809120802,org.eclipse.cdt.ui.editor.CEditor,1223118056734
+executed,command,org.eclipse.debug.ui,3.4.1.v20080811_r341,org.eclipse.debug.ui.commands.StepOver,1223118080687
+executed,command,org.eclipse.debug.ui,3.4.1.v20080811_r341,org.eclipse.debug.ui.commands.StepOver,1223118081218
+executed,command,org.eclipse.debug.ui,3.4.1.v20080811_r341,org.eclipse.debug.ui.commands.StepOver,1223118081750
+executed,command,org.eclipse.debug.ui,3.4.1.v20080811_r341,org.eclipse.debug.ui.commands.StepOver,1223118082125
+executed,command,org.eclipse.debug.ui,3.4.1.v20080811_r341,org.eclipse.debug.ui.commands.StepOver,1223118084000
+executed,command,org.eclipse.debug.ui,3.4.1.v20080811_r341,org.eclipse.debug.ui.commands.StepOver,1223118084515
+executed,command,org.eclipse.debug.ui,3.4.1.v20080811_r341,org.eclipse.debug.ui.commands.StepOver,1223118086046
+executed,command,org.eclipse.debug.ui,3.4.1.v20080811_r341,org.eclipse.debug.ui.commands.StepOver,1223118086843
+executed,command,org.eclipse.debug.ui,3.4.1.v20080811_r341,org.eclipse.debug.ui.commands.Resume,1223118089453
+activated,view,org.eclipse.debug.ui,3.4.1.v20080811_r341,org.eclipse.debug.ui.DebugView,1223118107843

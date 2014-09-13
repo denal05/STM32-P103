@@ -1,0 +1,82 @@
+NAME   = demoSTM32-STK_flash
+
+CC      = arm-none-eabi-gcc
+LD      = arm-none-eabi-ld -v
+AR      = arm-none-eabi-ar
+AS      = arm-none-eabi-as
+CP      = arm-none-eabi-objcopy
+OD		= arm-none-eabi-objdump
+
+VPATH   = lcd lib
+  
+CFLAGS  = -I lib -I lcd -c -fno-common -O0 -g -mcpu=cortex-m3 -mthumb 
+AFLAGS  = -ahls -mapcs-32 -o crt.o
+LFLAGS  = -TSTM32-STK_flash.cmd -nostartfiles
+CPFLAGS = -Obinary
+ODFLAGS	= -S
+
+all: main.o
+
+clean:
+	-rm -f main.lst main.out main.hex main.map
+	-rm -f main.o stm32f10x_it.o stm32f10x_vector.o stm32f10x_flash.o stm32f10x_gpio.o stm32f10x_lib.o stm32f10x_nvic.o stm32f10x_rcc.o stm32f10x_spi.o drv_pcd8544.o drv pcd8544_l.o Lucida_Console_6_6x6.o
+
+test: main.out
+	@ echo "...copying"
+	$(CP) $(CPFLAGS) main.out main.bin
+	$(OD) $(ODFLAGS) main.out > main.list
+
+main.out: main.o STM32-STK_flash.cmd stm32f10x_it.o stm32f10x_vector.o stm32f10x_flash.o stm32f10x_gpio.o stm32f10x_lib.o stm32f10x_nvic.o stm32f10x_rcc.o stm32f10x_spi.o drv_pcd8544.o drv pcd8544_l.o Lucida_Console_6_6x6.o 
+	@ echo "..linking"
+	$(LD) $(LFLAGS) -o main.out main.o stm32f10x_it.o stm32f10x_vector.o stm32f10x_flash.o stm32f10x_gpio.o stm32f10x_lib.o stm32f10x_nvic.o stm32f10x_rcc.o stm32f10x_spi.o drv_pcd8544.o drv pcd8544_l.o Lucida_Console_6_6x6.o
+
+main.o: main.c
+	@ echo ".compiling"
+	 $(CC) $(CFLAGS) main.c
+
+stm32f10x_rcc.o: stm32f10x_rcc.c 
+	@ echo ".compiling"
+	 $(CC) $(CFLAGS) stm32f10x_rcc.c 
+	 
+stm32f10x_gpio.o: stm32f10x_gpio.c
+	@ echo ".compiling"
+	 $(CC) $(CFLAGS) stm32f10x_gpio.c 
+
+stm32f10x_flash.o: stm32f10x_flash.c
+	@ echo ".compiling"
+	 $(CC) $(CFLAGS) stm32f10x_flash.c 
+
+stm32f10x_lib.o: stm32f10x_lib.c
+	@ echo ".compiling"
+	 $(CC) $(CFLAGS) stm32f10x_lib.c 
+	 
+stm32f10x_nvic.o: stm32f10x_nvic.c
+	@ echo ".compiling"
+	 $(CC) $(CFLAGS) stm32f10x_nvic.c 
+	 
+stm32f10x_spi.o: stm32f10x_spi.c
+	@ echo ".compiling"
+	 $(CC) $(CFLAGS) lib\stm32f10x_spi.c 
+	 	 
+	 
+stm32f10x_it.o: stm32f10x_it.c
+	@ echo ".compiling"
+	 $(CC) $(CFLAGS) stm32f10x_it.c
+	 
+stm32f10x_vector.o: stm32f10x_vector.c
+	@ echo ".compiling"
+	 $(CC) $(CFLAGS) stm32f10x_vector.c
+	 
+	 
+drv_pcd8544.o: drv_pcd8544.c
+	@ echo ".compiling"
+	 $(CC) $(CFLAGS) drv_pcd8544.c
+
+drv_pcd8544_l.o: drv_pcd8544_l.c
+	@ echo ".compiling"
+	 $(CC) $(CFLAGS) drv_pcd8544_l.c
+
+Lucida_Console_6_6x6.o: Lucida_Console_6_6x6.c
+	@ echo ".compiling"
+	 $(CC) $(CFLAGS) Lucida_Console_6_6x6.c
+	 

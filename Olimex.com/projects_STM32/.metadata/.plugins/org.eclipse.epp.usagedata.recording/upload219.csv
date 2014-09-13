@@ -1,0 +1,26 @@
+what,kind,bundleId,bundleVersion,description,time
+activated,workbench,org.eclipse.ui.workbench,3.4.1.M20080827-0800a,,1223117799468
+activated,view,org.eclipse.debug.ui,3.4.1.v20080811_r341,org.eclipse.debug.ui.BreakpointView,1223117799484
+no handler,command,org.eclipse.ui,3.4.1.M20080910-0800,org.eclipse.ui.edit.delete,1223117803390
+activated,view,org.eclipse.debug.ui,3.4.1.v20080811_r341,org.eclipse.debug.ui.DebugView,1223117805453
+executed,command,org.eclipse.debug.ui,3.4.1.v20080811_r341,org.eclipse.debug.ui.commands.Terminate,1223117805546
+deactivated,workbench,org.eclipse.ui.workbench,3.4.1.M20080827-0800a,,1223117814578
+activated,workbench,org.eclipse.ui.workbench,3.4.1.M20080827-0800a,,1223117823015
+activated,view,org.eclipse.ui.console,3.3.0.v20080529-1300,org.eclipse.ui.console.ConsoleView,1223117823015
+activated,view,org.eclipse.debug.ui,3.4.1.v20080811_r341,org.eclipse.debug.ui.DebugView,1223117824906
+executed,command,org.eclipse.debug.ui,3.4.1.v20080811_r341,org.eclipse.debug.ui.commands.Resume,1223117825031
+deactivated,workbench,org.eclipse.ui.workbench,3.4.1.M20080827-0800a,,1223117825031
+activated,workbench,org.eclipse.ui.workbench,3.4.1.M20080827-0800a,,1223117826343
+executed,command,org.eclipse.debug.ui,3.4.1.v20080811_r341,org.eclipse.debug.ui.commands.Terminate,1223117827734
+deactivated,workbench,org.eclipse.ui.workbench,3.4.1.M20080827-0800a,,1223117833015
+executed,command,org.eclipse.ui,3.4.1.M20080910-0800,org.eclipse.ui.edit.cut,1223117836968
+activated,workbench,org.eclipse.ui.workbench,3.4.1.M20080827-0800a,,1223117838390
+activated,view,org.eclipse.ui.console,3.3.0.v20080529-1300,org.eclipse.ui.console.ConsoleView,1223117844625
+activated,view,org.eclipse.debug.ui,3.4.1.v20080811_r341,org.eclipse.debug.ui.DebugView,1223117847109
+executed,command,org.eclipse.debug.ui,3.4.1.v20080811_r341,org.eclipse.debug.ui.commands.Resume,1223117847203
+opened,view,org.eclipse.debug.ui,3.4.1.v20080811_r341,org.eclipse.debug.ui.MemoryView,1223117848109
+opened,view,org.eclipse.debug.ui,3.4.1.v20080811_r341,org.eclipse.debug.ui.RegisterView,1223117848140
+opened,view,org.eclipse.debug.ui,3.4.1.v20080811_r341,org.eclipse.debug.ui.ModuleView,1223117848171
+opened,editor,org.eclipse.cdt.debug.ui,5.0.1.200809120802,org.eclipse.cdt.debug.ui.SourceNotFoundEditor,1223117848234
+executed,command,org.eclipse.debug.ui,3.4.1.v20080811_r341,org.eclipse.debug.ui.commands.Resume,1223117851906
+activated,view,org.eclipse.cdt.debug.ui,5.0.1.200809120802,org.eclipse.cdt.debug.ui.DisassemblyView,1223117855828

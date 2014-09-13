@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;STM32-H103_ram/stm_h103_blink_rom.cmd&apos; to &apos;stm_h103_blink_ram.cmd&apos;" description="Rename resource &apos;stm_h103_blink_rom.cmd&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="stm_h103_blink_rom.cmd" name="stm_h103_blink_ram.cmd" stamp="1269345292014" updateReferences="true"/>
+</session>

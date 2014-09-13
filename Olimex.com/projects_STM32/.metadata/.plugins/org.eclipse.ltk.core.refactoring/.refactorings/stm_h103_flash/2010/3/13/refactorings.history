@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;stm_h103_flash/library_files&apos; to &apos;lib&apos;" description="Rename resource &apos;library_files&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="library_files" name="lib" stamp="1269336282796" updateReferences="true"/>
+</session>

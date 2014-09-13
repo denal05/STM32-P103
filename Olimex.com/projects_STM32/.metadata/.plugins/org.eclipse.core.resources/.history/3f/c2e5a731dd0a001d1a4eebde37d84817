@@ -1,0 +1,36 @@
+NAME   = demo2103
+
+CC      = arm-elf-gcc
+LD      = arm-elf-ld -v
+AR      = arm-elf-ar
+AS      = arm-elf-as
+CP      = arm-elf-objcopy
+OD		= arm-elf-objdump
+
+CFLAGS  = -I./ -c -fno-common -O0 -g
+AFLAGS  = -ahls -mapcs-32 -o crt.o
+LFLAGS  =  -Map main.map -Tdemo2106_blink_flash.cmd
+CPFLAGS = -O binary
+ODFLAGS	= -x --syms
+
+all: test
+
+clean:
+	-rm crt.lst main.lst crt.o main.o main.out main.hex main.map main.dmp main.bin
+
+test: main.out
+	@ echo "...copying"
+	$(CP) $(CPFLAGS) main.out main.bin
+	$(OD) $(ODFLAGS) main.out > main.dmp
+
+main.out: crt.o main.o demo2106_blink_flash.cmd 
+	@ echo "..linking"
+	$(LD) $(LFLAGS) -o main.out  crt.o main.o
+
+crt.o: crt.s
+	@ echo ".assembling"
+	$(AS) $(AFLAGS) crt.s > crt.lst
+
+main.o: main.c
+	@ echo ".compiling"
+	$(CC) $(CFLAGS) main.c

@@ -1,0 +1,86 @@
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+flash            0x00000000         0x00008000
+ram_isp_low      0x40000120         0x000000df         a
+ram              0x40000200         0x00001de0
+ram_isp_high     0x40001fe0         0x00000020         a
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+                0x40001edc                _stack_end = 0x40001edc
+                0x00000000                . = 0x0
+
+startup
+ *(.startup)
+
+.text           0x00000000      0x2e4
+ *(.text)
+ .text          0x00000000       0xd8 crt.o
+                0x00000000                _startup
+                0x00000040                Reset_Handler
+ .text          0x000000d8      0x20c main.o
+                0x000002d0                UNDEF_Routine
+                0x000002bc                SWI_Routine
+                0x000002a8                FIQ_Routine
+                0x000000d8                main
+                0x0000025c                feed
+                0x00000294                IRQ_Routine
+                0x000001ac                Initialize
+ *(.rodata)
+ *(.rodata*)
+ *(.glue_7)
+ .glue_7        0x000002e4        0x0 crt.o
+ .glue_7        0x000002e4        0x0 main.o
+ *(.glue_7t)
+ .glue_7t       0x000002e4        0x0 crt.o
+ .glue_7t       0x000002e4        0x0 main.o
+                0x000002e4                _etext = .
+
+.data           0x40000200        0x0 load address 0x000002e4
+                0x40000200                _data = .
+ *(.data)
+ .data          0x40000200        0x0 crt.o
+ .data          0x40000200        0x0 main.o
+                0x40000200                _edata = .
+
+.bss            0x40000200        0x0
+                0x40000200                _bss_start = .
+ *(.bss)
+ .bss           0x40000200        0x0 crt.o
+ .bss           0x40000200        0x0 main.o
+                0x40000200                . = ALIGN (0x4)
+                0x40000200                _bss_end = .
+                0x40000200                _end = .
+LOAD crt.o
+LOAD main.o
+OUTPUT(main.out elf32-littlearm)
+
+.debug_abbrev   0x00000000       0x5c
+ .debug_abbrev  0x00000000       0x5c main.o
+
+.debug_info     0x00000000      0x121
+ .debug_info    0x00000000      0x121 main.o
+
+.debug_line     0x00000000       0x60
+ .debug_line    0x00000000       0x60 main.o
+
+.debug_frame    0x00000000       0xf0
+ .debug_frame   0x00000000       0xf0 main.o
+
+.debug_loc      0x00000000      0x126
+ .debug_loc     0x00000000      0x126 main.o
+
+.debug_pubnames
+                0x00000000       0x75
+ .debug_pubnames
+                0x00000000       0x75 main.o
+
+.debug_aranges  0x00000000       0x20
+ .debug_aranges
+                0x00000000       0x20 main.o
+
+.comment        0x00000000       0x12
+ .comment       0x00000000       0x12 main.o
