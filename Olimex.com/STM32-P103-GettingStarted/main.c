@@ -82,6 +82,9 @@ void Clk_Init (void)
   RCC_PCLK2Config(RCC_HCLK_Div1);
   RCC_PCLK1Config(RCC_HCLK_Div2);
   RCC_HCLKConfig(RCC_SYSCLK_Div1);
+
+#define EMB_FLASH
+
 #ifdef EMB_FLASH
   // 5. Init Embedded Flash
   // Zero wait state, if 0 < HCLK 24 MHz
@@ -202,7 +205,10 @@ BitAction oldAction;
   // Enable timer counting
   TIM1_Cmd(ENABLE);
 
+#ifndef  EMB_FLASH
   NVIC_RESETPRIMASK();
+#else
+#endif
 
   while(1)
   {
