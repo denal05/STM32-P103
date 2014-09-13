@@ -27,13 +27,13 @@ main.out: main.o stm32f10x_rcc.o stm32f10x_gpio.o stm_h103_blink_rom.cmd
 	@ echo "..linking"
 	$(LD) $(LFLAGS) -o main.out main.o stm32f10x_rcc.o stm32f10x_gpio.o
 
-stm32f10x_rcc.o: lib\stm32f10x_rcc.c 
+stm32f10x_rcc.o: lib/stm32f10x_rcc.c 
 	@ echo ".compiling"
-	 $(CC) $(CFLAGS) lib\stm32f10x_rcc.c 
+	 $(CC) $(CFLAGS) lib/stm32f10x_rcc.c 
 	 
-stm32f10x_gpio.o: lib\stm32f10x_gpio.c
+stm32f10x_gpio.o: lib/stm32f10x_gpio.c
 	@ echo ".compiling"
-	 $(CC) $(CFLAGS) lib\stm32f10x_gpio.c 
+	 $(CC) $(CFLAGS) lib/stm32f10x_gpio.c 
 	 
 main.o: main.c
 	@ echo ".compiling"
