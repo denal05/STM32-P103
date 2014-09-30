@@ -326,7 +326,7 @@ GPIO_InitTypeDef GPIO_InitStructure;
     GPIO_PinRemapConfig(GPIO_Remap_USART1,DISABLE);
 
     // Assign PA9 to UART1 (Tx)
-    GPIO_InitStructure.GPIO_Speed = GPIO_Speed_40MHz;
+    GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
     GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF_PP;
     GPIO_InitStructure.GPIO_Pin = GPIO_Pin_9;
     GPIO_Init(GPIOA, &GPIO_InitStructure);
@@ -392,7 +392,7 @@ GPIO_InitTypeDef GPIO_InitStructure;
     GPIO_PinRemapConfig(GPIO_Remap_USART2,DISABLE);
 
     // Assign PA2 to UART2 (Tx)
-    GPIO_InitStructure.GPIO_Speed = GPIO_Speed_40MHz;
+    GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
     GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF_PP;
     GPIO_InitStructure.GPIO_Pin = GPIO_Pin_2;
     GPIO_Init(GPIOA, &GPIO_InitStructure);
@@ -459,7 +459,7 @@ GPIO_InitTypeDef GPIO_InitStructure;
     GPIO_PinRemapConfig(GPIO_PartialRemap_USART3,ENABLE);
 
     // Assign PC10 to UART3 (Tx)
-    GPIO_InitStructure.GPIO_Speed = GPIO_Speed_40MHz;
+    GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
     GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF_PP;
     GPIO_InitStructure.GPIO_Pin = GPIO_Pin_10;
     GPIO_Init(GPIOC, &GPIO_InitStructure);

@@ -78,7 +78,7 @@ void Clk_Init (void)
 }
 
 /*************************************************************************
- * Function Name: Delay100us
+ * Function Name: Dly100us
  * Parameters: Int32U Dly
  *
  * Return: none
@@ -86,180 +86,12 @@ void Clk_Init (void)
  * Description: Delay Dly * 100us
  *
  *************************************************************************/
-void Delay100us(void *arg)
+void Dly100us(void *arg)
 {
 Int32U Dly = (Int32U)arg;
   while(Dly--)
   {
     for(volatile int i = LOOP_DLY_100US; i; i--);
-  }
-}
-
-/*************************************************************************
-https://my.st.com/public/STe2ecommunities/mcu/Lists/cortex_mx_stm32/Flat.aspx?RootFolder=%2Fpublic%2FSTe2ecommunities%2Fmcu%2FLists%2Fcortex_mx_stm32%2FSetting%20up%20RS232%20USART%20on%20STM32-P103&FolderCTID=0x01200200770978C69A1141439FE559EB459D7580009C4E14902C3CDE46A77F0FFD06506F5B&currentviews=712
-*************************************************************************/
-
-int putChar2 (int c)
-{
-  while(!(USART2->SR & USART_FLAG_TXE))
-  {
-  }
-
-  USART2->DR = (c & 0xFF);
- 
-  return(c);
-}
-
-int putChar3 (int c)
-{
-  while (!(USART3->SR & USART_FLAG_TXE));
-  USART3->DR = (c & 0xFF);
-
-  return (c);
-}
-
-int getChar2 (void)
-{
-  while (!(USART2->SR & USART_FLAG_RXNE));
-
-  return ((int)(USART2->DR & 0xFF));
-}
-
-void putS2(char *s)
-{
-  while(*s)
-  {
-    putChar2(*s);
-    s++;
-  }
-}
-
-void putS3(char *s)
-{
-  while(*s)
-  {
-    putChar3(*s);
-    s++;
-  }
-}
-
-int getS2(char *s)
-{
-  int character;
-  int i=0;
-  character = getChar2();
-
-  while(character != -1)
-  {
-    s[i] = character;
-    character = getChar2();
-    i++;
-  }
-
-  s[i-2] = '\0'; // remove \r\n
-
-  return i;
-}
-
-void UART_Demo( void )
-{
-  USART_InitTypeDef  UART_Initstructure, USART2_Initstructure, USART3_Initstructure;
-  NVIC_InitTypeDef NVIC_Initstructure;
-  GPIO_InitTypeDef GPIO_Initstructure;
-  TIM1_TimeBaseInitTypeDef TIM1_TimeBaseInitstruct;
-  //// *NVIC_CCR = *NVIC_CCR | 0x200; // Set STKALIGN in NVIC
-  
-  // ENable clocks BEFORE using/configuring peripherals that expect them to be running
-  RCC_APB2PeriphClockCmd(RCC_APB2Periph_AFIO, ENABLE);
-  RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA, ENABLE);
-  RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOB, ENABLE);
-  RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOC, ENABLE);
-
-  // Configure PC.12 as output push-pull (LED)
-  GPIO_WriteBit(GPIOC,GPIO_Pin_12,Bit_SET);
-  GPIO_Initstructure.GPIO_Pin =  GPIO_Pin_12;
-  GPIO_Initstructure.GPIO_Mode = GPIO_Mode_Out_PP;
-  GPIO_Initstructure.GPIO_Speed = GPIO_Speed_40MHz;
-  GPIO_Init(GPIOC, &GPIO_Initstructure);
-
-  // Configure USART2 Tx (PA.2) as alternate function push-pull
-  GPIO_Initstructure.GPIO_Pin = GPIO_Pin_2;
-  GPIO_Initstructure.GPIO_Speed = GPIO_Speed_40MHz;
-  GPIO_Initstructure.GPIO_Mode = GPIO_Mode_AF_PP;
-  GPIO_Init(GPIOA, &GPIO_Initstructure);
-
-  // Configure USART2 Rx (PA.3) as input floating
-  GPIO_Initstructure.GPIO_Pin = GPIO_Pin_3;
-  GPIO_Initstructure.GPIO_Speed = GPIO_Speed_40MHz;
-  GPIO_Initstructure.GPIO_Mode = GPIO_Mode_IN_FLOATING;
-  GPIO_Init(GPIOA, &GPIO_Initstructure);
-
-  // Configure USART3 Tx (PB.10) as alternate function push-pull
-  GPIO_Initstructure.GPIO_Pin = GPIO_Pin_10;
-  GPIO_Initstructure.GPIO_Speed = GPIO_Speed_40MHz;
-  GPIO_Initstructure.GPIO_Mode = GPIO_Mode_AF_PP;
-  GPIO_Init(GPIOB, &GPIO_Initstructure);
-
-  // enable UART peripheral by activating clock
-  RCC_APB1PeriphClockCmd(RCC_APB1Periph_USART2, ENABLE);
-  RCC_APB1PeriphClockCmd(RCC_APB1Periph_USART3, ENABLE);
-
-  /* There is a problem, possibly hardware bug, because although the UART word
-     length (data bits) is set to 8 bits, the serial terminal will display
-     correct data only if its data bits is set to 7 bits.
-  */
-  // USART2 configuration
-  /* @BUG The data is displayed correctly only if the Hyperterminal is set to
-   * a 7-bit word length, even though below the firmware is set to an 8-bit one!
-   */
-  USART2_Initstructure.USART_BaudRate = 115200;
-  USART2_Initstructure.USART_WordLength = USART_WordLength_8b;  //Word Length = 8 Bits
-  USART2_Initstructure.USART_StopBits = USART_StopBits_1;  //Two Stop Bit
-  USART2_Initstructure.USART_Parity = USART_Parity_No ;   //No parity
-  USART2_Initstructure.USART_HardwareFlowControl = USART_HardwareFlowControl_None;  //Hardware flow control disabled (RTS and CTS signals)
-  USART2_Initstructure.USART_Mode = USART_Mode_Rx | USART_Mode_Tx;  //Receive and transmit enabled
-
-  // USART3 configuration
-  USART3_Initstructure.USART_BaudRate = 115200;
-  USART3_Initstructure.USART_WordLength = USART_WordLength_8b;  //Word Length = 8 Bits
-  USART3_Initstructure.USART_StopBits = USART_StopBits_1;  //Two Stop Bit
-  USART3_Initstructure.USART_Parity = USART_Parity_No ;   //No parity
-  USART3_Initstructure.USART_HardwareFlowControl = USART_HardwareFlowControl_None;  //Hardware flow control disabled (RTS and CTS signals)
-  USART3_Initstructure.USART_Mode = USART_Mode_Tx;  //Transmit enabled
-
-  //Configure USARTs
-  USART_Init(USART2,&USART2_Initstructure);
-  USART_Init(USART3,&USART3_Initstructure);
-       
-  //Enable USARTs
-  USART_Cmd(USART2, ENABLE);
-  USART_Cmd(USART3, ENABLE);
-
-  unsigned int i = 0;
-  char prompt[] = "Please enter a character:\r\n";
-  char iRead[] = "I read: ";
-  
-  while (1)
-  {
-    char *s = prompt;
-    char readChar = '0';
-    
-    while(*s)
-    {
-      putChar2((char) *s ); // Send character from string to USART2 TX
-      ////putChar3(getChar2()); // Send character from USART2 RX to USART3 TX
-      putChar3((char) *s);
-      putchar((char) *s);  // Send character from string to STDIO (terminal I/O)
-      s++;
-
-    }
-
-    for(i=0; i<0xFFFFF; i++)
-    {
-      // Delay
-    }
-    
-    ////readChar = (char) USART_ReceiveData(USART2);
   }
 }
 
@@ -273,18 +105,7 @@ void UART_Demo( void )
  *
  *************************************************************************/
 void main(void)
-{  
-  // Init clock system
-  Clk_Init();  
-  
-  /* There is a problem, possibly hardware bug, because although the UART word
-     length (data bits) is set to 8 bits, the serial terminal will display
-     correct data only if its data bits is set to 7 bits.
-  */
-  UART_Demo();
-  
-/*
-  // https://www.olimex.com/dev/soft/arm/ST/STM32-P103/EW-ARM5_41%20STM32-P103.zip
+{
 Int8U Buffer[100];
 pInt8U pBuffer;
 Int32U Size,TranSize;
@@ -309,10 +130,10 @@ SerialState_t   SerialState = {0};
 
   // NVIC init
 #ifndef  EMB_FLASH
-  // Set the Vector Table base location at 0x20000000
+  /* Set the Vector Table base location at 0x20000000 */
   NVIC_SetVectorTable(NVIC_VectTab_RAM, 0x0);
-#else  // VECT_TAB_FLASH
-  // Set the Vector Table base location at 0x08000000
+#else  /* VECT_TAB_FLASH  */
+  /* Set the Vector Table base location at 0x08000000 */
   NVIC_SetVectorTable(NVIC_VectTab_FLASH, 0x0);
 #endif
   NVIC_PriorityGroupConfig(NVIC_PriorityGroup_4);
@@ -321,7 +142,7 @@ SerialState_t   SerialState = {0};
   TIM1_Cmd(ENABLE);
 
   // Init UART 3
- UartInit(UART,3);
+ UartInit(UART,3); // imade change HERE!!!
 
   // CDC USB
   UsbCdcInit();
@@ -330,16 +151,16 @@ SerialState_t   SerialState = {0};
   USB_ConnectRes(TRUE);
 
   EXT_CRT_SECTION();
-  //
-  //// LCD Init
-  //HD44780_PowerUpInit();
+/*
+  // LCD Init
+  HD44780_PowerUpInit();
 
-  //// Backlight On
-  //LCD_LIGHT_ON();
-  //// Show messages on LCD
-  //HD44780_strShow(1, 1,  "  IAR Systems   ");
-  //HD44780_strShow(1, 2,  "Virtual COM Port");
-
+  // Backlight On
+  LCD_LIGHT_ON();
+  // Show messages on LCD
+  HD44780_StrShow(1, 1,  "  IAR Systems   ");
+  HD44780_StrShow(1, 2,  "Virtual COM Port");
+*/
   SerialState.bRxCarrier = 1;
   SerialState.bTxCarrier = 1;
   while(1)
@@ -438,10 +259,7 @@ SerialState_t   SerialState = {0};
     #endif // CDC_DEVICE_SUPPORT_BREAK > 0
     }
   }
-*/
-  
 }
-
 #ifdef  DEBUG
 /*******************************************************************************
 * Function Name  : assert_failed

@@ -37,7 +37,7 @@ GPIO_InitTypeDef GPIO_InitStructure;
                          RCC_APB2Periph_GPIOC,
                          DISABLE);
 
-  GPIO_InitStructure.GPIO_Speed = GPIO_Speed_40MHz;
+  GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
   GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
 
   // E line init
@@ -113,7 +113,7 @@ void HD44780WrIO (Int32U Data)
 GPIO_InitTypeDef  GPIO_InitStructure;
   HD44780SetRW(0);
 
-  GPIO_InitStructure.GPIO_Speed = GPIO_Speed_40MHz;
+  GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
   GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
   GPIO_InitStructure.GPIO_Pin = LCD_DATA << LCD_DATA_SHIFT;
   GPIO_Init(LCD_DATA_PORT, &GPIO_InitStructure);
@@ -151,7 +151,7 @@ Int8U HD44780RdIO (void)
 Int8U Data;
 GPIO_InitTypeDef  GPIO_InitStructure;
   // Set Direction
-  GPIO_InitStructure.GPIO_Speed = GPIO_Speed_40MHz;
+  GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
   GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IN_FLOATING;
   GPIO_InitStructure.GPIO_Pin = LCD_DATA << LCD_DATA_SHIFT;
   GPIO_Init(LCD_DATA_PORT, &GPIO_InitStructure);

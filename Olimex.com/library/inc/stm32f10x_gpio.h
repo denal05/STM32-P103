@@ -23,7 +23,6 @@
 
 /* Exported types ------------------------------------------------------------*/
 /* Output Maximum frequency selection ----------------------------------------*/
-/*
 typedef enum
 { 
   GPIO_Speed_10MHz = 1,
@@ -33,19 +32,7 @@ typedef enum
 
 #define IS_GPIO_SPEED(SPEED) ((SPEED == GPIO_Speed_10MHz) || (SPEED == GPIO_Speed_2MHz) || \
                               (SPEED == GPIO_Speed_50MHz))
-*/
-
-typedef enum
-{ 
-  GPIO_Speed_400KHz = 0x00, /*!< Very Low Speed */
-  GPIO_Speed_2MHz   = 0x01, /*!< Low Speed */
-  GPIO_Speed_10MHz  = 0x02, /*!< Medium Speed */
-  GPIO_Speed_40MHz  = 0x03,  /*!< High Speed */
-  GPIO_Speed_50MHz  = 0x03
-}GPIOSpeed_TypeDef;
-#define IS_GPIO_SPEED(SPEED) (((SPEED) == GPIO_Speed_400KHz) || ((SPEED) == GPIO_Speed_2MHz) || \
-                              ((SPEED) == GPIO_Speed_10MHz)||  ((SPEED) == GPIO_Speed_40MHz))
-
+                                         
 /* Configuration Mode enumeration --------------------------------------------*/
 typedef enum
 { GPIO_Mode_AIN = 0x0,

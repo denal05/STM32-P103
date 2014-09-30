@@ -27,7 +27,6 @@
  *    $Revision: 19278 $
  **************************************************************************/
 #include "includes.h"
-#include <stdio.h>
 
 #define LOOP_DLY_100US  450
 
@@ -218,7 +217,7 @@ Int32U State, Count;
           if(Count-- == 0)
           {
             State++;
-            Count = 1;
+            Count = 100;
           }
           break;
         case 1:
@@ -226,7 +225,7 @@ Int32U State, Count;
           if(Count-- == 0)
           {
             State++;
-            Count = 1;
+            Count = 100;
           }
           break;
         case 2:
@@ -234,7 +233,7 @@ Int32U State, Count;
           if(Count-- == 0)
           {
             State++;
-            Count = 1;
+            Count = 100;
           }
           break;
         case 3:
@@ -242,25 +241,24 @@ Int32U State, Count;
           if(Count-- == 0)
           {
             State++;
-            Count = 1;
+            Count = 100;
           }
           break;
         default:
           State = 0;
-          Count = 1;
+          Count = 100;
         }
       }
       else
       {
         // Reset state
         State = 0;
-        Count = 1;
+        Count = 100;
       }
       // USB Wakeup
       if (GPIO_ReadInputDataBit(GPIOA,GPIO_Pin_0) == Bit_SET)
       {
         UsbWakeUp();
-        printf("Hello World!\n");
       }
     }
   /*  USB_ConnectRes(TRUE);

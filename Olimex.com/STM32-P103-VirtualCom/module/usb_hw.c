@@ -497,13 +497,13 @@ GPIO_InitTypeDef GPIO_InitStructure;
   // Configure PA11, PA12 as USB lines
   GPIO_InitStructure.GPIO_Pin =  GPIO_Pin_11 | GPIO_Pin_12;
   GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF_PP;
-  GPIO_InitStructure.GPIO_Speed = GPIO_Speed_40MHz;
+  GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
   GPIO_Init(GPIOA, &GPIO_InitStructure);
   // Configure PC11 USB connect.
   GPIO_WriteBit(GPIOC,GPIO_Pin_11,Bit_SET);
   GPIO_InitStructure.GPIO_Pin =  GPIO_Pin_11;
   GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
-  GPIO_InitStructure.GPIO_Speed = GPIO_Speed_40MHz;
+  GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
   GPIO_Init(GPIOC, &GPIO_InitStructure);
 
   // Disconnect device

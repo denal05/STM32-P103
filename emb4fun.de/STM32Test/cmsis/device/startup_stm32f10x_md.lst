@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/4x/ps5lfsx11bd3d9s8dj92yrt80000gn/T//ccz8hOJv.s 			page 1
+ARM GAS  /tmp/ccbFuVKj.s 			page 1
 
 
    1              	# 1 "cmsis/device/startup_stm32f10x_md.s"
@@ -58,7 +58,7 @@ ARM GAS  /var/folders/4x/ps5lfsx11bd3d9s8dj92yrt80000gn/T//ccz8hOJv.s 			page 1
   51 0000 00000000 	    .space    Stack_Size
   51      00000000 
   51      00000000 
-ARM GAS  /var/folders/4x/ps5lfsx11bd3d9s8dj92yrt80000gn/T//ccz8hOJv.s 			page 2
+ARM GAS  /tmp/ccbFuVKj.s 			page 2
 
 
   51      00000000 
@@ -118,7 +118,7 @@ ARM GAS  /var/folders/4x/ps5lfsx11bd3d9s8dj92yrt80000gn/T//ccz8hOJv.s 			page 1
  100 005c 00000000 	    .long    EXTI1_IRQHandler
  101 0060 00000000 	    .long    EXTI2_IRQHandler
  102 0064 00000000 	    .long    EXTI3_IRQHandler
-ARM GAS  /var/folders/4x/ps5lfsx11bd3d9s8dj92yrt80000gn/T//ccz8hOJv.s 			page 3
+ARM GAS  /tmp/ccbFuVKj.s 			page 3
 
 
  103 0068 00000000 	    .long    EXTI4_IRQHandler
@@ -178,7 +178,7 @@ ARM GAS  /var/folders/4x/ps5lfsx11bd3d9s8dj92yrt80000gn/T//ccz8hOJv.s 			page 1
  157              	/*     
  158              	 * Loop to copy data from read only memory to RAM. The ranges
  159              	 * of copy from/to are specified by following symbols evaluated in 
-ARM GAS  /var/folders/4x/ps5lfsx11bd3d9s8dj92yrt80000gn/T//ccz8hOJv.s 			page 4
+ARM GAS  /tmp/ccbFuVKj.s 			page 4
 
 
  160              	 * linker script.
@@ -187,9 +187,9 @@ ARM GAS  /var/folders/4x/ps5lfsx11bd3d9s8dj92yrt80000gn/T//ccz8hOJv.s 			page 1
  163              	 * copied to. Both must be aligned to 4 bytes boundary.
  164              	 */
  165              	
- 166 0000 0D49     	    ldr    r1, =__etext
- 167 0002 0E4A     	    ldr    r2, =__data_start__
- 168 0004 0E4B     	    ldr    r3, =__data_end__
+ 166 0000 0B49     	    ldr    r1, =__etext
+ 167 0002 0C4A     	    ldr    r2, =__data_start__
+ 168 0004 0C4B     	    ldr    r3, =__data_end__
  169              	
  170              	#if 0
  171              	/* 
@@ -205,40 +205,40 @@ ARM GAS  /var/folders/4x/ps5lfsx11bd3d9s8dj92yrt80000gn/T//ccz8hOJv.s 			page 1
  181              	    blt    .flash_to_ram_loop
  182              	#else
  183 0006 9B1A     	    subs   r3, r2
- 184 0008 40F30580 	    ble    .flash_to_ram_loop_end    
+ 184 0008 03DD     	    ble    .flash_to_ram_loop_end    
  185              	.flash_to_ram_loop:
- 186 000c 043B     	    subs   r3, #4
- 187 000e C858     	    ldr    r0, [r1, r3]
- 188 0010 D050     	    str    r0, [r2, r3]
- 189 0012 3FF7FBAF 	    bgt    .flash_to_ram_loop
+ 186 000a 043B     	    subs   r3, #4
+ 187 000c C858     	    ldr    r0, [r1, r3]
+ 188 000e D050     	    str    r0, [r2, r3]
+ 189 0010 FBDC     	    bgt    .flash_to_ram_loop
  190              	.flash_to_ram_loop_end:
  191              	#endif
  192              	
  193              	#ifndef __NO_SYSTEM_INIT
- 194 0016 0B48     	    ldr    r0, =SystemInit
- 195 0018 8047     	    blx    r0
+ 194 0012 0A48     	    ldr    r0, =SystemInit
+ 195 0014 8047     	    blx    r0
  196              	#endif
  197              	
  198              	/*
  199              	 * Clear the BSS segment 
  200              	 */
- 201 001a 0B48     	    ldr    r0, =0
- 202 001c 0B49     	    ldr    r1, =__bss_start__
- 203 001e 0C4A     	    ldr    r2, =__bss_end__
+ 201 0016 0A48     	    ldr    r0, =0
+ 202 0018 0A49     	    ldr    r1, =__bss_start__
+ 203 001a 0B4A     	    ldr    r2, =__bss_end__
  204              	
  205              	clear_bss_loop:
- 206 0020 9142     	    cmp    r1, r2
- 207 0022 00F00480 	    beq    clear_bss_loop_end
- 208 0026 41F8040B 	    str    r0, [r1], #4
- 209 002a FFF7F9BF 	    b      clear_bss_loop
+ 206 001c 9142     	    cmp    r1, r2
+ 207 001e 02D0     	    beq    clear_bss_loop_end
+ 208 0020 41F8040B 	    str    r0, [r1], #4
+ 209 0024 FAE7     	    b      clear_bss_loop
  210              	clear_bss_loop_end:
  211              	
  212              	/*
  213              	 * Jump to main
  214              	 */
- 215 002e 0948     	    ldr    r0, =main
- 216 0030 0047     	    bx     r0
-ARM GAS  /var/folders/4x/ps5lfsx11bd3d9s8dj92yrt80000gn/T//ccz8hOJv.s 			page 5
+ 215 0026 0948     	    ldr    r0, =main
+ 216 0028 0047     	    bx     r0
+ARM GAS  /tmp/ccbFuVKj.s 			page 5
 
 
  217              	
@@ -246,10 +246,10 @@ ARM GAS  /var/folders/4x/ps5lfsx11bd3d9s8dj92yrt80000gn/T//ccz8hOJv.s 			page 1
  219              	 * Exit loop
  220              	 */    
  221              	exit_loop:
- 222 0032 00BF     	    nop
- 223 0034 FFF7FDBF 	    b      exit_loop    
+ 222 002a 00BF     	    nop
+ 223 002c FDE7     	    b      exit_loop    
  224              	    
- 225 0038 00000000 	    .pool
+ 225 002e 00000000 	    .pool
  225      00000000 
  225      00000000 
  225      00000000 
@@ -275,7 +275,7 @@ ARM GAS  /var/folders/4x/ps5lfsx11bd3d9s8dj92yrt80000gn/T//ccz8hOJv.s 			page 1
  241              	>  .weak NMI_Handler
  241              	>  .type NMI_Handler,%function
  241              	> NMI_Handler:
- 241 0058 FEE7     	>  b .
+ 241 0050 FEE7     	>  b .
  241              	>  .size NMI_Handler,.-NMI_Handler
  242              	    def_default_handler    HardFault_Handler
  242              	>  .align 1
@@ -283,7 +283,7 @@ ARM GAS  /var/folders/4x/ps5lfsx11bd3d9s8dj92yrt80000gn/T//ccz8hOJv.s 			page 1
  242              	>  .weak HardFault_Handler
  242              	>  .type HardFault_Handler,%function
  242              	> HardFault_Handler:
- 242 005a FEE7     	>  b .
+ 242 0052 FEE7     	>  b .
  242              	>  .size HardFault_Handler,.-HardFault_Handler
  243              	    def_default_handler    MemManage_Handler
  243              	>  .align 1
@@ -291,18 +291,18 @@ ARM GAS  /var/folders/4x/ps5lfsx11bd3d9s8dj92yrt80000gn/T//ccz8hOJv.s 			page 1
  243              	>  .weak MemManage_Handler
  243              	>  .type MemManage_Handler,%function
  243              	> MemManage_Handler:
- 243 005c FEE7     	>  b .
+ 243 0054 FEE7     	>  b .
  243              	>  .size MemManage_Handler,.-MemManage_Handler
  244              	    def_default_handler    BusFault_Handler
  244              	>  .align 1
  244              	>  .thumb_func
  244              	>  .weak BusFault_Handler
  244              	>  .type BusFault_Handler,%function
-ARM GAS  /var/folders/4x/ps5lfsx11bd3d9s8dj92yrt80000gn/T//ccz8hOJv.s 			page 6
+ARM GAS  /tmp/ccbFuVKj.s 			page 6
 
 
  244              	> BusFault_Handler:
- 244 005e FEE7     	>  b .
+ 244 0056 FEE7     	>  b .
  244              	>  .size BusFault_Handler,.-BusFault_Handler
  245              	    def_default_handler    UsageFault_Handler
  245              	>  .align 1
@@ -310,7 +310,7 @@ ARM GAS  /var/folders/4x/ps5lfsx11bd3d9s8dj92yrt80000gn/T//ccz8hOJv.s 			page 1
  245              	>  .weak UsageFault_Handler
  245              	>  .type UsageFault_Handler,%function
  245              	> UsageFault_Handler:
- 245 0060 FEE7     	>  b .
+ 245 0058 FEE7     	>  b .
  245              	>  .size UsageFault_Handler,.-UsageFault_Handler
  246              	    def_default_handler    SVC_Handler
  246              	>  .align 1
@@ -318,7 +318,7 @@ ARM GAS  /var/folders/4x/ps5lfsx11bd3d9s8dj92yrt80000gn/T//ccz8hOJv.s 			page 1
  246              	>  .weak SVC_Handler
  246              	>  .type SVC_Handler,%function
  246              	> SVC_Handler:
- 246 0062 FEE7     	>  b .
+ 246 005a FEE7     	>  b .
  246              	>  .size SVC_Handler,.-SVC_Handler
  247              	    def_default_handler    DebugMon_Handler
  247              	>  .align 1
@@ -326,7 +326,7 @@ ARM GAS  /var/folders/4x/ps5lfsx11bd3d9s8dj92yrt80000gn/T//ccz8hOJv.s 			page 1
  247              	>  .weak DebugMon_Handler
  247              	>  .type DebugMon_Handler,%function
  247              	> DebugMon_Handler:
- 247 0064 FEE7     	>  b .
+ 247 005c FEE7     	>  b .
  247              	>  .size DebugMon_Handler,.-DebugMon_Handler
  248              	    def_default_handler    PendSV_Handler
  248              	>  .align 1
@@ -334,7 +334,7 @@ ARM GAS  /var/folders/4x/ps5lfsx11bd3d9s8dj92yrt80000gn/T//ccz8hOJv.s 			page 1
  248              	>  .weak PendSV_Handler
  248              	>  .type PendSV_Handler,%function
  248              	> PendSV_Handler:
- 248 0066 FEE7     	>  b .
+ 248 005e FEE7     	>  b .
  248              	>  .size PendSV_Handler,.-PendSV_Handler
  249              	    def_default_handler    SysTick_Handler
  249              	>  .align 1
@@ -342,7 +342,7 @@ ARM GAS  /var/folders/4x/ps5lfsx11bd3d9s8dj92yrt80000gn/T//ccz8hOJv.s 			page 1
  249              	>  .weak SysTick_Handler
  249              	>  .type SysTick_Handler,%function
  249              	> SysTick_Handler:
- 249 0068 FEE7     	>  b .
+ 249 0060 FEE7     	>  b .
  249              	>  .size SysTick_Handler,.-SysTick_Handler
  250              	    
  251              	    /* External interrupts */
@@ -352,18 +352,18 @@ ARM GAS  /var/folders/4x/ps5lfsx11bd3d9s8dj92yrt80000gn/T//ccz8hOJv.s 			page 1
  252              	>  .weak WWDG_IRQHandler
  252              	>  .type WWDG_IRQHandler,%function
  252              	> WWDG_IRQHandler:
- 252 006a FEE7     	>  b .
+ 252 0062 FEE7     	>  b .
  252              	>  .size WWDG_IRQHandler,.-WWDG_IRQHandler
  253              	    def_default_handler    PVD_IRQHandler
  253              	>  .align 1
  253              	>  .thumb_func
  253              	>  .weak PVD_IRQHandler
-ARM GAS  /var/folders/4x/ps5lfsx11bd3d9s8dj92yrt80000gn/T//ccz8hOJv.s 			page 7
+ARM GAS  /tmp/ccbFuVKj.s 			page 7
 
 
  253              	>  .type PVD_IRQHandler,%function
  253              	> PVD_IRQHandler:
- 253 006c FEE7     	>  b .
+ 253 0064 FEE7     	>  b .
  253              	>  .size PVD_IRQHandler,.-PVD_IRQHandler
  254              	    def_default_handler    TAMPER_IRQHandler
  254              	>  .align 1
@@ -371,7 +371,7 @@ ARM GAS  /var/folders/4x/ps5lfsx11bd3d9s8dj92yrt80000gn/T//ccz8hOJv.s 			page 1
  254              	>  .weak TAMPER_IRQHandler
  254              	>  .type TAMPER_IRQHandler,%function
  254              	> TAMPER_IRQHandler:
- 254 006e FEE7     	>  b .
+ 254 0066 FEE7     	>  b .
  254              	>  .size TAMPER_IRQHandler,.-TAMPER_IRQHandler
  255              	    def_default_handler    RTC_IRQHandler
  255              	>  .align 1
@@ -379,7 +379,7 @@ ARM GAS  /var/folders/4x/ps5lfsx11bd3d9s8dj92yrt80000gn/T//ccz8hOJv.s 			page 1
  255              	>  .weak RTC_IRQHandler
  255              	>  .type RTC_IRQHandler,%function
  255              	> RTC_IRQHandler:
- 255 0070 FEE7     	>  b .
+ 255 0068 FEE7     	>  b .
  255              	>  .size RTC_IRQHandler,.-RTC_IRQHandler
  256              	    def_default_handler    FLASH_IRQHandler
  256              	>  .align 1
@@ -387,7 +387,7 @@ ARM GAS  /var/folders/4x/ps5lfsx11bd3d9s8dj92yrt80000gn/T//ccz8hOJv.s 			page 1
  256              	>  .weak FLASH_IRQHandler
  256              	>  .type FLASH_IRQHandler,%function
  256              	> FLASH_IRQHandler:
- 256 0072 FEE7     	>  b .
+ 256 006a FEE7     	>  b .
  256              	>  .size FLASH_IRQHandler,.-FLASH_IRQHandler
  257              	    def_default_handler    RCC_IRQHandler
  257              	>  .align 1
@@ -395,7 +395,7 @@ ARM GAS  /var/folders/4x/ps5lfsx11bd3d9s8dj92yrt80000gn/T//ccz8hOJv.s 			page 1
  257              	>  .weak RCC_IRQHandler
  257              	>  .type RCC_IRQHandler,%function
  257              	> RCC_IRQHandler:
- 257 0074 FEE7     	>  b .
+ 257 006c FEE7     	>  b .
  257              	>  .size RCC_IRQHandler,.-RCC_IRQHandler
  258              	    def_default_handler    EXTI0_IRQHandler
  258              	>  .align 1
@@ -403,7 +403,7 @@ ARM GAS  /var/folders/4x/ps5lfsx11bd3d9s8dj92yrt80000gn/T//ccz8hOJv.s 			page 1
  258              	>  .weak EXTI0_IRQHandler
  258              	>  .type EXTI0_IRQHandler,%function
  258              	> EXTI0_IRQHandler:
- 258 0076 FEE7     	>  b .
+ 258 006e FEE7     	>  b .
  258              	>  .size EXTI0_IRQHandler,.-EXTI0_IRQHandler
  259              	    def_default_handler    EXTI1_IRQHandler
  259              	>  .align 1
@@ -411,18 +411,18 @@ ARM GAS  /var/folders/4x/ps5lfsx11bd3d9s8dj92yrt80000gn/T//ccz8hOJv.s 			page 1
  259              	>  .weak EXTI1_IRQHandler
  259              	>  .type EXTI1_IRQHandler,%function
  259              	> EXTI1_IRQHandler:
- 259 0078 FEE7     	>  b .
+ 259 0070 FEE7     	>  b .
  259              	>  .size EXTI1_IRQHandler,.-EXTI1_IRQHandler
  260              	    def_default_handler    EXTI2_IRQHandler
  260              	>  .align 1
  260              	>  .thumb_func
  260              	>  .weak EXTI2_IRQHandler
  260              	>  .type EXTI2_IRQHandler,%function
-ARM GAS  /var/folders/4x/ps5lfsx11bd3d9s8dj92yrt80000gn/T//ccz8hOJv.s 			page 8
+ARM GAS  /tmp/ccbFuVKj.s 			page 8
 
 
  260              	> EXTI2_IRQHandler:
- 260 007a FEE7     	>  b .
+ 260 0072 FEE7     	>  b .
  260              	>  .size EXTI2_IRQHandler,.-EXTI2_IRQHandler
  261              	    def_default_handler    EXTI3_IRQHandler
  261              	>  .align 1
@@ -430,7 +430,7 @@ ARM GAS  /var/folders/4x/ps5lfsx11bd3d9s8dj92yrt80000gn/T//ccz8hOJv.s 			page 1
  261              	>  .weak EXTI3_IRQHandler
  261              	>  .type EXTI3_IRQHandler,%function
  261              	> EXTI3_IRQHandler:
- 261 007c FEE7     	>  b .
+ 261 0074 FEE7     	>  b .
  261              	>  .size EXTI3_IRQHandler,.-EXTI3_IRQHandler
  262              	    def_default_handler    EXTI4_IRQHandler
  262              	>  .align 1
@@ -438,7 +438,7 @@ ARM GAS  /var/folders/4x/ps5lfsx11bd3d9s8dj92yrt80000gn/T//ccz8hOJv.s 			page 1
  262              	>  .weak EXTI4_IRQHandler
  262              	>  .type EXTI4_IRQHandler,%function
  262              	> EXTI4_IRQHandler:
- 262 007e FEE7     	>  b .
+ 262 0076 FEE7     	>  b .
  262              	>  .size EXTI4_IRQHandler,.-EXTI4_IRQHandler
  263              	    def_default_handler    DMA1_Channel1_IRQHandler
  263              	>  .align 1
@@ -446,7 +446,7 @@ ARM GAS  /var/folders/4x/ps5lfsx11bd3d9s8dj92yrt80000gn/T//ccz8hOJv.s 			page 1
  263              	>  .weak DMA1_Channel1_IRQHandler
  263              	>  .type DMA1_Channel1_IRQHandler,%function
  263              	> DMA1_Channel1_IRQHandler:
- 263 0080 FEE7     	>  b .
+ 263 0078 FEE7     	>  b .
  263              	>  .size DMA1_Channel1_IRQHandler,.-DMA1_Channel1_IRQHandler
  264              	    def_default_handler    DMA1_Channel2_IRQHandler
  264              	>  .align 1
@@ -454,7 +454,7 @@ ARM GAS  /var/folders/4x/ps5lfsx11bd3d9s8dj92yrt80000gn/T//ccz8hOJv.s 			page 1
  264              	>  .weak DMA1_Channel2_IRQHandler
  264              	>  .type DMA1_Channel2_IRQHandler,%function
  264              	> DMA1_Channel2_IRQHandler:
- 264 0082 FEE7     	>  b .
+ 264 007a FEE7     	>  b .
  264              	>  .size DMA1_Channel2_IRQHandler,.-DMA1_Channel2_IRQHandler
  265              	    def_default_handler    DMA1_Channel3_IRQHandler
  265              	>  .align 1
@@ -462,7 +462,7 @@ ARM GAS  /var/folders/4x/ps5lfsx11bd3d9s8dj92yrt80000gn/T//ccz8hOJv.s 			page 1
  265              	>  .weak DMA1_Channel3_IRQHandler
  265              	>  .type DMA1_Channel3_IRQHandler,%function
  265              	> DMA1_Channel3_IRQHandler:
- 265 0084 FEE7     	>  b .
+ 265 007c FEE7     	>  b .
  265              	>  .size DMA1_Channel3_IRQHandler,.-DMA1_Channel3_IRQHandler
  266              	    def_default_handler    DMA1_Channel4_IRQHandler
  266              	>  .align 1
@@ -470,7 +470,7 @@ ARM GAS  /var/folders/4x/ps5lfsx11bd3d9s8dj92yrt80000gn/T//ccz8hOJv.s 			page 1
  266              	>  .weak DMA1_Channel4_IRQHandler
  266              	>  .type DMA1_Channel4_IRQHandler,%function
  266              	> DMA1_Channel4_IRQHandler:
- 266 0086 FEE7     	>  b .
+ 266 007e FEE7     	>  b .
  266              	>  .size DMA1_Channel4_IRQHandler,.-DMA1_Channel4_IRQHandler
  267              	    def_default_handler    DMA1_Channel5_IRQHandler
  267              	>  .align 1
@@ -478,10 +478,10 @@ ARM GAS  /var/folders/4x/ps5lfsx11bd3d9s8dj92yrt80000gn/T//ccz8hOJv.s 			page 1
  267              	>  .weak DMA1_Channel5_IRQHandler
  267              	>  .type DMA1_Channel5_IRQHandler,%function
  267              	> DMA1_Channel5_IRQHandler:
-ARM GAS  /var/folders/4x/ps5lfsx11bd3d9s8dj92yrt80000gn/T//ccz8hOJv.s 			page 9
+ARM GAS  /tmp/ccbFuVKj.s 			page 9
 
 
- 267 0088 FEE7     	>  b .
+ 267 0080 FEE7     	>  b .
  267              	>  .size DMA1_Channel5_IRQHandler,.-DMA1_Channel5_IRQHandler
  268              	    def_default_handler    DMA1_Channel6_IRQHandler
  268              	>  .align 1
@@ -489,7 +489,7 @@ ARM GAS  /var/folders/4x/ps5lfsx11bd3d9s8dj92yrt80000gn/T//ccz8hOJv.s 			page 1
  268              	>  .weak DMA1_Channel6_IRQHandler
  268              	>  .type DMA1_Channel6_IRQHandler,%function
  268              	> DMA1_Channel6_IRQHandler:
- 268 008a FEE7     	>  b .
+ 268 0082 FEE7     	>  b .
  268              	>  .size DMA1_Channel6_IRQHandler,.-DMA1_Channel6_IRQHandler
  269              	    def_default_handler    DMA1_Channel7_IRQHandler
  269              	>  .align 1
@@ -497,7 +497,7 @@ ARM GAS  /var/folders/4x/ps5lfsx11bd3d9s8dj92yrt80000gn/T//ccz8hOJv.s 			page 1
  269              	>  .weak DMA1_Channel7_IRQHandler
  269              	>  .type DMA1_Channel7_IRQHandler,%function
  269              	> DMA1_Channel7_IRQHandler:
- 269 008c FEE7     	>  b .
+ 269 0084 FEE7     	>  b .
  269              	>  .size DMA1_Channel7_IRQHandler,.-DMA1_Channel7_IRQHandler
  270              	    def_default_handler    ADC1_2_IRQHandler
  270              	>  .align 1
@@ -505,7 +505,7 @@ ARM GAS  /var/folders/4x/ps5lfsx11bd3d9s8dj92yrt80000gn/T//ccz8hOJv.s 			page 1
  270              	>  .weak ADC1_2_IRQHandler
  270              	>  .type ADC1_2_IRQHandler,%function
  270              	> ADC1_2_IRQHandler:
- 270 008e FEE7     	>  b .
+ 270 0086 FEE7     	>  b .
  270              	>  .size ADC1_2_IRQHandler,.-ADC1_2_IRQHandler
  271              	    def_default_handler    USB_HP_CAN1_TX_IRQHandler
  271              	>  .align 1
@@ -513,7 +513,7 @@ ARM GAS  /var/folders/4x/ps5lfsx11bd3d9s8dj92yrt80000gn/T//ccz8hOJv.s 			page 1
  271              	>  .weak USB_HP_CAN1_TX_IRQHandler
  271              	>  .type USB_HP_CAN1_TX_IRQHandler,%function
  271              	> USB_HP_CAN1_TX_IRQHandler:
- 271 0090 FEE7     	>  b .
+ 271 0088 FEE7     	>  b .
  271              	>  .size USB_HP_CAN1_TX_IRQHandler,.-USB_HP_CAN1_TX_IRQHandler
  272              	    def_default_handler    USB_LP_CAN1_RX0_IRQHandler
  272              	>  .align 1
@@ -521,7 +521,7 @@ ARM GAS  /var/folders/4x/ps5lfsx11bd3d9s8dj92yrt80000gn/T//ccz8hOJv.s 			page 1
  272              	>  .weak USB_LP_CAN1_RX0_IRQHandler
  272              	>  .type USB_LP_CAN1_RX0_IRQHandler,%function
  272              	> USB_LP_CAN1_RX0_IRQHandler:
- 272 0092 FEE7     	>  b .
+ 272 008a FEE7     	>  b .
  272              	>  .size USB_LP_CAN1_RX0_IRQHandler,.-USB_LP_CAN1_RX0_IRQHandler
  273              	    def_default_handler    CAN1_RX1_IRQHandler
  273              	>  .align 1
@@ -529,7 +529,7 @@ ARM GAS  /var/folders/4x/ps5lfsx11bd3d9s8dj92yrt80000gn/T//ccz8hOJv.s 			page 1
  273              	>  .weak CAN1_RX1_IRQHandler
  273              	>  .type CAN1_RX1_IRQHandler,%function
  273              	> CAN1_RX1_IRQHandler:
- 273 0094 FEE7     	>  b .
+ 273 008c FEE7     	>  b .
  273              	>  .size CAN1_RX1_IRQHandler,.-CAN1_RX1_IRQHandler
  274              	    def_default_handler    CAN1_SCE_IRQHandler
  274              	>  .align 1
@@ -537,8 +537,8 @@ ARM GAS  /var/folders/4x/ps5lfsx11bd3d9s8dj92yrt80000gn/T//ccz8hOJv.s 			page 1
  274              	>  .weak CAN1_SCE_IRQHandler
  274              	>  .type CAN1_SCE_IRQHandler,%function
  274              	> CAN1_SCE_IRQHandler:
- 274 0096 FEE7     	>  b .
-ARM GAS  /var/folders/4x/ps5lfsx11bd3d9s8dj92yrt80000gn/T//ccz8hOJv.s 			page 10
+ 274 008e FEE7     	>  b .
+ARM GAS  /tmp/ccbFuVKj.s 			page 10
 
 
  274              	>  .size CAN1_SCE_IRQHandler,.-CAN1_SCE_IRQHandler
@@ -548,7 +548,7 @@ ARM GAS  /var/folders/4x/ps5lfsx11bd3d9s8dj92yrt80000gn/T//ccz8hOJv.s 			page 1
  275              	>  .weak EXTI9_5_IRQHandler
  275              	>  .type EXTI9_5_IRQHandler,%function
  275              	> EXTI9_5_IRQHandler:
- 275 0098 FEE7     	>  b .
+ 275 0090 FEE7     	>  b .
  275              	>  .size EXTI9_5_IRQHandler,.-EXTI9_5_IRQHandler
  276              	    def_default_handler    TIM1_BRK_IRQHandler
  276              	>  .align 1
@@ -556,7 +556,7 @@ ARM GAS  /var/folders/4x/ps5lfsx11bd3d9s8dj92yrt80000gn/T//ccz8hOJv.s 			page 1
  276              	>  .weak TIM1_BRK_IRQHandler
  276              	>  .type TIM1_BRK_IRQHandler,%function
  276              	> TIM1_BRK_IRQHandler:
- 276 009a FEE7     	>  b .
+ 276 0092 FEE7     	>  b .
  276              	>  .size TIM1_BRK_IRQHandler,.-TIM1_BRK_IRQHandler
  277              	    def_default_handler    TIM1_UP_IRQHandler
  277              	>  .align 1
@@ -564,7 +564,7 @@ ARM GAS  /var/folders/4x/ps5lfsx11bd3d9s8dj92yrt80000gn/T//ccz8hOJv.s 			page 1
  277              	>  .weak TIM1_UP_IRQHandler
  277              	>  .type TIM1_UP_IRQHandler,%function
  277              	> TIM1_UP_IRQHandler:
- 277 009c FEE7     	>  b .
+ 277 0094 FEE7     	>  b .
  277              	>  .size TIM1_UP_IRQHandler,.-TIM1_UP_IRQHandler
  278              	    def_default_handler    TIM1_TRG_COM_IRQHandler
  278              	>  .align 1
@@ -572,7 +572,7 @@ ARM GAS  /var/folders/4x/ps5lfsx11bd3d9s8dj92yrt80000gn/T//ccz8hOJv.s 			page 1
  278              	>  .weak TIM1_TRG_COM_IRQHandler
  278              	>  .type TIM1_TRG_COM_IRQHandler,%function
  278              	> TIM1_TRG_COM_IRQHandler:
- 278 009e FEE7     	>  b .
+ 278 0096 FEE7     	>  b .
  278              	>  .size TIM1_TRG_COM_IRQHandler,.-TIM1_TRG_COM_IRQHandler
  279              	    def_default_handler    TIM1_CC_IRQHandler
  279              	>  .align 1
@@ -580,7 +580,7 @@ ARM GAS  /var/folders/4x/ps5lfsx11bd3d9s8dj92yrt80000gn/T//ccz8hOJv.s 			page 1
  279              	>  .weak TIM1_CC_IRQHandler
  279              	>  .type TIM1_CC_IRQHandler,%function
  279              	> TIM1_CC_IRQHandler:
- 279 00a0 FEE7     	>  b .
+ 279 0098 FEE7     	>  b .
  279              	>  .size TIM1_CC_IRQHandler,.-TIM1_CC_IRQHandler
  280              	    def_default_handler    TIM2_IRQHandler
  280              	>  .align 1
@@ -588,7 +588,7 @@ ARM GAS  /var/folders/4x/ps5lfsx11bd3d9s8dj92yrt80000gn/T//ccz8hOJv.s 			page 1
  280              	>  .weak TIM2_IRQHandler
  280              	>  .type TIM2_IRQHandler,%function
  280              	> TIM2_IRQHandler:
- 280 00a2 FEE7     	>  b .
+ 280 009a FEE7     	>  b .
  280              	>  .size TIM2_IRQHandler,.-TIM2_IRQHandler
  281              	    def_default_handler    TIM3_IRQHandler
  281              	>  .align 1
@@ -596,9 +596,9 @@ ARM GAS  /var/folders/4x/ps5lfsx11bd3d9s8dj92yrt80000gn/T//ccz8hOJv.s 			page 1
  281              	>  .weak TIM3_IRQHandler
  281              	>  .type TIM3_IRQHandler,%function
  281              	> TIM3_IRQHandler:
- 281 00a4 FEE7     	>  b .
+ 281 009c FEE7     	>  b .
  281              	>  .size TIM3_IRQHandler,.-TIM3_IRQHandler
-ARM GAS  /var/folders/4x/ps5lfsx11bd3d9s8dj92yrt80000gn/T//ccz8hOJv.s 			page 11
+ARM GAS  /tmp/ccbFuVKj.s 			page 11
 
 
  282              	    def_default_handler    TIM4_IRQHandler
@@ -607,7 +607,7 @@ ARM GAS  /var/folders/4x/ps5lfsx11bd3d9s8dj92yrt80000gn/T//ccz8hOJv.s 			page 1
  282              	>  .weak TIM4_IRQHandler
  282              	>  .type TIM4_IRQHandler,%function
  282              	> TIM4_IRQHandler:
- 282 00a6 FEE7     	>  b .
+ 282 009e FEE7     	>  b .
  282              	>  .size TIM4_IRQHandler,.-TIM4_IRQHandler
  283              	    def_default_handler    I2C1_EV_IRQHandler
  283              	>  .align 1
@@ -615,7 +615,7 @@ ARM GAS  /var/folders/4x/ps5lfsx11bd3d9s8dj92yrt80000gn/T//ccz8hOJv.s 			page 1
  283              	>  .weak I2C1_EV_IRQHandler
  283              	>  .type I2C1_EV_IRQHandler,%function
  283              	> I2C1_EV_IRQHandler:
- 283 00a8 FEE7     	>  b .
+ 283 00a0 FEE7     	>  b .
  283              	>  .size I2C1_EV_IRQHandler,.-I2C1_EV_IRQHandler
  284              	    def_default_handler    I2C1_ER_IRQHandler
  284              	>  .align 1
@@ -623,7 +623,7 @@ ARM GAS  /var/folders/4x/ps5lfsx11bd3d9s8dj92yrt80000gn/T//ccz8hOJv.s 			page 1
  284              	>  .weak I2C1_ER_IRQHandler
  284              	>  .type I2C1_ER_IRQHandler,%function
  284              	> I2C1_ER_IRQHandler:
- 284 00aa FEE7     	>  b .
+ 284 00a2 FEE7     	>  b .
  284              	>  .size I2C1_ER_IRQHandler,.-I2C1_ER_IRQHandler
  285              	    def_default_handler    I2C2_EV_IRQHandler
  285              	>  .align 1
@@ -631,7 +631,7 @@ ARM GAS  /var/folders/4x/ps5lfsx11bd3d9s8dj92yrt80000gn/T//ccz8hOJv.s 			page 1
  285              	>  .weak I2C2_EV_IRQHandler
  285              	>  .type I2C2_EV_IRQHandler,%function
  285              	> I2C2_EV_IRQHandler:
- 285 00ac FEE7     	>  b .
+ 285 00a4 FEE7     	>  b .
  285              	>  .size I2C2_EV_IRQHandler,.-I2C2_EV_IRQHandler
  286              	    def_default_handler    I2C2_ER_IRQHandler
  286              	>  .align 1
@@ -639,7 +639,7 @@ ARM GAS  /var/folders/4x/ps5lfsx11bd3d9s8dj92yrt80000gn/T//ccz8hOJv.s 			page 1
  286              	>  .weak I2C2_ER_IRQHandler
  286              	>  .type I2C2_ER_IRQHandler,%function
  286              	> I2C2_ER_IRQHandler:
- 286 00ae FEE7     	>  b .
+ 286 00a6 FEE7     	>  b .
  286              	>  .size I2C2_ER_IRQHandler,.-I2C2_ER_IRQHandler
  287              	    def_default_handler    SPI1_IRQHandler
  287              	>  .align 1
@@ -647,7 +647,7 @@ ARM GAS  /var/folders/4x/ps5lfsx11bd3d9s8dj92yrt80000gn/T//ccz8hOJv.s 			page 1
  287              	>  .weak SPI1_IRQHandler
  287              	>  .type SPI1_IRQHandler,%function
  287              	> SPI1_IRQHandler:
- 287 00b0 FEE7     	>  b .
+ 287 00a8 FEE7     	>  b .
  287              	>  .size SPI1_IRQHandler,.-SPI1_IRQHandler
  288              	    def_default_handler    SPI2_IRQHandler
  288              	>  .align 1
@@ -655,10 +655,10 @@ ARM GAS  /var/folders/4x/ps5lfsx11bd3d9s8dj92yrt80000gn/T//ccz8hOJv.s 			page 1
  288              	>  .weak SPI2_IRQHandler
  288              	>  .type SPI2_IRQHandler,%function
  288              	> SPI2_IRQHandler:
- 288 00b2 FEE7     	>  b .
+ 288 00aa FEE7     	>  b .
  288              	>  .size SPI2_IRQHandler,.-SPI2_IRQHandler
  289              	    def_default_handler    USART1_IRQHandler
-ARM GAS  /var/folders/4x/ps5lfsx11bd3d9s8dj92yrt80000gn/T//ccz8hOJv.s 			page 12
+ARM GAS  /tmp/ccbFuVKj.s 			page 12
 
 
  289              	>  .align 1
@@ -666,7 +666,7 @@ ARM GAS  /var/folders/4x/ps5lfsx11bd3d9s8dj92yrt80000gn/T//ccz8hOJv.s 			page 1
  289              	>  .weak USART1_IRQHandler
  289              	>  .type USART1_IRQHandler,%function
  289              	> USART1_IRQHandler:
- 289 00b4 FEE7     	>  b .
+ 289 00ac FEE7     	>  b .
  289              	>  .size USART1_IRQHandler,.-USART1_IRQHandler
  290              	    def_default_handler    USART2_IRQHandler
  290              	>  .align 1
@@ -674,7 +674,7 @@ ARM GAS  /var/folders/4x/ps5lfsx11bd3d9s8dj92yrt80000gn/T//ccz8hOJv.s 			page 1
  290              	>  .weak USART2_IRQHandler
  290              	>  .type USART2_IRQHandler,%function
  290              	> USART2_IRQHandler:
- 290 00b6 FEE7     	>  b .
+ 290 00ae FEE7     	>  b .
  290              	>  .size USART2_IRQHandler,.-USART2_IRQHandler
  291              	    def_default_handler    USART3_IRQHandler
  291              	>  .align 1
@@ -682,7 +682,7 @@ ARM GAS  /var/folders/4x/ps5lfsx11bd3d9s8dj92yrt80000gn/T//ccz8hOJv.s 			page 1
  291              	>  .weak USART3_IRQHandler
  291              	>  .type USART3_IRQHandler,%function
  291              	> USART3_IRQHandler:
- 291 00b8 FEE7     	>  b .
+ 291 00b0 FEE7     	>  b .
  291              	>  .size USART3_IRQHandler,.-USART3_IRQHandler
  292              	    def_default_handler    EXTI15_10_IRQHandler
  292              	>  .align 1
@@ -690,7 +690,7 @@ ARM GAS  /var/folders/4x/ps5lfsx11bd3d9s8dj92yrt80000gn/T//ccz8hOJv.s 			page 1
  292              	>  .weak EXTI15_10_IRQHandler
  292              	>  .type EXTI15_10_IRQHandler,%function
  292              	> EXTI15_10_IRQHandler:
- 292 00ba FEE7     	>  b .
+ 292 00b2 FEE7     	>  b .
  292              	>  .size EXTI15_10_IRQHandler,.-EXTI15_10_IRQHandler
  293              	    def_default_handler    RTCAlarm_IRQHandler
  293              	>  .align 1
@@ -698,7 +698,7 @@ ARM GAS  /var/folders/4x/ps5lfsx11bd3d9s8dj92yrt80000gn/T//ccz8hOJv.s 			page 1
  293              	>  .weak RTCAlarm_IRQHandler
  293              	>  .type RTCAlarm_IRQHandler,%function
  293              	> RTCAlarm_IRQHandler:
- 293 00bc FEE7     	>  b .
+ 293 00b4 FEE7     	>  b .
  293              	>  .size RTCAlarm_IRQHandler,.-RTCAlarm_IRQHandler
  294              	    def_default_handler    USBWakeUp_IRQHandler 
  294              	>  .align 1
@@ -706,89 +706,89 @@ ARM GAS  /var/folders/4x/ps5lfsx11bd3d9s8dj92yrt80000gn/T//ccz8hOJv.s 			page 1
  294              	>  .weak USBWakeUp_IRQHandler
  294              	>  .type USBWakeUp_IRQHandler,%function
  294              	> USBWakeUp_IRQHandler:
- 294 00be FEE7     	>  b .
+ 294 00b6 FEE7     	>  b .
  294              	>  .size USBWakeUp_IRQHandler,.-USBWakeUp_IRQHandler
  295              	    
  296              	    .end
-ARM GAS  /var/folders/4x/ps5lfsx11bd3d9s8dj92yrt80000gn/T//ccz8hOJv.s 			page 13
+ARM GAS  /tmp/ccbFuVKj.s 			page 13
 
 
 DEFINED SYMBOLS
-cmsis/device/startup_stm32f10x_md.s:42     .stack:0000000000000000 $d
-cmsis/device/startup_stm32f10x_md.s:46     *ABS*:0000000000000c00 Stack_Size
-cmsis/device/startup_stm32f10x_md.s:53     .stack:0000000000000c00 __StackTop
-cmsis/device/startup_stm32f10x_md.s:50     .stack:0000000000000000 __StackLimit
-cmsis/device/startup_stm32f10x_md.s:57     .heap:0000000000000000 $d
-cmsis/device/startup_stm32f10x_md.s:61     *ABS*:0000000000000800 Heap_Size
-cmsis/device/startup_stm32f10x_md.s:65     .heap:0000000000000000 __HeapBase
-cmsis/device/startup_stm32f10x_md.s:68     .heap:0000000000000800 __HeapLimit
-cmsis/device/startup_stm32f10x_md.s:72     .isr_vector:0000000000000000 $d
-cmsis/device/startup_stm32f10x_md.s:74     .isr_vector:0000000000000000 __isr_vector
-cmsis/device/startup_stm32f10x_md.s:156    .text:0000000000000000 Reset_Handler
-cmsis/device/startup_stm32f10x_md.s:241    .text:0000000000000058 NMI_Handler
-cmsis/device/startup_stm32f10x_md.s:242    .text:000000000000005a HardFault_Handler
-cmsis/device/startup_stm32f10x_md.s:243    .text:000000000000005c MemManage_Handler
-cmsis/device/startup_stm32f10x_md.s:244    .text:000000000000005e BusFault_Handler
-cmsis/device/startup_stm32f10x_md.s:245    .text:0000000000000060 UsageFault_Handler
-cmsis/device/startup_stm32f10x_md.s:246    .text:0000000000000062 SVC_Handler
-cmsis/device/startup_stm32f10x_md.s:247    .text:0000000000000064 DebugMon_Handler
-cmsis/device/startup_stm32f10x_md.s:248    .text:0000000000000066 PendSV_Handler
-cmsis/device/startup_stm32f10x_md.s:249    .text:0000000000000068 SysTick_Handler
-cmsis/device/startup_stm32f10x_md.s:252    .text:000000000000006a WWDG_IRQHandler
-cmsis/device/startup_stm32f10x_md.s:253    .text:000000000000006c PVD_IRQHandler
-cmsis/device/startup_stm32f10x_md.s:254    .text:000000000000006e TAMPER_IRQHandler
-cmsis/device/startup_stm32f10x_md.s:255    .text:0000000000000070 RTC_IRQHandler
-cmsis/device/startup_stm32f10x_md.s:256    .text:0000000000000072 FLASH_IRQHandler
-cmsis/device/startup_stm32f10x_md.s:257    .text:0000000000000074 RCC_IRQHandler
-cmsis/device/startup_stm32f10x_md.s:258    .text:0000000000000076 EXTI0_IRQHandler
-cmsis/device/startup_stm32f10x_md.s:259    .text:0000000000000078 EXTI1_IRQHandler
-cmsis/device/startup_stm32f10x_md.s:260    .text:000000000000007a EXTI2_IRQHandler
-cmsis/device/startup_stm32f10x_md.s:261    .text:000000000000007c EXTI3_IRQHandler
-cmsis/device/startup_stm32f10x_md.s:262    .text:000000000000007e EXTI4_IRQHandler
-cmsis/device/startup_stm32f10x_md.s:263    .text:0000000000000080 DMA1_Channel1_IRQHandler
-cmsis/device/startup_stm32f10x_md.s:264    .text:0000000000000082 DMA1_Channel2_IRQHandler
-cmsis/device/startup_stm32f10x_md.s:265    .text:0000000000000084 DMA1_Channel3_IRQHandler
-cmsis/device/startup_stm32f10x_md.s:266    .text:0000000000000086 DMA1_Channel4_IRQHandler
-cmsis/device/startup_stm32f10x_md.s:267    .text:0000000000000088 DMA1_Channel5_IRQHandler
-cmsis/device/startup_stm32f10x_md.s:268    .text:000000000000008a DMA1_Channel6_IRQHandler
-cmsis/device/startup_stm32f10x_md.s:269    .text:000000000000008c DMA1_Channel7_IRQHandler
-cmsis/device/startup_stm32f10x_md.s:270    .text:000000000000008e ADC1_2_IRQHandler
-cmsis/device/startup_stm32f10x_md.s:271    .text:0000000000000090 USB_HP_CAN1_TX_IRQHandler
-cmsis/device/startup_stm32f10x_md.s:272    .text:0000000000000092 USB_LP_CAN1_RX0_IRQHandler
-cmsis/device/startup_stm32f10x_md.s:273    .text:0000000000000094 CAN1_RX1_IRQHandler
-cmsis/device/startup_stm32f10x_md.s:274    .text:0000000000000096 CAN1_SCE_IRQHandler
-cmsis/device/startup_stm32f10x_md.s:275    .text:0000000000000098 EXTI9_5_IRQHandler
-cmsis/device/startup_stm32f10x_md.s:276    .text:000000000000009a TIM1_BRK_IRQHandler
-cmsis/device/startup_stm32f10x_md.s:277    .text:000000000000009c TIM1_UP_IRQHandler
-cmsis/device/startup_stm32f10x_md.s:278    .text:000000000000009e TIM1_TRG_COM_IRQHandler
-cmsis/device/startup_stm32f10x_md.s:279    .text:00000000000000a0 TIM1_CC_IRQHandler
-cmsis/device/startup_stm32f10x_md.s:280    .text:00000000000000a2 TIM2_IRQHandler
-cmsis/device/startup_stm32f10x_md.s:281    .text:00000000000000a4 TIM3_IRQHandler
-cmsis/device/startup_stm32f10x_md.s:282    .text:00000000000000a6 TIM4_IRQHandler
-cmsis/device/startup_stm32f10x_md.s:283    .text:00000000000000a8 I2C1_EV_IRQHandler
-cmsis/device/startup_stm32f10x_md.s:284    .text:00000000000000aa I2C1_ER_IRQHandler
-cmsis/device/startup_stm32f10x_md.s:285    .text:00000000000000ac I2C2_EV_IRQHandler
-cmsis/device/startup_stm32f10x_md.s:286    .text:00000000000000ae I2C2_ER_IRQHandler
-cmsis/device/startup_stm32f10x_md.s:287    .text:00000000000000b0 SPI1_IRQHandler
-ARM GAS  /var/folders/4x/ps5lfsx11bd3d9s8dj92yrt80000gn/T//ccz8hOJv.s 			page 14
+cmsis/device/startup_stm32f10x_md.s:42     .stack:00000000 $d
+cmsis/device/startup_stm32f10x_md.s:46     *ABS*:00000c00 Stack_Size
+cmsis/device/startup_stm32f10x_md.s:53     .stack:00000c00 __StackTop
+cmsis/device/startup_stm32f10x_md.s:50     .stack:00000000 __StackLimit
+cmsis/device/startup_stm32f10x_md.s:57     .heap:00000000 $d
+cmsis/device/startup_stm32f10x_md.s:61     *ABS*:00000800 Heap_Size
+cmsis/device/startup_stm32f10x_md.s:65     .heap:00000000 __HeapBase
+cmsis/device/startup_stm32f10x_md.s:68     .heap:00000800 __HeapLimit
+cmsis/device/startup_stm32f10x_md.s:72     .isr_vector:00000000 $d
+cmsis/device/startup_stm32f10x_md.s:74     .isr_vector:00000000 __isr_vector
+cmsis/device/startup_stm32f10x_md.s:156    .text:00000000 Reset_Handler
+cmsis/device/startup_stm32f10x_md.s:241    .text:00000050 NMI_Handler
+cmsis/device/startup_stm32f10x_md.s:242    .text:00000052 HardFault_Handler
+cmsis/device/startup_stm32f10x_md.s:243    .text:00000054 MemManage_Handler
+cmsis/device/startup_stm32f10x_md.s:244    .text:00000056 BusFault_Handler
+cmsis/device/startup_stm32f10x_md.s:245    .text:00000058 UsageFault_Handler
+cmsis/device/startup_stm32f10x_md.s:246    .text:0000005a SVC_Handler
+cmsis/device/startup_stm32f10x_md.s:247    .text:0000005c DebugMon_Handler
+cmsis/device/startup_stm32f10x_md.s:248    .text:0000005e PendSV_Handler
+cmsis/device/startup_stm32f10x_md.s:249    .text:00000060 SysTick_Handler
+cmsis/device/startup_stm32f10x_md.s:252    .text:00000062 WWDG_IRQHandler
+cmsis/device/startup_stm32f10x_md.s:253    .text:00000064 PVD_IRQHandler
+cmsis/device/startup_stm32f10x_md.s:254    .text:00000066 TAMPER_IRQHandler
+cmsis/device/startup_stm32f10x_md.s:255    .text:00000068 RTC_IRQHandler
+cmsis/device/startup_stm32f10x_md.s:256    .text:0000006a FLASH_IRQHandler
+cmsis/device/startup_stm32f10x_md.s:257    .text:0000006c RCC_IRQHandler
+cmsis/device/startup_stm32f10x_md.s:258    .text:0000006e EXTI0_IRQHandler
+cmsis/device/startup_stm32f10x_md.s:259    .text:00000070 EXTI1_IRQHandler
+cmsis/device/startup_stm32f10x_md.s:260    .text:00000072 EXTI2_IRQHandler
+cmsis/device/startup_stm32f10x_md.s:261    .text:00000074 EXTI3_IRQHandler
+cmsis/device/startup_stm32f10x_md.s:262    .text:00000076 EXTI4_IRQHandler
+cmsis/device/startup_stm32f10x_md.s:263    .text:00000078 DMA1_Channel1_IRQHandler
+cmsis/device/startup_stm32f10x_md.s:264    .text:0000007a DMA1_Channel2_IRQHandler
+cmsis/device/startup_stm32f10x_md.s:265    .text:0000007c DMA1_Channel3_IRQHandler
+cmsis/device/startup_stm32f10x_md.s:266    .text:0000007e DMA1_Channel4_IRQHandler
+cmsis/device/startup_stm32f10x_md.s:267    .text:00000080 DMA1_Channel5_IRQHandler
+cmsis/device/startup_stm32f10x_md.s:268    .text:00000082 DMA1_Channel6_IRQHandler
+cmsis/device/startup_stm32f10x_md.s:269    .text:00000084 DMA1_Channel7_IRQHandler
+cmsis/device/startup_stm32f10x_md.s:270    .text:00000086 ADC1_2_IRQHandler
+cmsis/device/startup_stm32f10x_md.s:271    .text:00000088 USB_HP_CAN1_TX_IRQHandler
+cmsis/device/startup_stm32f10x_md.s:272    .text:0000008a USB_LP_CAN1_RX0_IRQHandler
+cmsis/device/startup_stm32f10x_md.s:273    .text:0000008c CAN1_RX1_IRQHandler
+cmsis/device/startup_stm32f10x_md.s:274    .text:0000008e CAN1_SCE_IRQHandler
+cmsis/device/startup_stm32f10x_md.s:275    .text:00000090 EXTI9_5_IRQHandler
+cmsis/device/startup_stm32f10x_md.s:276    .text:00000092 TIM1_BRK_IRQHandler
+cmsis/device/startup_stm32f10x_md.s:277    .text:00000094 TIM1_UP_IRQHandler
+cmsis/device/startup_stm32f10x_md.s:278    .text:00000096 TIM1_TRG_COM_IRQHandler
+cmsis/device/startup_stm32f10x_md.s:279    .text:00000098 TIM1_CC_IRQHandler
+cmsis/device/startup_stm32f10x_md.s:280    .text:0000009a TIM2_IRQHandler
+cmsis/device/startup_stm32f10x_md.s:281    .text:0000009c TIM3_IRQHandler
+cmsis/device/startup_stm32f10x_md.s:282    .text:0000009e TIM4_IRQHandler
+cmsis/device/startup_stm32f10x_md.s:283    .text:000000a0 I2C1_EV_IRQHandler
+cmsis/device/startup_stm32f10x_md.s:284    .text:000000a2 I2C1_ER_IRQHandler
+cmsis/device/startup_stm32f10x_md.s:285    .text:000000a4 I2C2_EV_IRQHandler
+cmsis/device/startup_stm32f10x_md.s:286    .text:000000a6 I2C2_ER_IRQHandler
+cmsis/device/startup_stm32f10x_md.s:287    .text:000000a8 SPI1_IRQHandler
+ARM GAS  /tmp/ccbFuVKj.s 			page 14
 
 
-cmsis/device/startup_stm32f10x_md.s:288    .text:00000000000000b2 SPI2_IRQHandler
-cmsis/device/startup_stm32f10x_md.s:289    .text:00000000000000b4 USART1_IRQHandler
-cmsis/device/startup_stm32f10x_md.s:290    .text:00000000000000b6 USART2_IRQHandler
-cmsis/device/startup_stm32f10x_md.s:291    .text:00000000000000b8 USART3_IRQHandler
-cmsis/device/startup_stm32f10x_md.s:292    .text:00000000000000ba EXTI15_10_IRQHandler
-cmsis/device/startup_stm32f10x_md.s:293    .text:00000000000000bc RTCAlarm_IRQHandler
-cmsis/device/startup_stm32f10x_md.s:294    .text:00000000000000be USBWakeUp_IRQHandler
-cmsis/device/startup_stm32f10x_md.s:153    .text:0000000000000000 $t
-cmsis/device/startup_stm32f10x_md.s:190    .text:0000000000000016 .flash_to_ram_loop_end
-cmsis/device/startup_stm32f10x_md.s:185    .text:000000000000000c .flash_to_ram_loop
-cmsis/device/startup_stm32f10x_md.s:205    .text:0000000000000020 clear_bss_loop
-cmsis/device/startup_stm32f10x_md.s:210    .text:000000000000002e clear_bss_loop_end
-cmsis/device/startup_stm32f10x_md.s:221    .text:0000000000000032 exit_loop
-cmsis/device/startup_stm32f10x_md.s:225    .text:0000000000000038 $d
-cmsis/device/startup_stm32f10x_md.s:241    .text:0000000000000058 $t
-                   .debug_aranges:000000000000000c $d
+cmsis/device/startup_stm32f10x_md.s:288    .text:000000aa SPI2_IRQHandler
+cmsis/device/startup_stm32f10x_md.s:289    .text:000000ac USART1_IRQHandler
+cmsis/device/startup_stm32f10x_md.s:290    .text:000000ae USART2_IRQHandler
+cmsis/device/startup_stm32f10x_md.s:291    .text:000000b0 USART3_IRQHandler
+cmsis/device/startup_stm32f10x_md.s:292    .text:000000b2 EXTI15_10_IRQHandler
+cmsis/device/startup_stm32f10x_md.s:293    .text:000000b4 RTCAlarm_IRQHandler
+cmsis/device/startup_stm32f10x_md.s:294    .text:000000b6 USBWakeUp_IRQHandler
+cmsis/device/startup_stm32f10x_md.s:153    .text:00000000 $t
+cmsis/device/startup_stm32f10x_md.s:190    .text:00000012 .flash_to_ram_loop_end
+cmsis/device/startup_stm32f10x_md.s:185    .text:0000000a .flash_to_ram_loop
+cmsis/device/startup_stm32f10x_md.s:205    .text:0000001c clear_bss_loop
+cmsis/device/startup_stm32f10x_md.s:210    .text:00000026 clear_bss_loop_end
+cmsis/device/startup_stm32f10x_md.s:221    .text:0000002a exit_loop
+cmsis/device/startup_stm32f10x_md.s:225    .text:0000002e $d
+cmsis/device/startup_stm32f10x_md.s:241    .text:00000050 $t
+                   .debug_aranges:0000000c $d
 
 UNDEFINED SYMBOLS
 __etext

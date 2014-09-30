@@ -18,9 +18,6 @@
 #ifndef __STM32F10x_EXTI_H
 #define __STM32F10x_EXTI_H
 
-/* Taken from stm32l1xx.h */
-#define EXTI                ((EXTI_TypeDef *) EXTI_BASE)
-
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f10x_map.h"
 

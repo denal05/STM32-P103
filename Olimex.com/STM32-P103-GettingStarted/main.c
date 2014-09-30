@@ -24,7 +24,6 @@
  **************************************************************************/
 #include <intrinsics.h>
 #include "stm32f10x_lib.h"
-#include <stdio.h>
 
 volatile unsigned int LedState = 0; // LED is ON when corresponding bit is 1
 
@@ -43,13 +42,11 @@ void Timer1IntrHandler (void)
 {
   // Clear update interrupt bit
   TIM1_ClearITPendingBit(TIM1_FLAG_Update);
-  /*
   if(((LedState <<= 1) > 0x8000) || (LedState == 0))
   {
     LedState = 1;
   }
   LEDsSet(LedState);
-  */
 }
 
 /*************************************************************************
@@ -82,9 +79,6 @@ void Clk_Init (void)
   RCC_PCLK2Config(RCC_HCLK_Div1);
   RCC_PCLK1Config(RCC_HCLK_Div2);
   RCC_HCLKConfig(RCC_SYSCLK_Div1);
-
-#define EMB_FLASH
-
 #ifdef EMB_FLASH
   // 5. Init Embedded Flash
   // Zero wait state, if 0 < HCLK 24 MHz
@@ -112,15 +106,7 @@ void Clk_Init (void)
  *************************************************************************/
 void LEDsSet (unsigned int State)
 {
-////   GPIO_WriteBit(GPIOC,GPIO_Pin_12 ,(State & (1<<15))?Bit_RESET:Bit_SET);
-   if (State)
-   {
-     GPIO_WriteBit(GPIOC,GPIO_Pin_12 , Bit_SET);
-   }
-   else
-   {
-     GPIO_WriteBit(GPIOC,GPIO_Pin_12 , Bit_RESET);
-   }
+   GPIO_WriteBit(GPIOC,GPIO_Pin_12 ,(State & (1<<15))?Bit_RESET:Bit_SET);
 }
 
 /*************************************************************************
@@ -138,8 +124,6 @@ GPIO_InitTypeDef GPIO_InitStructure;
 NVIC_InitTypeDef NVIC_InitStructure;
 TIM1_TimeBaseInitTypeDef TIM1_TimeBaseInitStruct;
 
-BitAction oldAction;
-
 #ifdef DEBUG
    debug();
 #endif
@@ -151,10 +135,10 @@ BitAction oldAction;
 
   // NVIC init
 #ifndef  EMB_FLASH
-  // Set the Vector Table base location at 0x20000000
+  /* Set the Vector Table base location at 0x20000000 */
   NVIC_SetVectorTable(NVIC_VectTab_RAM, 0x0);
-#else  // VECT_TAB_FLASH
-  // Set the Vector Table base location at 0x08000000
+#else  /* VECT_TAB_FLASH  */
+  /* Set the Vector Table base location at 0x08000000 */
   NVIC_SetVectorTable(NVIC_VectTab_FLASH, 0x0);
 #endif
   NVIC_PriorityGroupConfig(NVIC_PriorityGroup_4);
@@ -205,25 +189,12 @@ BitAction oldAction;
   // Enable timer counting
   TIM1_Cmd(ENABLE);
 
-#ifndef  EMB_FLASH
   NVIC_RESETPRIMASK();
-#else
-#endif
 
   while(1)
   {
-    bool ButtonIsPressed = (GPIO_ReadInputDataBit(GPIOA,GPIO_Pin_0) == Bit_SET);
-////    if (GPIO_ReadInputDataBit(GPIOA,GPIO_Pin_0) != oldAction)
-    if(ButtonIsPressed)
-    {
-////      oldAction = GPIO_ReadInputDataBit(GPIOA,GPIO_Pin_0);
-      LedState = !LedState;
-      printf("LedState = %d\n", LedState);
-      LEDsSet(LedState);
-    }
   }
 }
-
 #ifdef  DEBUG
 /*******************************************************************************
 * Function Name  : assert_failed

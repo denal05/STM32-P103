@@ -16,7 +16,7 @@
 # Start of default section
 #
 
-TRGT = /opt/gcc-arm-none-eabi-4_8-2014q2/bin/arm-none-eabi-
+TRGT = /opt/gcc-arm-none-eabi-4_6-2012q4/bin/arm-none-eabi-
 CC   = $(TRGT)gcc
 CP   = $(TRGT)objcopy
 AS   = $(TRGT)gcc -x assembler-with-cpp
@@ -52,7 +52,7 @@ DLIBS =
 # 
 # Define project name and Ram/Flash mode here
 PROJECT        = test
-RUN_FROM_FLASH = 1
+RUN_FROM_FLASH = 0
 USE_HARD_FPU   = 0
 
 #

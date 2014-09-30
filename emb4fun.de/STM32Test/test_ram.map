@@ -1,0 +1,340 @@
+Archive member included because of file (symbol)
+
+/opt/gcc-arm-none-eabi-4_6-2012q4/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m/libgcc.a(_arm_addsubsf3.o)
+                              ./src/main.o (__aeabi_fadd)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+RAM              0x20000000         0x00005000         xrw
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD ./cmsis/device/startup_stm32f10x_md.o
+LOAD ./cmsis/device/system_stm32f10x.o
+LOAD ./src/main.o
+START GROUP
+LOAD /opt/gcc-arm-none-eabi-4_6-2012q4/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m/libgcc.a
+LOAD /opt/gcc-arm-none-eabi-4_6-2012q4/bin/../lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/armv7-m/libc.a
+END GROUP
+START GROUP
+LOAD /opt/gcc-arm-none-eabi-4_6-2012q4/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m/libgcc.a
+LOAD /opt/gcc-arm-none-eabi-4_6-2012q4/bin/../lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/armv7-m/libc.a
+LOAD /opt/gcc-arm-none-eabi-4_6-2012q4/bin/../lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/armv7-m/libm.a
+LOAD /opt/gcc-arm-none-eabi-4_6-2012q4/bin/../lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/armv7-m/libnosys.a
+END GROUP
+
+.text           0x20000000      0x84c
+ *(.isr_vector)
+ .isr_vector    0x20000000      0x108 ./cmsis/device/startup_stm32f10x_md.o
+                0x20000000                __isr_vector
+ *(.text*)
+ .text          0x20000108       0xb8 ./cmsis/device/startup_stm32f10x_md.o
+                0x20000108                Reset_Handler
+                0x20000158                NMI_Handler
+                0x2000015a                HardFault_Handler
+                0x2000015c                MemManage_Handler
+                0x2000015e                BusFault_Handler
+                0x20000160                UsageFault_Handler
+                0x20000162                SVC_Handler
+                0x20000164                DebugMon_Handler
+                0x20000166                PendSV_Handler
+                0x20000168                SysTick_Handler
+                0x2000016a                WWDG_IRQHandler
+                0x2000016c                PVD_IRQHandler
+                0x2000016e                TAMPER_IRQHandler
+                0x20000170                RTC_IRQHandler
+                0x20000172                FLASH_IRQHandler
+                0x20000174                RCC_IRQHandler
+                0x20000176                EXTI0_IRQHandler
+                0x20000178                EXTI1_IRQHandler
+                0x2000017a                EXTI2_IRQHandler
+                0x2000017c                EXTI3_IRQHandler
+                0x2000017e                EXTI4_IRQHandler
+                0x20000180                DMA1_Channel1_IRQHandler
+                0x20000182                DMA1_Channel2_IRQHandler
+                0x20000184                DMA1_Channel3_IRQHandler
+                0x20000186                DMA1_Channel4_IRQHandler
+                0x20000188                DMA1_Channel5_IRQHandler
+                0x2000018a                DMA1_Channel6_IRQHandler
+                0x2000018c                DMA1_Channel7_IRQHandler
+                0x2000018e                ADC1_2_IRQHandler
+                0x20000190                USB_HP_CAN1_TX_IRQHandler
+                0x20000192                USB_LP_CAN1_RX0_IRQHandler
+                0x20000194                CAN1_RX1_IRQHandler
+                0x20000196                CAN1_SCE_IRQHandler
+                0x20000198                EXTI9_5_IRQHandler
+                0x2000019a                TIM1_BRK_IRQHandler
+                0x2000019c                TIM1_UP_IRQHandler
+                0x2000019e                TIM1_TRG_COM_IRQHandler
+                0x200001a0                TIM1_CC_IRQHandler
+                0x200001a2                TIM2_IRQHandler
+                0x200001a4                TIM3_IRQHandler
+                0x200001a6                TIM4_IRQHandler
+                0x200001a8                I2C1_EV_IRQHandler
+                0x200001aa                I2C1_ER_IRQHandler
+                0x200001ac                I2C2_EV_IRQHandler
+                0x200001ae                I2C2_ER_IRQHandler
+                0x200001b0                SPI1_IRQHandler
+                0x200001b2                SPI2_IRQHandler
+                0x200001b4                USART1_IRQHandler
+                0x200001b6                USART2_IRQHandler
+                0x200001b8                USART3_IRQHandler
+                0x200001ba                EXTI15_10_IRQHandler
+                0x200001bc                RTCAlarm_IRQHandler
+                0x200001be                USBWakeUp_IRQHandler
+ .text          0x200001c0      0x3ac ./cmsis/device/system_stm32f10x.o
+                0x200001c0                SystemInit
+                0x2000026c                SystemCoreClockUpdate
+ .text          0x2000056c       0xbc ./src/main.o
+                0x2000056c                main
+ .text          0x20000628      0x21c /opt/gcc-arm-none-eabi-4_6-2012q4/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m/libgcc.a(_arm_addsubsf3.o)
+                0x20000628                __aeabi_frsub
+                0x20000630                __subsf3
+                0x20000630                __aeabi_fsub
+                0x20000634                __aeabi_fadd
+                0x20000634                __addsf3
+                0x20000794                __aeabi_ui2f
+                0x20000794                __floatunsisf
+                0x2000079c                __aeabi_i2f
+                0x2000079c                __floatsisf
+                0x200007b8                __floatundisf
+                0x200007b8                __aeabi_ul2f
+                0x200007c8                __floatdisf
+                0x200007c8                __aeabi_l2f
+ *(.init)
+ *(.fini)
+ *crtbegin.o(.ctors)
+ *crtbegin?.o(.ctors)
+ *(EXCLUDE_FILE(*crtend.o *crtend?.o) .ctors)
+ *(SORT(.ctors.*))
+ *(.ctors)
+ *crtbegin.o(.dtors)
+ *crtbegin?.o(.dtors)
+ *(EXCLUDE_FILE(*crtend.o *crtend?.o) .dtors)
+ *(SORT(.dtors.*))
+ *(.dtors)
+ *(.rodata*)
+ .rodata        0x20000844        0x8 ./src/main.o
+ *(.eh_frame*)
+
+.glue_7         0x2000084c        0x0
+ .glue_7        0x00000000        0x0 linker stubs
+
+.glue_7t        0x2000084c        0x0
+ .glue_7t       0x00000000        0x0 linker stubs
+
+.vfp11_veneer   0x2000084c        0x0
+ .vfp11_veneer  0x00000000        0x0 linker stubs
+
+.v4_bx          0x2000084c        0x0
+ .v4_bx         0x00000000        0x0 linker stubs
+
+.ARM.extab
+ *(.ARM.extab* .gnu.linkonce.armextab.*)
+                0x2000084c                __exidx_start = .
+
+.ARM.exidx
+ *(.ARM.exidx* .gnu.linkonce.armexidx.*)
+                0x2000084c                __exidx_end = .
+                0x2000084c                __etext = .
+
+.data           0x2000084c       0x18
+                0x2000084c                __data_start__ = .
+ *(vtable)
+ *(.data*)
+ .data          0x2000084c        0x0 ./cmsis/device/startup_stm32f10x_md.o
+ .data          0x2000084c       0x14 ./cmsis/device/system_stm32f10x.o
+                0x2000084c                SystemCoreClock
+                0x20000850                AHBPrescTable
+ .data          0x20000860        0x4 ./src/main.o
+ .data          0x20000864        0x0 /opt/gcc-arm-none-eabi-4_6-2012q4/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m/libgcc.a(_arm_addsubsf3.o)
+                0x20000864                . = ALIGN (0x4)
+                0x20000864                PROVIDE (__preinit_array_start, .)
+ *(.preinit_array)
+                0x20000864                PROVIDE (__preinit_array_end, .)
+                0x20000864                . = ALIGN (0x4)
+                0x20000864                PROVIDE (__init_array_start, .)
+ *(SORT(.init_array.*))
+ *(.init_array)
+                0x20000864                PROVIDE (__init_array_end, .)
+                0x20000864                . = ALIGN (0x4)
+                0x20000864                PROVIDE (__fini_array_start, .)
+ *(SORT(.fini_array.*))
+ *(.fini_array)
+                0x20000864                PROVIDE (__fini_array_end, .)
+                0x20000864                . = ALIGN (0x4)
+                0x20000864                __data_end__ = .
+
+.bss            0x20000864        0x4
+                0x20000864                . = ALIGN (0x4)
+                0x20000864                __bss_start__ = .
+ *(.bss*)
+ .bss           0x20000864        0x0 ./cmsis/device/startup_stm32f10x_md.o
+ .bss           0x20000864        0x0 ./cmsis/device/system_stm32f10x.o
+ .bss           0x20000864        0x4 ./src/main.o
+ .bss           0x20000868        0x0 /opt/gcc-arm-none-eabi-4_6-2012q4/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m/libgcc.a(_arm_addsubsf3.o)
+ *(COMMON)
+                0x20000868                . = ALIGN (0x4)
+                0x20000868                __bss_end__ = .
+
+.heap           0x20000868      0x800
+                0x20000868                . = ALIGN (0x4)
+                0x20000868                __end__ = .
+                0x20000868                end = __end__
+ *(.heap*)
+ .heap          0x20000868      0x800 ./cmsis/device/startup_stm32f10x_md.o
+                0x20000868                __HeapBase
+                0x20001068                . = ALIGN (0x4)
+                0x20001068                __HeapLimit = .
+
+.stack_dummy    0x20000868      0xc00
+ *(.stack)
+ .stack         0x20000868      0xc00 ./cmsis/device/startup_stm32f10x_md.o
+                0x20005000                __StackTop = (ORIGIN (RAM) + 0x5000)
+                0x20004400                __StackLimit = (__StackTop - SIZEOF (.stack_dummy))
+                0x20005000                PROVIDE (__stack, __StackTop)
+                0x00000001                ASSERT ((__StackLimit >= __HeapLimit), region RAM overflowed with stack)
+OUTPUT(test_ram.elf elf32-littlearm)
+
+.ARM.attributes
+                0x00000000       0x29
+ .ARM.attributes
+                0x00000000       0x1b ./cmsis/device/startup_stm32f10x_md.o
+ .ARM.attributes
+                0x0000001b       0x33 ./cmsis/device/system_stm32f10x.o
+ .ARM.attributes
+                0x0000004e       0x33 ./src/main.o
+ .ARM.attributes
+                0x00000081       0x1d /opt/gcc-arm-none-eabi-4_6-2012q4/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m/libgcc.a(_arm_addsubsf3.o)
+
+.comment        0x00000000       0x70
+ .comment       0x00000000       0x70 ./cmsis/device/system_stm32f10x.o
+                                 0x71 (size before relaxing)
+ .comment       0x00000000       0x71 ./src/main.o
+
+.debug_line     0x00000000      0x2f6
+ .debug_line    0x00000000       0xa2 ./cmsis/device/startup_stm32f10x_md.o
+ .debug_line    0x000000a2      0x172 ./cmsis/device/system_stm32f10x.o
+ .debug_line    0x00000214       0xe2 ./src/main.o
+
+.debug_info     0x00000000      0x6a4
+ .debug_info    0x00000000       0x94 ./cmsis/device/startup_stm32f10x_md.o
+ .debug_info    0x00000094      0x4df ./cmsis/device/system_stm32f10x.o
+ .debug_info    0x00000573      0x131 ./src/main.o
+
+.debug_abbrev   0x00000000      0x1dc
+ .debug_abbrev  0x00000000       0x14 ./cmsis/device/startup_stm32f10x_md.o
+ .debug_abbrev  0x00000014      0x153 ./cmsis/device/system_stm32f10x.o
+ .debug_abbrev  0x00000167       0x75 ./src/main.o
+
+.debug_aranges  0x00000000       0x60
+ .debug_aranges
+                0x00000000       0x20 ./cmsis/device/startup_stm32f10x_md.o
+ .debug_aranges
+                0x00000020       0x20 ./cmsis/device/system_stm32f10x.o
+ .debug_aranges
+                0x00000040       0x20 ./src/main.o
+
+.debug_loc      0x00000000      0x100
+ .debug_loc     0x00000000       0xc8 ./cmsis/device/system_stm32f10x.o
+ .debug_loc     0x000000c8       0x38 ./src/main.o
+
+.debug_str      0x00000000      0x2a3
+ .debug_str     0x00000000      0x275 ./cmsis/device/system_stm32f10x.o
+                                0x2b6 (size before relaxing)
+ .debug_str     0x00000275       0x2e ./src/main.o
+                                0x14c (size before relaxing)
+
+.debug_frame    0x00000000       0xb0
+ .debug_frame   0x00000000       0x80 ./cmsis/device/system_stm32f10x.o
+ .debug_frame   0x00000080       0x30 ./src/main.o
+
+Cross Reference Table
+
+Symbol                                            File
+ADC1_2_IRQHandler                                 ./cmsis/device/startup_stm32f10x_md.o
+AHBPrescTable                                     ./cmsis/device/system_stm32f10x.o
+BusFault_Handler                                  ./cmsis/device/startup_stm32f10x_md.o
+CAN1_RX1_IRQHandler                               ./cmsis/device/startup_stm32f10x_md.o
+CAN1_SCE_IRQHandler                               ./cmsis/device/startup_stm32f10x_md.o
+DMA1_Channel1_IRQHandler                          ./cmsis/device/startup_stm32f10x_md.o
+DMA1_Channel2_IRQHandler                          ./cmsis/device/startup_stm32f10x_md.o
+DMA1_Channel3_IRQHandler                          ./cmsis/device/startup_stm32f10x_md.o
+DMA1_Channel4_IRQHandler                          ./cmsis/device/startup_stm32f10x_md.o
+DMA1_Channel5_IRQHandler                          ./cmsis/device/startup_stm32f10x_md.o
+DMA1_Channel6_IRQHandler                          ./cmsis/device/startup_stm32f10x_md.o
+DMA1_Channel7_IRQHandler                          ./cmsis/device/startup_stm32f10x_md.o
+DebugMon_Handler                                  ./cmsis/device/startup_stm32f10x_md.o
+EXTI0_IRQHandler                                  ./cmsis/device/startup_stm32f10x_md.o
+EXTI15_10_IRQHandler                              ./cmsis/device/startup_stm32f10x_md.o
+EXTI1_IRQHandler                                  ./cmsis/device/startup_stm32f10x_md.o
+EXTI2_IRQHandler                                  ./cmsis/device/startup_stm32f10x_md.o
+EXTI3_IRQHandler                                  ./cmsis/device/startup_stm32f10x_md.o
+EXTI4_IRQHandler                                  ./cmsis/device/startup_stm32f10x_md.o
+EXTI9_5_IRQHandler                                ./cmsis/device/startup_stm32f10x_md.o
+FLASH_IRQHandler                                  ./cmsis/device/startup_stm32f10x_md.o
+HardFault_Handler                                 ./cmsis/device/startup_stm32f10x_md.o
+I2C1_ER_IRQHandler                                ./cmsis/device/startup_stm32f10x_md.o
+I2C1_EV_IRQHandler                                ./cmsis/device/startup_stm32f10x_md.o
+I2C2_ER_IRQHandler                                ./cmsis/device/startup_stm32f10x_md.o
+I2C2_EV_IRQHandler                                ./cmsis/device/startup_stm32f10x_md.o
+MemManage_Handler                                 ./cmsis/device/startup_stm32f10x_md.o
+NMI_Handler                                       ./cmsis/device/startup_stm32f10x_md.o
+PVD_IRQHandler                                    ./cmsis/device/startup_stm32f10x_md.o
+PendSV_Handler                                    ./cmsis/device/startup_stm32f10x_md.o
+RCC_IRQHandler                                    ./cmsis/device/startup_stm32f10x_md.o
+RTCAlarm_IRQHandler                               ./cmsis/device/startup_stm32f10x_md.o
+RTC_IRQHandler                                    ./cmsis/device/startup_stm32f10x_md.o
+Reset_Handler                                     ./cmsis/device/startup_stm32f10x_md.o
+SPI1_IRQHandler                                   ./cmsis/device/startup_stm32f10x_md.o
+SPI2_IRQHandler                                   ./cmsis/device/startup_stm32f10x_md.o
+SVC_Handler                                       ./cmsis/device/startup_stm32f10x_md.o
+SysTick_Handler                                   ./cmsis/device/startup_stm32f10x_md.o
+SystemCoreClock                                   ./cmsis/device/system_stm32f10x.o
+SystemCoreClockUpdate                             ./cmsis/device/system_stm32f10x.o
+SystemInit                                        ./cmsis/device/system_stm32f10x.o
+                                                  ./cmsis/device/startup_stm32f10x_md.o
+TAMPER_IRQHandler                                 ./cmsis/device/startup_stm32f10x_md.o
+TIM1_BRK_IRQHandler                               ./cmsis/device/startup_stm32f10x_md.o
+TIM1_CC_IRQHandler                                ./cmsis/device/startup_stm32f10x_md.o
+TIM1_TRG_COM_IRQHandler                           ./cmsis/device/startup_stm32f10x_md.o
+TIM1_UP_IRQHandler                                ./cmsis/device/startup_stm32f10x_md.o
+TIM2_IRQHandler                                   ./cmsis/device/startup_stm32f10x_md.o
+TIM3_IRQHandler                                   ./cmsis/device/startup_stm32f10x_md.o
+TIM4_IRQHandler                                   ./cmsis/device/startup_stm32f10x_md.o
+USART1_IRQHandler                                 ./cmsis/device/startup_stm32f10x_md.o
+USART2_IRQHandler                                 ./cmsis/device/startup_stm32f10x_md.o
+USART3_IRQHandler                                 ./cmsis/device/startup_stm32f10x_md.o
+USBWakeUp_IRQHandler                              ./cmsis/device/startup_stm32f10x_md.o
+USB_HP_CAN1_TX_IRQHandler                         ./cmsis/device/startup_stm32f10x_md.o
+USB_LP_CAN1_RX0_IRQHandler                        ./cmsis/device/startup_stm32f10x_md.o
+UsageFault_Handler                                ./cmsis/device/startup_stm32f10x_md.o
+WWDG_IRQHandler                                   ./cmsis/device/startup_stm32f10x_md.o
+__HeapBase                                        ./cmsis/device/startup_stm32f10x_md.o
+__HeapLimit                                       ./cmsis/device/startup_stm32f10x_md.o
+__StackLimit                                      ./cmsis/device/startup_stm32f10x_md.o
+__StackTop                                        ./cmsis/device/startup_stm32f10x_md.o
+__addsf3                                          /opt/gcc-arm-none-eabi-4_6-2012q4/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m/libgcc.a(_arm_addsubsf3.o)
+__aeabi_fadd                                      /opt/gcc-arm-none-eabi-4_6-2012q4/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m/libgcc.a(_arm_addsubsf3.o)
+                                                  ./src/main.o
+__aeabi_frsub                                     /opt/gcc-arm-none-eabi-4_6-2012q4/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m/libgcc.a(_arm_addsubsf3.o)
+__aeabi_fsub                                      /opt/gcc-arm-none-eabi-4_6-2012q4/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m/libgcc.a(_arm_addsubsf3.o)
+__aeabi_i2f                                       /opt/gcc-arm-none-eabi-4_6-2012q4/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m/libgcc.a(_arm_addsubsf3.o)
+__aeabi_l2f                                       /opt/gcc-arm-none-eabi-4_6-2012q4/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m/libgcc.a(_arm_addsubsf3.o)
+__aeabi_ui2f                                      /opt/gcc-arm-none-eabi-4_6-2012q4/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m/libgcc.a(_arm_addsubsf3.o)
+__aeabi_ul2f                                      /opt/gcc-arm-none-eabi-4_6-2012q4/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m/libgcc.a(_arm_addsubsf3.o)
+__bss_end__                                       ./cmsis/device/startup_stm32f10x_md.o
+__bss_start__                                     ./cmsis/device/startup_stm32f10x_md.o
+__data_end__                                      ./cmsis/device/startup_stm32f10x_md.o
+__data_start__                                    ./cmsis/device/startup_stm32f10x_md.o
+__etext                                           ./cmsis/device/startup_stm32f10x_md.o
+__floatdisf                                       /opt/gcc-arm-none-eabi-4_6-2012q4/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m/libgcc.a(_arm_addsubsf3.o)
+__floatsisf                                       /opt/gcc-arm-none-eabi-4_6-2012q4/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m/libgcc.a(_arm_addsubsf3.o)
+__floatundisf                                     /opt/gcc-arm-none-eabi-4_6-2012q4/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m/libgcc.a(_arm_addsubsf3.o)
+__floatunsisf                                     /opt/gcc-arm-none-eabi-4_6-2012q4/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m/libgcc.a(_arm_addsubsf3.o)
+__isr_vector                                      ./cmsis/device/startup_stm32f10x_md.o
+__subsf3                                          /opt/gcc-arm-none-eabi-4_6-2012q4/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m/libgcc.a(_arm_addsubsf3.o)
+main                                              ./src/main.o
+                                                  ./cmsis/device/startup_stm32f10x_md.o
